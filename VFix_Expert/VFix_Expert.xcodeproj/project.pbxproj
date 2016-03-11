@@ -12,6 +12,14 @@
 		3E8CE5231C92AD12002A4A5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8CE5211C92AD12002A4A5B /* Main.storyboard */; };
 		3E8CE5251C92AD12002A4A5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E8CE5241C92AD12002A4A5B /* Assets.xcassets */; };
 		3E8CE5281C92AD12002A4A5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8CE5261C92AD12002A4A5B /* LaunchScreen.storyboard */; };
+		3E8CE5311C92AE23002A4A5B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE5301C92AE23002A4A5B /* LoginViewController.swift */; };
+		3E8CE5331C92AE30002A4A5B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE5321C92AE30002A4A5B /* SignUpViewController.swift */; };
+		3E8CE5351C92AE39002A4A5B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE5341C92AE39002A4A5B /* CalendarViewController.swift */; };
+		3E8CE5371C92AE47002A4A5B /* JobsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE5361C92AE47002A4A5B /* JobsTableViewController.swift */; };
+		3E8CE5391C92AE57002A4A5B /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE5381C92AE57002A4A5B /* MapsViewController.swift */; };
+		3E8CE53B1C92AE62002A4A5B /* JobHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE53A1C92AE62002A4A5B /* JobHistoryViewController.swift */; };
+		3E8CE53D1C92AE72002A4A5B /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE53C1C92AE72002A4A5B /* JobDetailViewController.swift */; };
+		3E8CE5401C92AE8E002A4A5B /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE53F1C92AE8E002A4A5B /* JobTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,14 @@
 		3E8CE5241C92AD12002A4A5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E8CE5271C92AD12002A4A5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E8CE5291C92AD12002A4A5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E8CE5301C92AE23002A4A5B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3E8CE5321C92AE30002A4A5B /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3E8CE5341C92AE39002A4A5B /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		3E8CE5361C92AE47002A4A5B /* JobsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsTableViewController.swift; sourceTree = "<group>"; };
+		3E8CE5381C92AE57002A4A5B /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		3E8CE53A1C92AE62002A4A5B /* JobHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobHistoryViewController.swift; sourceTree = "<group>"; };
+		3E8CE53C1C92AE72002A4A5B /* JobDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
+		3E8CE53F1C92AE8E002A4A5B /* JobTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,9 @@
 		3E8CE51C1C92AD12002A4A5B /* VFix_Expert */ = {
 			isa = PBXGroup;
 			children = (
+				3E8CE5411C92AEB1002A4A5B /* Models */,
+				3E8CE52F1C92AE09002A4A5B /* View Controllers */,
+				3E8CE53E1C92AE77002A4A5B /* Views */,
 				3E8CE51D1C92AD12002A4A5B /* AppDelegate.swift */,
 				3E8CE51F1C92AD12002A4A5B /* ViewController.swift */,
 				3E8CE5211C92AD12002A4A5B /* Main.storyboard */,
@@ -62,6 +81,35 @@
 				3E8CE5291C92AD12002A4A5B /* Info.plist */,
 			);
 			path = VFix_Expert;
+			sourceTree = "<group>";
+		};
+		3E8CE52F1C92AE09002A4A5B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3E8CE5341C92AE39002A4A5B /* CalendarViewController.swift */,
+				3E8CE53C1C92AE72002A4A5B /* JobDetailViewController.swift */,
+				3E8CE53A1C92AE62002A4A5B /* JobHistoryViewController.swift */,
+				3E8CE5361C92AE47002A4A5B /* JobsTableViewController.swift */,
+				3E8CE5301C92AE23002A4A5B /* LoginViewController.swift */,
+				3E8CE5381C92AE57002A4A5B /* MapsViewController.swift */,
+				3E8CE5321C92AE30002A4A5B /* SignUpViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3E8CE53E1C92AE77002A4A5B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3E8CE53F1C92AE8E002A4A5B /* JobTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3E8CE5411C92AEB1002A4A5B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +183,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E8CE5351C92AE39002A4A5B /* CalendarViewController.swift in Sources */,
+				3E8CE5311C92AE23002A4A5B /* LoginViewController.swift in Sources */,
+				3E8CE5391C92AE57002A4A5B /* MapsViewController.swift in Sources */,
 				3E8CE5201C92AD12002A4A5B /* ViewController.swift in Sources */,
+				3E8CE5331C92AE30002A4A5B /* SignUpViewController.swift in Sources */,
+				3E8CE53B1C92AE62002A4A5B /* JobHistoryViewController.swift in Sources */,
 				3E8CE51E1C92AD12002A4A5B /* AppDelegate.swift in Sources */,
+				3E8CE53D1C92AE72002A4A5B /* JobDetailViewController.swift in Sources */,
+				3E8CE5371C92AE47002A4A5B /* JobsTableViewController.swift in Sources */,
+				3E8CE5401C92AE8E002A4A5B /* JobTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
