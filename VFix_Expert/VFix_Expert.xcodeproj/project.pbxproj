@@ -12,17 +12,6 @@
 		3E8CE4E21C90CF5E002A4A5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8CE4E01C90CF5E002A4A5B /* Main.storyboard */; };
 		3E8CE4E41C90CF5E002A4A5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E8CE4E31C90CF5E002A4A5B /* Assets.xcassets */; };
 		3E8CE4E71C90CF5E002A4A5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8CE4E51C90CF5E002A4A5B /* LaunchScreen.storyboard */; };
-		3E8CE4F61C924C59002A4A5B /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E8CE4F41C924C59002A4A5B /* lock.png */; };
-		3E8CE4F71C924C59002A4A5B /* note.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E8CE4F51C924C59002A4A5B /* note.png */; };
-		3E8CE4FC1C924CB9002A4A5B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE4FB1C924CB9002A4A5B /* LoginViewController.swift */; };
-		3E8CE4FE1C924E3C002A4A5B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE4FD1C924E3C002A4A5B /* CalendarViewController.swift */; };
-		3E8CE5001C924ED7002A4A5B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE4FF1C924ED7002A4A5B /* SignUpViewController.swift */; };
-		3E8CE5021C924F2A002A4A5B /* JobDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE5011C924F2A002A4A5B /* JobDetailsViewController.swift */; };
-		3E8CE5041C9259D9002A4A5B /* WorkHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE5031C9259D9002A4A5B /* WorkHistoryViewController.swift */; };
-		3E8CE5061C926A3A002A4A5B /* JobTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE5051C926A3A002A4A5B /* JobTableViewController.swift */; };
-		3E8CE50C1C92754F002A4A5B /* JobsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE50B1C92754F002A4A5B /* JobsTableViewCell.swift */; };
-		3E8CE50E1C9282CC002A4A5B /* VFix_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E8CE50D1C9282CC002A4A5B /* VFix_logo.png */; };
-		3E8CE5101C92A18F002A4A5B /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE50F1C92A18F002A4A5B /* MapsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,17 +22,6 @@
 		3E8CE4E31C90CF5E002A4A5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E8CE4E61C90CF5E002A4A5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E8CE4E81C90CF5E002A4A5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3E8CE4F41C924C59002A4A5B /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lock.png; path = "../../my-icons-collection-7404e66d9a39c9367a478c1001d31af4/png/lock.png"; sourceTree = "<group>"; };
-		3E8CE4F51C924C59002A4A5B /* note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = note.png; path = "../../my-icons-collection-7404e66d9a39c9367a478c1001d31af4/png/note.png"; sourceTree = "<group>"; };
-		3E8CE4FB1C924CB9002A4A5B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		3E8CE4FD1C924E3C002A4A5B /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		3E8CE4FF1C924ED7002A4A5B /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		3E8CE5011C924F2A002A4A5B /* JobDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobDetailsViewController.swift; sourceTree = "<group>"; };
-		3E8CE5031C9259D9002A4A5B /* WorkHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkHistoryViewController.swift; sourceTree = "<group>"; };
-		3E8CE5051C926A3A002A4A5B /* JobTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobTableViewController.swift; sourceTree = "<group>"; };
-		3E8CE50B1C92754F002A4A5B /* JobsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsTableViewCell.swift; sourceTree = "<group>"; };
-		3E8CE50D1C9282CC002A4A5B /* VFix_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VFix_logo.png; path = Assets.xcassets/Image.imageset/VFix_logo.png; sourceTree = "<group>"; };
-		3E8CE50F1C92A18F002A4A5B /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +38,6 @@
 		3E8CE4D01C90CF5E002A4A5B = {
 			isa = PBXGroup;
 			children = (
-				3E8CE4FA1C924C92002A4A5B /* Models */,
-				3E8CE4F91C924C8C002A4A5B /* Views */,
-				3E8CE4F81C924C7F002A4A5B /* View Controllers */,
-				3E8CE4F41C924C59002A4A5B /* lock.png */,
-				3E8CE4F51C924C59002A4A5B /* note.png */,
 				3E8CE4DB1C90CF5E002A4A5B /* VFix_Expert */,
 				3E8CE4DA1C90CF5E002A4A5B /* Products */,
 			);
@@ -84,41 +57,11 @@
 				3E8CE4DC1C90CF5E002A4A5B /* AppDelegate.swift */,
 				3E8CE4DE1C90CF5E002A4A5B /* ViewController.swift */,
 				3E8CE4E01C90CF5E002A4A5B /* Main.storyboard */,
-				3E8CE50D1C9282CC002A4A5B /* VFix_logo.png */,
 				3E8CE4E31C90CF5E002A4A5B /* Assets.xcassets */,
 				3E8CE4E51C90CF5E002A4A5B /* LaunchScreen.storyboard */,
 				3E8CE4E81C90CF5E002A4A5B /* Info.plist */,
 			);
 			path = VFix_Expert;
-			sourceTree = "<group>";
-		};
-		3E8CE4F81C924C7F002A4A5B /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				3E8CE4FB1C924CB9002A4A5B /* LoginViewController.swift */,
-				3E8CE4FD1C924E3C002A4A5B /* CalendarViewController.swift */,
-				3E8CE4FF1C924ED7002A4A5B /* SignUpViewController.swift */,
-				3E8CE5011C924F2A002A4A5B /* JobDetailsViewController.swift */,
-				3E8CE5031C9259D9002A4A5B /* WorkHistoryViewController.swift */,
-				3E8CE5051C926A3A002A4A5B /* JobTableViewController.swift */,
-				3E8CE50F1C92A18F002A4A5B /* MapsViewController.swift */,
-			);
-			name = "View Controllers";
-			sourceTree = "<group>";
-		};
-		3E8CE4F91C924C8C002A4A5B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				3E8CE50B1C92754F002A4A5B /* JobsTableViewCell.swift */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		3E8CE4FA1C924C92002A4A5B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,11 +123,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E8CE4E71C90CF5E002A4A5B /* LaunchScreen.storyboard in Resources */,
-				3E8CE50E1C9282CC002A4A5B /* VFix_logo.png in Resources */,
-				3E8CE4F61C924C59002A4A5B /* lock.png in Resources */,
 				3E8CE4E41C90CF5E002A4A5B /* Assets.xcassets in Resources */,
 				3E8CE4E21C90CF5E002A4A5B /* Main.storyboard in Resources */,
-				3E8CE4F71C924C59002A4A5B /* note.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,16 +135,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E8CE4FE1C924E3C002A4A5B /* CalendarViewController.swift in Sources */,
-				3E8CE5061C926A3A002A4A5B /* JobTableViewController.swift in Sources */,
-				3E8CE5021C924F2A002A4A5B /* JobDetailsViewController.swift in Sources */,
-				3E8CE4FC1C924CB9002A4A5B /* LoginViewController.swift in Sources */,
 				3E8CE4DF1C90CF5E002A4A5B /* ViewController.swift in Sources */,
-				3E8CE5101C92A18F002A4A5B /* MapsViewController.swift in Sources */,
 				3E8CE4DD1C90CF5E002A4A5B /* AppDelegate.swift in Sources */,
-				3E8CE50C1C92754F002A4A5B /* JobsTableViewCell.swift in Sources */,
-				3E8CE5041C9259D9002A4A5B /* WorkHistoryViewController.swift in Sources */,
-				3E8CE5001C924ED7002A4A5B /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
