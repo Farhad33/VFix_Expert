@@ -1,17 +1,9 @@
-﻿Technician:
+Technician:
 technicianName: String
-
-
-
-
-
-
 
 
 Client:
 clientName: String
-
-
 
 
 Job:
