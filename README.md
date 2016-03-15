@@ -30,6 +30,9 @@ Here's a walkthrough of implemented user stories:
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
+## Wireframe
+![Wireframe.pdf](VFix_ExpertWireframe.jpg)
+
 ## Considerations
 **1. Q: What is your product pitch?**
   * Start with a problem statement and follow up with a solution.
