@@ -33,6 +33,21 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Wireframe
 ![Wireframe.pdf](VFix_ExpertWireframe.jpg)
 
+## Model Classes
+**Technician:** <br>
+technicianName: String <br>
+
+**Client:** <br>
+clientName: String <br>
+
+**Job:** <br>
+jobDate: NSDate <br>
+jobType: <br>
+jobLocation: 
+jobComment: String <br>
+jobPhone: <br>
+jobEmail: <br>
+
 ## Considerations
 **1. Q: What is your product pitch?**
   * Start with a problem statement and follow up with a solution.
