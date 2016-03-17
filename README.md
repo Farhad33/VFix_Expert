@@ -33,6 +33,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Wireframe
 ![Wireframe.pdf](VFix_ExpertWireframe.jpg)
 
+## API Endpoints
+
 ## Model Classes
 **Technician:** <br>
 technicianName: String <br>
