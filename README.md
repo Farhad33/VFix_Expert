@@ -12,12 +12,14 @@ The following **required** functionality is completed:
 - [x] Used a RESTful API to source data that is populated into the application
 - [ ] Uses local persistence
 - [x] Uses at least three separate screens supporting user interaction
-- [ ] Uses maps to give locations of, and directions to, customers
-- [ ] Uses a calendar to show scheduled appointments
+- [ ] Shows a table view of current jobs for technician
+
 
 The following **optional** features are implemented:
 
 - [ ] Allow users to login using Facebook and Twitter
+- [ ] Uses maps to give locations of, and directions to, customers
+- [ ] Uses a calendar to show scheduled appointments
 
 The following **additional** features are implemented:
 
