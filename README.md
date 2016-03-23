@@ -18,7 +18,7 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 - [ ] Allow users to login using Facebook and Twitter
-- [ ] Uses maps to give locations of, and directions to, customers
+- [ ] Uses maps to give technicians locations of and directions to customers
 - [ ] Uses a calendar to show scheduled appointments
 
 The following **additional** features are implemented:
