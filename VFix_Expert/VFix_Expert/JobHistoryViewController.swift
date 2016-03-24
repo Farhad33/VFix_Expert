@@ -8,10 +8,16 @@
 
 import UIKit
 
-class JobHistoryViewController: UIViewController {
+class JobHistoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+
 
         // Do any additional setup after loading the view.
     }
@@ -22,6 +28,23 @@ class JobHistoryViewController: UIViewController {
     }
     
 
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //        if let jobs = self.jobs {
+        //            return jobs.count;
+        //        }
+        return 20;
+    }
+    
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell =  tableView.dequeueReusableCellWithIdentifier("JobHistoryTableViewCell", forIndexPath: indexPath) as! JobHistoryTableViewCell
+        
+        
+        return cell
+        
+    }
     /*
     // MARK: - Navigation
 
