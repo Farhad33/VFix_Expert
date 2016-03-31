@@ -1,0 +1,24 @@
+PODS:
+  - MMDrawerController (0.5.7):
+    - MMDrawerController/Core (= 0.5.7)
+    - MMDrawerController/MMDrawerBarButtonItem (= 0.5.7)
+    - MMDrawerController/MMDrawerVisualStates (= 0.5.7)
+    - MMDrawerController/Subclass (= 0.5.7)
+  - MMDrawerController/Core (0.5.7)
+  - MMDrawerController/MMDrawerBarButtonItem (0.5.7):
+    - MMDrawerController/Core
+  - MMDrawerController/MMDrawerVisualStates (0.5.7):
+    - MMDrawerController/Core
+  - MMDrawerController/Subclass (0.5.7):
+    - MMDrawerController/Core
+  - TPDMapsApp (1.1.0)
+
+DEPENDENCIES:
+  - MMDrawerController (~> 0.5.7)
+  - TPDMapsApp (~> 1.0)
+
+SPEC CHECKSUMS:
+  MMDrawerController: 7a4cf8e25596bf2434e03ce50d22a8608ddee6a1
+  TPDMapsApp: 2ccfb67dd3192bc0757a34f7f1dad5fadb2012b1
+
+COCOAPODS: 0.39.0

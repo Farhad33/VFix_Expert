@@ -1,0 +1,15 @@
+Technician:
+technicianName: String
+
+
+Client:
+clientName: String
+
+
+Job:
+jobDate: NSDate 
+jobType:
+jobLocation: 
+jobComment: String
+jobPhone:
+jobEmail:

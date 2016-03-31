@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15F527176F6EB4745B0387B8 /* Pods_VFix_Expert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B326CC34EF53A07D7359B26A /* Pods_VFix_Expert.framework */; };
+		3E8CE51E1C92AD12002A4A5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE51D1C92AD12002A4A5B /* AppDelegate.swift */; };
+		3E8CE5201C92AD12002A4A5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE51F1C92AD12002A4A5B /* ViewController.swift */; };
+		3E8CE5231C92AD12002A4A5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8CE5211C92AD12002A4A5B /* Main.storyboard */; };
+		3E8CE5251C92AD12002A4A5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E8CE5241C92AD12002A4A5B /* Assets.xcassets */; };
+		3E8CE5281C92AD12002A4A5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8CE5261C92AD12002A4A5B /* LaunchScreen.storyboard */; };
+		3E8CE5311C92AE23002A4A5B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE5301C92AE23002A4A5B /* LoginViewController.swift */; };
+		3E8CE5331C92AE30002A4A5B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE5321C92AE30002A4A5B /* SignUpViewController.swift */; };
+		3E8CE5351C92AE39002A4A5B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE5341C92AE39002A4A5B /* CalendarViewController.swift */; };
+		3E8CE5371C92AE47002A4A5B /* JobsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE5361C92AE47002A4A5B /* JobsTableViewController.swift */; };
+		3E8CE5391C92AE57002A4A5B /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE5381C92AE57002A4A5B /* MapsViewController.swift */; };
+		3E8CE53B1C92AE62002A4A5B /* JobHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE53A1C92AE62002A4A5B /* JobHistoryViewController.swift */; };
+		3E8CE53D1C92AE72002A4A5B /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE53C1C92AE72002A4A5B /* JobDetailViewController.swift */; };
+		3E8CE5401C92AE8E002A4A5B /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE53F1C92AE8E002A4A5B /* JobTableViewCell.swift */; };
+		A00543071CA74E6000656D5A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00543061CA74E6000656D5A /* ProfileViewController.swift */; };
+		A00543091CA74E6F00656D5A /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00543081CA74E6F00656D5A /* ScheduleViewController.swift */; };
+		A005430B1CA74E7B00656D5A /* myPayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A005430A1CA74E7B00656D5A /* myPayViewController.swift */; };
+		A005430D1CA74E8700656D5A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A005430C1CA74E8700656D5A /* SettingsViewController.swift */; };
+		A005430F1CA74E9600656D5A /* MyCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A005430E1CA74E9600656D5A /* MyCardViewController.swift */; };
+		A00543111CA74EA900656D5A /* RatingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00543101CA74EA900656D5A /* RatingsViewController.swift */; };
+		A00543161CA9F41A00656D5A /* DashboardTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00543151CA9F41A00656D5A /* DashboardTabBarController.swift */; };
+		A097C7E41C9E1CBA00E9A1EA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A097C7E31C9E1CBA00E9A1EA /* MenuViewController.swift */; };
+		A097C7E61C9E219000E9A1EA /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A097C7E51C9E219000E9A1EA /* MenuCell.swift */; };
+		A0E009BC1CA4D4B8003DD632 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E009BB1CA4D4B8003DD632 /* MainPageViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3E8CE51A1C92AD12002A4A5B /* VFix_Expert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VFix_Expert.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E8CE51D1C92AD12002A4A5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3E8CE51F1C92AD12002A4A5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3E8CE5221C92AD12002A4A5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3E8CE5241C92AD12002A4A5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3E8CE5271C92AD12002A4A5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3E8CE5291C92AD12002A4A5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E8CE5301C92AE23002A4A5B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3E8CE5321C92AE30002A4A5B /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3E8CE5341C92AE39002A4A5B /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		3E8CE5361C92AE47002A4A5B /* JobsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsTableViewController.swift; sourceTree = "<group>"; };
+		3E8CE5381C92AE57002A4A5B /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		3E8CE53A1C92AE62002A4A5B /* JobHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobHistoryViewController.swift; sourceTree = "<group>"; };
+		3E8CE53C1C92AE72002A4A5B /* JobDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
+		3E8CE53F1C92AE8E002A4A5B /* JobTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
+		5D61062AE78C63CFB19FDB1E /* Pods-VFix_Expert.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VFix_Expert.release.xcconfig"; path = "Pods/Target Support Files/Pods-VFix_Expert/Pods-VFix_Expert.release.xcconfig"; sourceTree = "<group>"; };
+		A00543061CA74E6000656D5A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A00543081CA74E6F00656D5A /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		A005430A1CA74E7B00656D5A /* myPayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myPayViewController.swift; sourceTree = "<group>"; };
+		A005430C1CA74E8700656D5A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A005430E1CA74E9600656D5A /* MyCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCardViewController.swift; sourceTree = "<group>"; };
+		A00543101CA74EA900656D5A /* RatingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingsViewController.swift; sourceTree = "<group>"; };
+		A00543121CA884C600656D5A /* VFix_Expert-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VFix_Expert-Bridging-Header.h"; sourceTree = "<group>"; };
+		A00543151CA9F41A00656D5A /* DashboardTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTabBarController.swift; sourceTree = "<group>"; };
+		A097C7E31C9E1CBA00E9A1EA /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		A097C7E51C9E219000E9A1EA /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		A0E009BB1CA4D4B8003DD632 /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		B326CC34EF53A07D7359B26A /* Pods_VFix_Expert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VFix_Expert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1D5377566DD79BDA9E6B34C /* Pods-VFix_Expert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VFix_Expert.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VFix_Expert/Pods-VFix_Expert.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E8CE5171C92AD12002A4A5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15F527176F6EB4745B0387B8 /* Pods_VFix_Expert.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		030DADA698A98A6B12043C26 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1D5377566DD79BDA9E6B34C /* Pods-VFix_Expert.debug.xcconfig */,
+				5D61062AE78C63CFB19FDB1E /* Pods-VFix_Expert.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3E8CE5111C92AD12002A4A5B = {
+			isa = PBXGroup;
+			children = (
+				3E8CE51C1C92AD12002A4A5B /* VFix_Expert */,
+				3E8CE51B1C92AD12002A4A5B /* Products */,
+				030DADA698A98A6B12043C26 /* Pods */,
+				6FBE457E2B027AE1516C2219 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3E8CE51B1C92AD12002A4A5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E8CE51A1C92AD12002A4A5B /* VFix_Expert.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E8CE51C1C92AD12002A4A5B /* VFix_Expert */ = {
+			isa = PBXGroup;
+			children = (
+				A00543051CA74B3000656D5A /* menuViewControllers */,
+				A00543041CA6042600656D5A /* Other */,
+				3E8CE5411C92AEB1002A4A5B /* Models */,
+				3E8CE52F1C92AE09002A4A5B /* View Controllers */,
+				3E8CE53E1C92AE77002A4A5B /* Views */,
+				3E8CE51F1C92AD12002A4A5B /* ViewController.swift */,
+				3E8CE5211C92AD12002A4A5B /* Main.storyboard */,
+				3E8CE5241C92AD12002A4A5B /* Assets.xcassets */,
+				3E8CE5261C92AD12002A4A5B /* LaunchScreen.storyboard */,
+				3E8CE5291C92AD12002A4A5B /* Info.plist */,
+			);
+			path = VFix_Expert;
+			sourceTree = "<group>";
+		};
+		3E8CE52F1C92AE09002A4A5B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3E8CE5341C92AE39002A4A5B /* CalendarViewController.swift */,
+				3E8CE53C1C92AE72002A4A5B /* JobDetailViewController.swift */,
+				3E8CE53A1C92AE62002A4A5B /* JobHistoryViewController.swift */,
+				3E8CE5361C92AE47002A4A5B /* JobsTableViewController.swift */,
+				3E8CE5301C92AE23002A4A5B /* LoginViewController.swift */,
+				3E8CE5381C92AE57002A4A5B /* MapsViewController.swift */,
+				3E8CE5321C92AE30002A4A5B /* SignUpViewController.swift */,
+				A00543151CA9F41A00656D5A /* DashboardTabBarController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3E8CE53E1C92AE77002A4A5B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3E8CE53F1C92AE8E002A4A5B /* JobTableViewCell.swift */,
+				A097C7E51C9E219000E9A1EA /* MenuCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3E8CE5411C92AEB1002A4A5B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		6FBE457E2B027AE1516C2219 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B326CC34EF53A07D7359B26A /* Pods_VFix_Expert.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A00543041CA6042600656D5A /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				3E8CE51D1C92AD12002A4A5B /* AppDelegate.swift */,
+				A00543121CA884C600656D5A /* VFix_Expert-Bridging-Header.h */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		A00543051CA74B3000656D5A /* menuViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A097C7E31C9E1CBA00E9A1EA /* MenuViewController.swift */,
+				A0E009BB1CA4D4B8003DD632 /* MainPageViewController.swift */,
+				A00543061CA74E6000656D5A /* ProfileViewController.swift */,
+				A00543081CA74E6F00656D5A /* ScheduleViewController.swift */,
+				A005430A1CA74E7B00656D5A /* myPayViewController.swift */,
+				A005430C1CA74E8700656D5A /* SettingsViewController.swift */,
+				A005430E1CA74E9600656D5A /* MyCardViewController.swift */,
+				A00543101CA74EA900656D5A /* RatingsViewController.swift */,
+			);
+			name = menuViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E8CE5191C92AD12002A4A5B /* VFix_Expert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E8CE52C1C92AD12002A4A5B /* Build configuration list for PBXNativeTarget "VFix_Expert" */;
+			buildPhases = (
+				1CAA8DEE6BE79E7D5EB1DCB3 /* Check Pods Manifest.lock */,
+				3E8CE5161C92AD12002A4A5B /* Sources */,
+				3E8CE5171C92AD12002A4A5B /* Frameworks */,
+				3E8CE5181C92AD12002A4A5B /* Resources */,
+				FD8C195BA0136B2BCA60B2F6 /* Embed Pods Frameworks */,
+				41B7175B84B32C027D03FEDC /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VFix_Expert;
+			productName = VFix_Expert;
+			productReference = 3E8CE51A1C92AD12002A4A5B /* VFix_Expert.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3E8CE5121C92AD12002A4A5B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Dustyn August";
+				TargetAttributes = {
+					3E8CE5191C92AD12002A4A5B = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 3E8CE5151C92AD12002A4A5B /* Build configuration list for PBXProject "VFix_Expert" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3E8CE5111C92AD12002A4A5B;
+			productRefGroup = 3E8CE51B1C92AD12002A4A5B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E8CE5191C92AD12002A4A5B /* VFix_Expert */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E8CE5181C92AD12002A4A5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E8CE5281C92AD12002A4A5B /* LaunchScreen.storyboard in Resources */,
+				3E8CE5251C92AD12002A4A5B /* Assets.xcassets in Resources */,
+				3E8CE5231C92AD12002A4A5B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1CAA8DEE6BE79E7D5EB1DCB3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		41B7175B84B32C027D03FEDC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VFix_Expert/Pods-VFix_Expert-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD8C195BA0136B2BCA60B2F6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VFix_Expert/Pods-VFix_Expert-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E8CE5161C92AD12002A4A5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A00543091CA74E6F00656D5A /* ScheduleViewController.swift in Sources */,
+				3E8CE5351C92AE39002A4A5B /* CalendarViewController.swift in Sources */,
+				3E8CE5311C92AE23002A4A5B /* LoginViewController.swift in Sources */,
+				A005430B1CA74E7B00656D5A /* myPayViewController.swift in Sources */,
+				A005430F1CA74E9600656D5A /* MyCardViewController.swift in Sources */,
+				A097C7E61C9E219000E9A1EA /* MenuCell.swift in Sources */,
+				A00543161CA9F41A00656D5A /* DashboardTabBarController.swift in Sources */,
+				3E8CE5391C92AE57002A4A5B /* MapsViewController.swift in Sources */,
+				A00543071CA74E6000656D5A /* ProfileViewController.swift in Sources */,
+				3E8CE5201C92AD12002A4A5B /* ViewController.swift in Sources */,
+				A097C7E41C9E1CBA00E9A1EA /* MenuViewController.swift in Sources */,
+				A00543111CA74EA900656D5A /* RatingsViewController.swift in Sources */,
+				3E8CE5331C92AE30002A4A5B /* SignUpViewController.swift in Sources */,
+				A0E009BC1CA4D4B8003DD632 /* MainPageViewController.swift in Sources */,
+				3E8CE53B1C92AE62002A4A5B /* JobHistoryViewController.swift in Sources */,
+				A005430D1CA74E8700656D5A /* SettingsViewController.swift in Sources */,
+				3E8CE51E1C92AD12002A4A5B /* AppDelegate.swift in Sources */,
+				3E8CE53D1C92AE72002A4A5B /* JobDetailViewController.swift in Sources */,
+				3E8CE5371C92AE47002A4A5B /* JobsTableViewController.swift in Sources */,
+				3E8CE5401C92AE8E002A4A5B /* JobTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3E8CE5211C92AD12002A4A5B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E8CE5221C92AD12002A4A5B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3E8CE5261C92AD12002A4A5B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E8CE5271C92AD12002A4A5B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3E8CE52A1C92AD12002A4A5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3E8CE52B1C92AD12002A4A5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3E8CE52D1C92AD12002A4A5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1D5377566DD79BDA9E6B34C /* Pods-VFix_Expert.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VFix_Expert/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "https---github.com-Farhad33-VFix-Expert.VFix-Expert";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3E8CE52E1C92AD12002A4A5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D61062AE78C63CFB19FDB1E /* Pods-VFix_Expert.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VFix_Expert/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "https---github.com-Farhad33-VFix-Expert.VFix-Expert";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E8CE5151C92AD12002A4A5B /* Build configuration list for PBXProject "VFix_Expert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E8CE52A1C92AD12002A4A5B /* Debug */,
+				3E8CE52B1C92AD12002A4A5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E8CE52C1C92AD12002A4A5B /* Build configuration list for PBXNativeTarget "VFix_Expert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E8CE52D1C92AD12002A4A5B /* Debug */,
+				3E8CE52E1C92AD12002A4A5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3E8CE5121C92AD12002A4A5B /* Project object */;
+}
