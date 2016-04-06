@@ -16,6 +16,13 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        VFixClient.sharedInstance.getTable("wp_postmeta")
+        
+        
+        
+        
+        
         let logInBUtton = TWTRLogInButton { (session, error) in
             if let unwrappedSession = session {
                 let alert = UIAlertController(title: "Logged In",

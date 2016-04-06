@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'AD99C3410AE7B6C8C7961B54'
+               BlueprintIdentifier = 'C28A7219B91C0F4C4558EA77'
                BlueprintName = 'Pods-VFix_Expert'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-VFix_Expert.a'>
+               BuildableName = 'Pods_VFix_Expert.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
