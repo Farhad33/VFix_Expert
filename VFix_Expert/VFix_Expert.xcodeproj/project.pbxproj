@@ -15,7 +15,6 @@
 		3E8CE5311C92AE23002A4A5B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE5301C92AE23002A4A5B /* LoginViewController.swift */; };
 		3E8CE5331C92AE30002A4A5B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE5321C92AE30002A4A5B /* SignUpViewController.swift */; };
 		3E8CE5351C92AE39002A4A5B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE5341C92AE39002A4A5B /* CalendarViewController.swift */; };
-		3E8CE5371C92AE47002A4A5B /* JobsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE5361C92AE47002A4A5B /* JobsTableViewController.swift */; };
 		3E8CE5391C92AE57002A4A5B /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE5381C92AE57002A4A5B /* MapsViewController.swift */; };
 		3E8CE53B1C92AE62002A4A5B /* JobHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE53A1C92AE62002A4A5B /* JobHistoryViewController.swift */; };
 		3E8CE53D1C92AE72002A4A5B /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE53C1C92AE72002A4A5B /* JobDetailViewController.swift */; };
@@ -36,7 +35,6 @@
 		3E8CE5301C92AE23002A4A5B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3E8CE5321C92AE30002A4A5B /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3E8CE5341C92AE39002A4A5B /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		3E8CE5361C92AE47002A4A5B /* JobsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsTableViewController.swift; sourceTree = "<group>"; };
 		3E8CE5381C92AE57002A4A5B /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		3E8CE53A1C92AE62002A4A5B /* JobHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobHistoryViewController.swift; sourceTree = "<group>"; };
 		3E8CE53C1C92AE72002A4A5B /* JobDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 				3E8CE5341C92AE39002A4A5B /* CalendarViewController.swift */,
 				3E8CE53C1C92AE72002A4A5B /* JobDetailViewController.swift */,
 				3E8CE53A1C92AE62002A4A5B /* JobHistoryViewController.swift */,
-				3E8CE5361C92AE47002A4A5B /* JobsTableViewController.swift */,
 				3E8CE5301C92AE23002A4A5B /* LoginViewController.swift */,
 				3E8CE5381C92AE57002A4A5B /* MapsViewController.swift */,
 				3E8CE5321C92AE30002A4A5B /* SignUpViewController.swift */,
@@ -296,7 +293,6 @@
 				3E8CE53B1C92AE62002A4A5B /* JobHistoryViewController.swift in Sources */,
 				3E8CE51E1C92AD12002A4A5B /* AppDelegate.swift in Sources */,
 				3E8CE53D1C92AE72002A4A5B /* JobDetailViewController.swift in Sources */,
-				3E8CE5371C92AE47002A4A5B /* JobsTableViewController.swift in Sources */,
 				3E8CE5401C92AE8E002A4A5B /* JobTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
