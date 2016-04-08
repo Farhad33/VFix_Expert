@@ -1,0 +1,6 @@
+framework module Pods_VFix_Expert {
+  umbrella header "Pods-VFix_Expert-umbrella.h"
+
+  export *
+  module * { export * }
+}
