@@ -7,12 +7,21 @@
 //
 
 import UIKit
+import TPDMapsApp
 
 class defaultMapsCell: UITableViewCell {
 
+    
+    @IBOutlet weak var mapsAppImage: UIImageView!
+    @IBOutlet weak var mapsAppName: UILabel!
+   
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -20,5 +29,6 @@ class defaultMapsCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
 
 }

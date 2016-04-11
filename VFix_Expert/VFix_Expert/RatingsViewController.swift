@@ -8,14 +8,23 @@
 
 import UIKit
 import MMDrawerController
+import Cosmos
 
 class RatingsViewController: UIViewController {
 
+    @IBOutlet weak var cosmosView: CosmosView!
+    @IBOutlet weak var ratingNumber: UILabel!
+    @IBOutlet weak var jobsCountLabel: UILabel!
+    @IBOutlet weak var fiveStarCountLabel: UILabel!
+    @IBOutlet weak var acceptancePercentageLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.barTintColor = UIColor(red: 20/255.0, green: 157/255.0, blue: 234/255.0, alpha: 1.0)
 //        navigationController?.navigationBar.barStyle = UIBarStyle.Black
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        cosmosView.rating = 3.6
+        cosmosView.settings.updateOnTouch = false
         // Do any additional setup after loading the view.
     }
 

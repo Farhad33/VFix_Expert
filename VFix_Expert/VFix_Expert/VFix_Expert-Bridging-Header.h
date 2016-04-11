@@ -10,5 +10,8 @@
 #define VFix_Expert_Bridging_Header_h
 
 #import "MMDrawerController.h"
+#import "TPDMapsApp.h"
+#import "TPDURLUtilities.h"
+#import "BEMCheckBox.h"
 
 #endif /* VFix_Expert_Bridging_Header_h */

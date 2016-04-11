@@ -7,8 +7,8 @@
 //
 
 import UIKit
-//import DrawerController
 import MMDrawerController
+//import TPDMapsApp
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var drawerContainer: MMDrawerController?
     var mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-    //var userDefaults = NSUserDefaults.standardUserDefaults()
+    var userDefaults = NSUserDefaults.standardUserDefaults()
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -24,10 +24,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        UIApplication.sharedApplication().statusBarHidden = false
 //        UIApplication.sharedApplication().statusBarStyle = .LightContent
         
+        let username: String = "ndyoussfi"
+        let name: String = "Noureddine Youssfi"
+        let address_part1: String = "900 Mansell St"
+        let address_part2: String = ""
+        let phone: String = "4153007403"
+        let email: String = "ndyoussfi@gmail.com"
+        let state: String = "CA"
+        let zip: String = "94134"
         
+        userDefaults.setObject(name, forKey: "expert_name")
+        userDefaults.setObject(address_part1, forKey: "expert_mail_first")
+        userDefaults.setObject(address_part2, forKey: "expert_mail_second")
+        userDefaults.setObject(phone, forKey: "expert_phone")
+        userDefaults.setObject(email, forKey: "expert_email")
+        userDefaults.setObject(state, forKey: "state")
+        userDefaults.setObject(zip, forKey: "zip_code")
+        userDefaults.setObject(username, forKey: "user_name")
+
         
-        let username: String? = NSUserDefaults.standardUserDefaults().stringForKey("user_name")
-        if username != nil{
+        let savedUserName: String? = userDefaults.stringForKey("user_name")
+        if savedUserName != nil{
             
             buildInterface()
         

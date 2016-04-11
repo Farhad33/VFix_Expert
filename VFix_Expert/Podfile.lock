@@ -1,4 +1,6 @@
 PODS:
+  - Alamofire (2.0.2)
+  - Cosmos (1.2.2)
   - MMDrawerController (0.5.7):
     - MMDrawerController/Core (= 0.5.7)
     - MMDrawerController/MMDrawerBarButtonItem (= 0.5.7)
@@ -14,10 +16,14 @@ PODS:
   - TPDMapsApp (1.1.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 2.0)
+  - Cosmos (~> 1.2)
   - MMDrawerController (~> 0.5.7)
   - TPDMapsApp (~> 1.0)
 
 SPEC CHECKSUMS:
+  Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
+  Cosmos: 87c49100c69d2cb2eebfa4eb8d1e801fe29ff774
   MMDrawerController: 7a4cf8e25596bf2434e03ce50d22a8608ddee6a1
   TPDMapsApp: 2ccfb67dd3192bc0757a34f7f1dad5fadb2012b1
 

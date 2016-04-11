@@ -30,6 +30,8 @@
 		A00543161CA9F41A00656D5A /* DashboardTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00543151CA9F41A00656D5A /* DashboardTabBarController.swift */; };
 		A097C7E41C9E1CBA00E9A1EA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A097C7E31C9E1CBA00E9A1EA /* MenuViewController.swift */; };
 		A097C7E61C9E219000E9A1EA /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A097C7E51C9E219000E9A1EA /* MenuCell.swift */; };
+		A0CC28001CB1EA7D001F562F /* defaultMapsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CC27FF1CB1EA7D001F562F /* defaultMapsCell.swift */; };
+		A0DD3AB41CB739A1005C4791 /* defaultMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD3AB31CB739A1005C4791 /* defaultMaps.swift */; };
 		A0E009BC1CA4D4B8003DD632 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E009BB1CA4D4B8003DD632 /* MainPageViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		A00543151CA9F41A00656D5A /* DashboardTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTabBarController.swift; sourceTree = "<group>"; };
 		A097C7E31C9E1CBA00E9A1EA /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		A097C7E51C9E219000E9A1EA /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		A0CC27FF1CB1EA7D001F562F /* defaultMapsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = defaultMapsCell.swift; sourceTree = "<group>"; };
+		A0DD3AB31CB739A1005C4791 /* defaultMaps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = defaultMaps.swift; sourceTree = "<group>"; };
 		A0E009BB1CA4D4B8003DD632 /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		B326CC34EF53A07D7359B26A /* Pods_VFix_Expert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VFix_Expert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D5377566DD79BDA9E6B34C /* Pods-VFix_Expert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VFix_Expert.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VFix_Expert/Pods-VFix_Expert.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 			children = (
 				3E8CE53F1C92AE8E002A4A5B /* JobTableViewCell.swift */,
 				A097C7E51C9E219000E9A1EA /* MenuCell.swift */,
+				A0CC27FF1CB1EA7D001F562F /* defaultMapsCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 			children = (
 				3E8CE51D1C92AD12002A4A5B /* AppDelegate.swift */,
 				A00543121CA884C600656D5A /* VFix_Expert-Bridging-Header.h */,
+				A0DD3AB31CB739A1005C4791 /* defaultMaps.swift */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -219,6 +225,7 @@
 				TargetAttributes = {
 					3E8CE5191C92AD12002A4A5B = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 7ZV8VK2M4F;
 					};
 				};
 			};
@@ -307,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A00543091CA74E6F00656D5A /* ScheduleViewController.swift in Sources */,
+				A0CC28001CB1EA7D001F562F /* defaultMapsCell.swift in Sources */,
 				3E8CE5351C92AE39002A4A5B /* CalendarViewController.swift in Sources */,
 				3E8CE5311C92AE23002A4A5B /* LoginViewController.swift in Sources */,
 				A005430B1CA74E7B00656D5A /* myPayViewController.swift in Sources */,
@@ -317,6 +325,7 @@
 				A00543071CA74E6000656D5A /* ProfileViewController.swift in Sources */,
 				3E8CE5201C92AD12002A4A5B /* ViewController.swift in Sources */,
 				A097C7E41C9E1CBA00E9A1EA /* MenuViewController.swift in Sources */,
+				A0DD3AB41CB739A1005C4791 /* defaultMaps.swift in Sources */,
 				A00543111CA74EA900656D5A /* RatingsViewController.swift in Sources */,
 				3E8CE5331C92AE30002A4A5B /* SignUpViewController.swift in Sources */,
 				A0E009BC1CA4D4B8003DD632 /* MainPageViewController.swift in Sources */,
@@ -439,10 +448,13 @@
 			baseConfigurationReference = D1D5377566DD79BDA9E6B34C /* Pods-VFix_Expert.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = VFix_Expert/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "https---github.com-Farhad33-VFix-Expert.VFix-Expert";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -451,10 +463,13 @@
 			baseConfigurationReference = 5D61062AE78C63CFB19FDB1E /* Pods-VFix_Expert.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = VFix_Expert/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "https---github.com-Farhad33-VFix-Expert.VFix-Expert";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

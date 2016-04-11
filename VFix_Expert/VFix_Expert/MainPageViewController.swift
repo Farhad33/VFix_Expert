@@ -9,7 +9,14 @@
 import UIKit
 import MMDrawerController
 import MapKit
+import Alamofire
 import CoreLocation
+
+let sessionToken = "22719873bdbb43cf0cc7f77d6e857e9e"
+var endPoint = "companies/13772899/appointments"
+let APIKey = "f8d0c6b95ab7f5316a7bff112b40bfd2def192a0"
+let baseUrl = "https://www.agendize.com/api/2.0/scheduling/"
+
 
 class MainPageViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
 
@@ -28,7 +35,7 @@ class MainPageViewController: UIViewController, CLLocationManagerDelegate, MKMap
 
         
         
-        let location: String = "1 Infinite Loop, CA, USA"
+        let location: String = "50 phelan ave sanfrancisco CA"
         let geocoder: CLGeocoder = CLGeocoder()
         geocoder.geocodeAddressString(location,completionHandler: {(placemarks: [CLPlacemark]?, error: NSError?) -> Void in
             if (placemarks?.count > 0) {
@@ -56,6 +63,19 @@ class MainPageViewController: UIViewController, CLLocationManagerDelegate, MKMap
         locationManager.distanceFilter = 200
         locationManager.requestWhenInUseAuthorization()
         
+
+        NetworkRequest(sessionToken, endPoint: endPoint)
+        
+    }
+    
+    
+    func NetworkRequest(sessionToken: String, endPoint: String) {
+        Alamofire.request(.GET, "\(baseUrl)\(endPoint)?apiKey=\(APIKey)&token=\(sessionToken)")
+            
+            .responseJSON { response in
+                print(response)
+        }
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -81,6 +101,7 @@ class MainPageViewController: UIViewController, CLLocationManagerDelegate, MKMap
             locationManager.startUpdatingLocation()
         }
     }
+    
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {

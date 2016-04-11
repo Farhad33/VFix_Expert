@@ -7,16 +7,27 @@
 //
 
 import UIKit
-import MMDrawerController 
+import MMDrawerController
+import TPDMapsApp
 
-class SettingsViewController: UIViewController {
-
+class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+    
+    
+    let availableMapsApps = TPDMapsApp.availableMapsAppsSortedByName()
+    var mapsIcons: [String] = ["Dashboard.png", "Profile.png", "Schedule.png"]
+    @IBOutlet weak var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.barTintColor = UIColor(red: 20/255.0, green: 157/255.0, blue: 234/255.0, alpha: 1.0)
-//        navigationController?.navigationBar.barStyle = UIBarStyle.Black
+        
+//          navigationController?.navigationBar.barStyle = UIBarStyle.Black
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         // Do any additional setup after loading the view.
+        tableview.delegate = self
+        tableview.dataSource = self
+        tableview.scrollEnabled = false
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +40,54 @@ class SettingsViewController: UIViewController {
     @IBAction func menuButtonTapped(sender: AnyObject) {
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.drawerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("defaultMapsCell", forIndexPath: indexPath) as! defaultMapsCell
+        let app = availableMapsApps![indexPath.row] as! TPDMapsApp
+        cell.mapsAppImage.image = UIImage(named: mapsIcons[indexPath.row])
+        cell.mapsAppName.text = app.name
+        cell.mapsAppName.enabled = app.installed
+        
+        if !app.installed{
+            cell.hidden = false
+        }
+        return cell
+        
+    }
+    override func preferredStatusBarStyle() -> UIStatusBarStyle  {
+        return .LightContent
+    }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return availableMapsApps.count
+    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let cell = tableView.dequeueReusableCellWithIdentifier("defaultMapsCell", forIndexPath: indexPath) as! defaultMapsCell
+        let app = availableMapsApps![indexPath.row] as! TPDMapsApp
+        let chosenMap: defaultMaps = defaultMaps()
+        switch(indexPath.row){
+        case 0:
+//            cell.checkBoxView.setOn(true, animated: true)
+//            app.openWithQuery("100 Van Ness Ave San Francisco CA 94102");
+            chosenMap.setDefault(app)
+            print(indexPath.row)
+            break
+        case 1:
+//            cell.checkBoxView.setOn(true, animated: true)
+//            app.openWithQuery("100 Van Ness Ave San Francisco CA 94102");
+            chosenMap.setDefault(app)
+            print(indexPath.row)
+            break
+        case 2:
+//            cell.checkBoxView.setOn(true, animated: true)
+//            app.openWithQuery("100 Van Ness Ave San Francisco CA 94102");
+            chosenMap.setDefault(app)
+            print(indexPath.row)
+            break
+        default:
+            print(indexPath.row)
+        }
     }
 
     /*

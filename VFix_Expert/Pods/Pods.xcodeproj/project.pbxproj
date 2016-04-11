@@ -7,126 +7,230 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00AB9667C6E85C84AA87F4055C95475D /* MMDrawerController+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 14746FCDF6FA99830C50A15549FA82AA /* MMDrawerController+Subclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0109E668ACA78BD94B428CF182521B50 /* Pods-VFix_Expert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C82201027E067197DC45E7D63EE1A26 /* Pods-VFix_Expert-dummy.m */; };
-		1BE6CF55F21915FE9194F67B7AFBFE4F /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF68CA996474BD193BDE685FCE32D8C /* MMDrawerBarButtonItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		2365690974EF27DA50179A66994976C2 /* TPDURLQueryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F81D6C43D6EDB33489BEB7266F34524D /* TPDURLQueryItem.m */; };
-		2550DF6FF42DCDC754EA66884350A548 /* MMDrawerBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C49B3E13E0F650430898A54FF90373D2 /* MMDrawerBarButtonItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C0E7B14F4D9D011CDD02BE012EA02A5 /* MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = B508F664EBCF75B6C8893A632F9CC57C /* MMDrawerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2D5F7CCF65A3EE56F2D5E2E4076ACB4F /* TPDURLUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = EC049EED625137FA02F941C019542588 /* TPDURLUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B8CBBEB4F30D9CBAF21AA0E4A724C67 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373D9DC20BCECE589CAF7227F453E9A9 /* MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		402D489E3CC8EAC3F996450C7EA21027 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */; };
-		493D418569461B2EB5A22646F5F0DB1D /* TPDAppleMapsApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 14BD77964E9FDC6E6B9486CF7F8B034C /* TPDAppleMapsApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4A6B67FBD446549DC0364E250EE3B781 /* MMDrawerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EADCB465E1DA8A2AFB5639CB672D53B0 /* MMDrawerController-dummy.m */; };
-		5D5E9FF3A03D137CB569F33C19F37A0A /* TPDWazeMapsApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 622897B0D2E8E74832B3F98AE30CBF3E /* TPDWazeMapsApp.m */; };
-		63AFE0ED1CBD542FEF26CFE3053F100C /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8F6A5A9C4341BBF10E85DE2566629E /* UIViewController+MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		6BF76D5F380E3ECFCD2727A07A4F4CF1 /* TPDURLQueryItem.h in Headers */ = {isa = PBXBuildFile; fileRef = B88F5429F6A83D23620E0FFC336AB8FA /* TPDURLQueryItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6BFFEABB81C3ED8B29E8D817AC3AE2D5 /* TPDGoogleMapsApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CB4E260F054E2C272193DE877996701 /* TPDGoogleMapsApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		75BF8C8AA90168468F1C56BF2921A24D /* TPDMapsApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C70ED6ED195E51122DB762DD831A1F /* TPDMapsApp-dummy.m */; };
-		7D2E8F034B237654512FD95066732647 /* TPDMapsApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DB6474A2E6C812948EC1767880A98ED /* TPDMapsApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7E5C8A9390AE8BAE813714A0510CE030 /* TPDMapsApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48C69F7608636F572F573C9BFB6C1257 /* TPDMapsApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00AB9667C6E85C84AA87F4055C95475D /* MMDrawerController+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = A116E8966334B2A4B17611BB95FB63EF /* MMDrawerController+Subclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EFD1FF643346FF85C83679F659672CA /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0314F4650AA7212AC7CD9C862D0F6C /* Stream.swift */; };
+		13399901A139E4616B7D1976E74CBAE2 /* TPDMapsApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB3B16FF79ACCD32A204BC69EEA4451 /* TPDMapsApp-dummy.m */; };
+		137CF51F4FBE1C8162297FED260F5381 /* Pods-VFix_Expert-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 935E66CD9ED88180810DBFA0FC221215 /* Pods-VFix_Expert-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18AD55A048EBA023CCF35354278F959C /* TPDAppleMapsApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE6B9FD77E54C02BA32EB6140CF4E9A /* TPDAppleMapsApp.m */; };
+		1BE6CF55F21915FE9194F67B7AFBFE4F /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F807F82D3A44E8B06D8E2F8CE3346043 /* MMDrawerBarButtonItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		227182790ECBCA9F05EBE542662DC4F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */; };
+		2336A7F0F45440935556D3DDAC798E27 /* CosmosLayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40DF6F36F5F49EB33366E95F832C944 /* CosmosLayerHelper.swift */; };
+		2550DF6FF42DCDC754EA66884350A548 /* MMDrawerBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = A3F8D5256461B33708D7A9AC43E18C9E /* MMDrawerBarButtonItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2855A73FE27354065611744350526A3F /* TPDWazeMapsApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C1AD6A6DFF98417AA0E1734D5B9B608 /* TPDWazeMapsApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		299992941CFA463D0A7204190D39FA73 /* CosmosRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C86760767D70763F96645447F05C821 /* CosmosRating.swift */; };
+		2C0E7B14F4D9D011CDD02BE012EA02A5 /* MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = F5E30ED6510A4DAADBE01DB4138B6F84 /* MMDrawerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30A8F35FCAB29F5FBFC9F3F7E25A3B6B /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BFC2FAE66EFFBBB9DDBF8FC9F744E /* ServerTrustPolicy.swift */; };
+		31412C0329E070BBFE5802CAC60A26F9 /* TPDMapsApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF706089A9365D454D424791012AEF /* TPDMapsApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3767CC6B69BCC7DAF06B700AC04FE2A1 /* TPDMapQuestMapsApp.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB8D70DB88B41319F253D1CFD42F339 /* TPDMapQuestMapsApp.m */; };
+		3B8CBBEB4F30D9CBAF21AA0E4A724C67 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C9C3B9B139A3ADE6FCB56DB2E14436 /* MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3E73DB65BEC900EFC6EC35C5F2A526B3 /* CosmosAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A396C53C67ECA182E4DA13A661BD832B /* CosmosAccessibility.swift */; };
+		3E9392CB5BD9C0CC47B04EDB40639558 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C323FA15C3E84631E59F7C5970C124 /* Validation.swift */; };
+		3EDE1B308AC0556EE7560CDD0AFEF5E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */; };
+		3EFCCC931EFB340108AB20B34C9FD626 /* CosmosTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2902BE4B0049893AA2FF51A1094260AB /* CosmosTouch.swift */; };
+		3F9A192B65484D9E4CF20C64FD8F02CF /* TPDURLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1566CD157116A1E3ACEBAB08FBC1ED4B /* TPDURLUtilities.m */; };
+		4A6B67FBD446549DC0364E250EE3B781 /* MMDrawerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBD36F7465D818EC30ABF1EFD1E1123 /* MMDrawerController-dummy.m */; };
+		5FC4B63DCCCD027324948BB587F15445 /* TPDMapsApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4671189FCF105AB22A87DAE383DDB80B /* TPDMapsApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		606A219B918881A70A78CD91EACDA8F7 /* Cosmos-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E4B959BB16C774FB7B2EDD2FF1525B0 /* Cosmos-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61137E758A762DBADEAAE6454CB06EA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */; };
+		62A8CA31EA35172D3375E11586921F82 /* CosmosTouchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BB22DFE3AD01543D96C0EB73E4D63D /* CosmosTouchTarget.swift */; };
+		63AFE0ED1CBD542FEF26CFE3053F100C /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FB0B946D5271F575C9EC7D76BE0942 /* UIViewController+MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		63ECC77E4E536666556C8D2791280861 /* StarLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5424CC298C03A6077FA3F0A3F71A0D0A /* StarLayer.swift */; };
+		69A447D12E60E5C3451DA30C6BB4BF7F /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6BE9EB5209796CF22737382F02D6B4 /* Manager.swift */; };
+		6BD18651BF9F0D4A2AD13A42DD5CA678 /* TPDGoogleMapsApp.m in Sources */ = {isa = PBXBuildFile; fileRef = E3872EBB9B072512799D072B952857E1 /* TPDGoogleMapsApp.m */; };
+		72A8D1EAA2A0AA75463CBB779C3CCC87 /* Pods-VFix_Expert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C82201027E067197DC45E7D63EE1A26 /* Pods-VFix_Expert-dummy.m */; };
+		7CCF424046BEED00EB99738D76C64132 /* StarFillMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3826DBB7C7193E9F5F3169B9DB12767 /* StarFillMode.swift */; };
 		7F5F911A1133F3E3EC21B0D60AAE3C8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */; };
-		87E9DF92EC59F187381F74D34ECC797D /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D00FF25217A43E30521A59A986B28B /* MMDrawerVisualState.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		8A9A4E16F1F8626B00E3437D396476B5 /* Pods-VFix_Expert-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 935E66CD9ED88180810DBFA0FC221215 /* Pods-VFix_Expert-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9E9D43CEA27F64D0A2D7C4A095D74064 /* TPDMapsApp.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F0BC35FCD62C7770118869DEF272CE /* TPDMapsApp.m */; };
-		A071D0EC0B86BECDB1F5D44511AB4E1A /* MMDrawerVisualState.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9A825E2A4B7E3085467E2759937FC2 /* MMDrawerVisualState.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A1C43594F1539A3FBBB8059E33B985AC /* TPDURLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2A956609860EEA6ABFAB5B15E8F880 /* TPDURLUtilities.m */; };
-		A839EBBBCA86D330FC9C0638452877F0 /* MMDrawerController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E5447A144E78671DD01666201BD2E85 /* MMDrawerController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		848CEFBFC69DEBAF0E18885F3269F439 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E529DAD83EB74D291D5A98CEFD1EB797 /* ResponseSerialization.swift */; };
+		87E9DF92EC59F187381F74D34ECC797D /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D35EFC0797569CA75EA7A96340061F3 /* MMDrawerVisualState.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		883E1BE9856159DB1EBBEBEEA85D8199 /* CosmosSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C686FB415B8F8265E2540699CD09307 /* CosmosSize.swift */; };
+		9077ECA2FA7B9C5D73365490A3D8898F /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B2567D735C24D287B54BBE9C68C75 /* Download.swift */; };
+		984ACF077007E44906F6A2F419E3D3C9 /* CosmosLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1803BADFE8004061C9BD6EFD81EB077A /* CosmosLayers.swift */; };
+		98F3B06BDFB855DF68B06B9664059BB3 /* TPDMotionXGPSMapsApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FF019FDA63E1453934383053AFF506 /* TPDMotionXGPSMapsApp.m */; };
+		9D1D58A5ED379ABDA6BF567CE70A6372 /* Cosmos-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4289680EC56DFC9505347F6BE27B4FB2 /* Cosmos-dummy.m */; };
+		9DA4707CD6A8069AA7A42A375EE7DD4B /* TPDGoogleMapsApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 67CA12F4E0BBE5917CDCD12ADC25EF21 /* TPDGoogleMapsApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A071D0EC0B86BECDB1F5D44511AB4E1A /* MMDrawerVisualState.h in Headers */ = {isa = PBXBuildFile; fileRef = 3370B8967C15990AB0189D421673EEE8 /* MMDrawerVisualState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A0C58A338DA547DC3EAA5CD10A7D305E /* CosmosLocalizedRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D56F92DE09436C4137ED09DC76603F /* CosmosLocalizedRating.swift */; };
+		A215FAB60CB15B6E5FA3A15E9E350D7D /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3587D6404E90D37C142F5A5920139E1A /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A839EBBBCA86D330FC9C0638452877F0 /* MMDrawerController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 30D510090185914E735F71C39988A95E /* MMDrawerController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A84E190C472D28E1EB771327D55A0257 /* CosmosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F9D00A610BD8B45CBF06014C4DD760 /* CosmosView.swift */; };
+		A8B5EDB7371475F62767B297B1A10CDE /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EF84C6E017AA32A94F460ACE4A0E1E /* ParameterEncoding.swift */; };
+		AD92524FA1D54A38C035D09DF2BC1780 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */; };
+		AEB59AA3A5B8111151CC12845EA5A731 /* TPDMotionXGPSMapsApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA0B086CBCE7189F2B0763897811A96 /* TPDMotionXGPSMapsApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA8B58BD8C0D06680BA81693D7454F9D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18F24645AA4D651DFC7B69A3A0833DB /* QuartzCore.framework */; };
-		BB8C39243CC4E03A34DC5E269EA1E7FA /* TPDMotionXGPSMapsApp.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7286A2281457CE2AAD403AD51CA1A5 /* TPDMotionXGPSMapsApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE306CCD326D75404D8EAE5FCEC6C821 /* TPDNavigonMapsApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0EDC484113070BBCDB4066C4C81865 /* TPDNavigonMapsApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C39367B780B1662501007B287C16A907 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */; };
-		CAE2EF6171328E8B33AE6E7A2E96597B /* UIViewController+MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2BAB9CAAD7A583D3EA250244764DD3 /* UIViewController+MMDrawerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D330B094AA7A7A5B50BAD3201FADDB14 /* TPDMotionXGPSMapsApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E27B8AF18660C3CD0E0ACDA64B29BC /* TPDMotionXGPSMapsApp.m */; };
-		DD15AF4B0CC60E383182224F4F006C06 /* TPDGoogleMapsApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF301FB11BFA8C86335B3761DAE14BA /* TPDGoogleMapsApp.m */; };
-		E5A9BC236C4492C7C6E5A417019CA27F /* TPDNavigonMapsApp.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC97918DDE07E8C5671744FCD151952 /* TPDNavigonMapsApp.m */; };
-		E7781417C0EEEB627BAA5EAA34895B90 /* TPDMapQuestMapsApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 511D6E5A91BE405D58F58DFB3A5CEF1E /* TPDMapQuestMapsApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F40AB0FD689C26F1A5C2B1DA6E4D49B6 /* TPDWazeMapsApp.h in Headers */ = {isa = PBXBuildFile; fileRef = F7A5393C31888F93F33033C54E70736B /* TPDWazeMapsApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FC031F3F5375BD49000F62D469BF7757 /* TPDAppleMapsApp.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D404903C40119E0E696575889697EB /* TPDAppleMapsApp.m */; };
-		FF987318B8CEC6A9C7F11D33BA7BC8F0 /* TPDMapQuestMapsApp.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA547D1E56A2E0BC1A4C7E3609833D1 /* TPDMapQuestMapsApp.m */; };
+		BCF41E4DCCCF4724306F0A6C4F33EA38 /* TPDMapQuestMapsApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 447D355C7F51D431992BAF392A7893AB /* TPDMapQuestMapsApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C6241EE15DDF797CD77301741682C63C /* TPDWazeMapsApp.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7F02F6161CB1D1FA8FE0416D3F04A1 /* TPDWazeMapsApp.m */; };
+		CAE2EF6171328E8B33AE6E7A2E96597B /* UIViewController+MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = DB8106B7C12550DBB12E78784FEC22BA /* UIViewController+MMDrawerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC00126E443C3CEEFA221930E1B0CC54 /* CosmosDefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCCC6F62786E48AB142AE36A18110EC /* CosmosDefaultSettings.swift */; };
+		CEF8C6D2FC8ECD7687FB3BB384F194FF /* TPDNavigonMapsApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7BBD31A0BF6EF13F2177794C9E4258 /* TPDNavigonMapsApp.m */; };
+		D0962564B50DBABE6DCF48B58393718E /* TPDAppleMapsApp.h in Headers */ = {isa = PBXBuildFile; fileRef = BE6D5BD45635B2525E22DB2A32DEADC3 /* TPDAppleMapsApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D39B20327B1DAF6D8753ED5685DDE6DC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB38776BBB4AFC002DE3CA3578B344C /* MultipartFormData.swift */; };
+		D6AAB150EC3E9B43E8D75FA8E1826EAC /* TPDURLQueryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF3AE7B49FC0F4E7E06FEC4706EFB5D /* TPDURLQueryItem.m */; };
+		D7453EEDB3CD57C33612C94FCBF8A57E /* CosmosSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0327EDF9F11CEBFD1DE30A4CCD711E86 /* CosmosSettings.swift */; };
+		D8136D3B59D4753690000387A8082B54 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C1D480C8825C0AE81506D3DE63B46B43 /* Alamofire-dummy.m */; };
+		D845A196D602459BE530B485A970601B /* TPDMapsApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CEAD506712B845B3A9FB990338912B /* TPDMapsApp.m */; };
+		DF717A08CF1193FFCA4FE75041293A18 /* CosmosText.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8DE856EBFA704980BDEF886672F9DC /* CosmosText.swift */; };
+		E6D041ABFBB48D9F1D8AA96E7D4C6C34 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429AA07DA6FDD38C4E2AC14624F4D8F /* Result.swift */; };
+		E7B226D8BB16471AD63665A794036E44 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6853B776599C1DBA0DA368EB4AE28D1A /* Upload.swift */; };
+		E816509B4E3564E1A117CBDC0D845D69 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BAB89F22AF8E73D42042DF523ECBF7 /* Alamofire.swift */; };
+		EA89C4F3AB15689212D86A201F47E699 /* TPDURLUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 873E3FD8B41CF1B61052B78C0A7F7230 /* TPDURLUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBDF6C9C0D1BBE9F6D4A2A7F15C3EE0F /* TPDURLQueryItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D3E4A085B05B09AF8A408651116650A /* TPDURLQueryItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F16FEF1CB9703FE1887C8A618B84B7C6 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C7D33854FEA158C9958AC8C2D597A /* Request.swift */; };
+		F3CDEF7BC051BAF30C09A468D4B01DA6 /* TPDNavigonMapsApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C767C4656794C189CE2CD2F525E9833 /* TPDNavigonMapsApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE1F95F519342B9266EB69B23B4336CF /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF10E72E1F857077255FC8CFF5457C8 /* Error.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		420DF7640831C7022027361BE00CCABF /* PBXContainerItemProxy */ = {
+		6049B9C8F1D61AF731645FCDB459E4F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B2F30D90D85A544E9EFE2A49D392C25;
+			remoteInfo = Alamofire;
+		};
+		7B83C508C7F2015BDBA4550E742BA497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 168D3353E7817EFF3CFE5B062A8C4F47;
+			remoteInfo = TPDMapsApp;
+		};
+		98323486692471E58FC1C13906A8B5A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 96D3562E47E4792B0A6093A0323EB398;
 			remoteInfo = MMDrawerController;
 		};
-		8BDD0A71482F00343BF0D3F7571F4D23 /* PBXContainerItemProxy */ = {
+		EBB629C2C519BB309EBDEAC17A63F337 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8CB102FA61DD88A6C4FC58265D500A00;
-			remoteInfo = TPDMapsApp;
+			remoteGlobalIDString = 608B49B5DDACC601EE8044A1931993F9;
+			remoteInfo = Cosmos;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0327EDF9F11CEBFD1DE30A4CCD711E86 /* CosmosSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSettings.swift; path = Cosmos/CosmosSettings.swift; sourceTree = "<group>"; };
 		03F101698E00DA1F18AFC4491980AE6B /* Pods-VFix_Expert.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-VFix_Expert.modulemap"; sourceTree = "<group>"; };
-		0CF301FB11BFA8C86335B3761DAE14BA /* TPDGoogleMapsApp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPDGoogleMapsApp.m; path = TPDMapsApp/TPDMapsApp/TPDGoogleMapsApp.m; sourceTree = "<group>"; };
-		14746FCDF6FA99830C50A15549FA82AA /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MMDrawerController+Subclass.h"; path = "MMDrawerController/MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
-		14BD77964E9FDC6E6B9486CF7F8B034C /* TPDAppleMapsApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPDAppleMapsApp.h; path = TPDMapsApp/TPDMapsApp/TPDAppleMapsApp.h; sourceTree = "<group>"; };
-		1752AFBB9FB124B1F714764F3049F579 /* MMDrawerController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MMDrawerController.modulemap; sourceTree = "<group>"; };
-		1BD0676C15ACBF63BDAE00509F73CA56 /* TPDMapsApp.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TPDMapsApp.xcconfig; sourceTree = "<group>"; };
-		1D2A956609860EEA6ABFAB5B15E8F880 /* TPDURLUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPDURLUtilities.m; path = TPDMapsApp/TPDMapsApp/TPDURLUtilities.m; sourceTree = "<group>"; };
+		04BAB89F22AF8E73D42042DF523ECBF7 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		076F8521CAAB8330D7540E0413548D9A /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		0AB0029FD2194B89C1CF39DAF42F0D7D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B6BE9EB5209796CF22737382F02D6B4 /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Manager.swift; sourceTree = "<group>"; };
+		0C767C4656794C189CE2CD2F525E9833 /* TPDNavigonMapsApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPDNavigonMapsApp.h; path = TPDMapsApp/TPDMapsApp/TPDNavigonMapsApp.h; sourceTree = "<group>"; };
+		0D35EFC0797569CA75EA7A96340061F3 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerVisualState.m; path = MMDrawerController/MMDrawerVisualState.m; sourceTree = "<group>"; };
+		0DB3B16FF79ACCD32A204BC69EEA4451 /* TPDMapsApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TPDMapsApp-dummy.m"; sourceTree = "<group>"; };
+		12ED69A0671DE8230FD6AD1E910A10F7 /* MMDrawerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MMDrawerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1566CD157116A1E3ACEBAB08FBC1ED4B /* TPDURLUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPDURLUtilities.m; path = TPDMapsApp/TPDMapsApp/TPDURLUtilities.m; sourceTree = "<group>"; };
+		1803BADFE8004061C9BD6EFD81EB077A /* CosmosLayers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayers.swift; path = Cosmos/CosmosLayers.swift; sourceTree = "<group>"; };
+		183B02C73C2342668CEE31CFBD7D21DD /* MMDrawerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMDrawerController.xcconfig; sourceTree = "<group>"; };
+		1C459486ADB77EE239B9110A43A2F384 /* Cosmos-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-prefix.pch"; sourceTree = "<group>"; };
 		23D9244175D3A5EA67B00F7251CB15C9 /* Pods-VFix_Expert.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VFix_Expert.release.xcconfig"; sourceTree = "<group>"; };
 		258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		294248DC089B48586BB01C100AEA4532 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2DB6474A2E6C812948EC1767880A98ED /* TPDMapsApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPDMapsApp.h; path = TPDMapsApp/TPDMapsApp/TPDMapsApp.h; sourceTree = "<group>"; };
-		373D9DC20BCECE589CAF7227F453E9A9 /* MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerController.m; path = MMDrawerController/MMDrawerController.m; sourceTree = "<group>"; };
+		26F9D00A610BD8B45CBF06014C4DD760 /* CosmosView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosView.swift; path = Cosmos/CosmosView.swift; sourceTree = "<group>"; };
+		2902BE4B0049893AA2FF51A1094260AB /* CosmosTouch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouch.swift; path = Cosmos/CosmosTouch.swift; sourceTree = "<group>"; };
+		29325C99963A14D5143BEF69645FF38F /* TPDMapsApp.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TPDMapsApp.xcconfig; sourceTree = "<group>"; };
+		29BB22DFE3AD01543D96C0EB73E4D63D /* CosmosTouchTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouchTarget.swift; path = Cosmos/Helpers/CosmosTouchTarget.swift; sourceTree = "<group>"; };
+		30D510090185914E735F71C39988A95E /* MMDrawerController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController-umbrella.h"; sourceTree = "<group>"; };
+		327BFC2FAE66EFFBBB9DDBF8FC9F744E /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		3370B8967C15990AB0189D421673EEE8 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerVisualState.h; path = MMDrawerController/MMDrawerVisualState.h; sourceTree = "<group>"; };
+		3587D6404E90D37C142F5A5920139E1A /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		363C7D33854FEA158C9958AC8C2D597A /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		3B0314F4650AA7212AC7CD9C862D0F6C /* Stream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = Source/Stream.swift; sourceTree = "<group>"; };
+		3B290CBD70D773A3DE2739452A96276A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40DC2E37A8B73E4FF660D661257C8B6E /* Pods-VFix_Expert-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VFix_Expert-frameworks.sh"; sourceTree = "<group>"; };
-		48C69F7608636F572F573C9BFB6C1257 /* TPDMapsApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TPDMapsApp-umbrella.h"; sourceTree = "<group>"; };
-		511D6E5A91BE405D58F58DFB3A5CEF1E /* TPDMapQuestMapsApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPDMapQuestMapsApp.h; path = TPDMapsApp/TPDMapsApp/TPDMapQuestMapsApp.h; sourceTree = "<group>"; };
-		5CB4E260F054E2C272193DE877996701 /* TPDGoogleMapsApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPDGoogleMapsApp.h; path = TPDMapsApp/TPDMapsApp/TPDGoogleMapsApp.h; sourceTree = "<group>"; };
-		5DCB9CE666516617DD5278F04E2C4F26 /* Pods_VFix_Expert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VFix_Expert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E5447A144E78671DD01666201BD2E85 /* MMDrawerController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController-umbrella.h"; sourceTree = "<group>"; };
-		622897B0D2E8E74832B3F98AE30CBF3E /* TPDWazeMapsApp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPDWazeMapsApp.m; path = TPDMapsApp/TPDMapsApp/TPDWazeMapsApp.m; sourceTree = "<group>"; };
-		73C70ED6ED195E51122DB762DD831A1F /* TPDMapsApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TPDMapsApp-dummy.m"; sourceTree = "<group>"; };
-		76DAE509A504DCA2898EFC534D00C022 /* TPDMapsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TPDMapsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4289680EC56DFC9505347F6BE27B4FB2 /* Cosmos-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cosmos-dummy.m"; sourceTree = "<group>"; };
+		4336B2A4B39786EF7555F6305178548D /* TPDMapsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TPDMapsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		447D355C7F51D431992BAF392A7893AB /* TPDMapQuestMapsApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPDMapQuestMapsApp.h; path = TPDMapsApp/TPDMapsApp/TPDMapQuestMapsApp.h; sourceTree = "<group>"; };
+		4671189FCF105AB22A87DAE383DDB80B /* TPDMapsApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPDMapsApp.h; path = TPDMapsApp/TPDMapsApp/TPDMapsApp.h; sourceTree = "<group>"; };
+		46CEAD506712B845B3A9FB990338912B /* TPDMapsApp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPDMapsApp.m; path = TPDMapsApp/TPDMapsApp/TPDMapsApp.m; sourceTree = "<group>"; };
+		49C323FA15C3E84631E59F7C5970C124 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		4CA0B086CBCE7189F2B0763897811A96 /* TPDMotionXGPSMapsApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPDMotionXGPSMapsApp.h; path = TPDMapsApp/TPDMapsApp/TPDMotionXGPSMapsApp.h; sourceTree = "<group>"; };
+		4FE6B9FD77E54C02BA32EB6140CF4E9A /* TPDAppleMapsApp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPDAppleMapsApp.m; path = TPDMapsApp/TPDMapsApp/TPDAppleMapsApp.m; sourceTree = "<group>"; };
+		5424CC298C03A6077FA3F0A3F71A0D0A /* StarLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarLayer.swift; path = Cosmos/StarLayer.swift; sourceTree = "<group>"; };
+		57FF019FDA63E1453934383053AFF506 /* TPDMotionXGPSMapsApp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPDMotionXGPSMapsApp.m; path = TPDMapsApp/TPDMapsApp/TPDMotionXGPSMapsApp.m; sourceTree = "<group>"; };
+		58EF84C6E017AA32A94F460ACE4A0E1E /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		5D3E4A085B05B09AF8A408651116650A /* TPDURLQueryItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPDURLQueryItem.h; path = TPDMapsApp/TPDMapsApp/TPDURLQueryItem.h; sourceTree = "<group>"; };
+		67CA12F4E0BBE5917CDCD12ADC25EF21 /* TPDGoogleMapsApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPDGoogleMapsApp.h; path = TPDMapsApp/TPDMapsApp/TPDGoogleMapsApp.h; sourceTree = "<group>"; };
+		6853B776599C1DBA0DA368EB4AE28D1A /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
+		6AB38776BBB4AFC002DE3CA3578B344C /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		6D7BBD31A0BF6EF13F2177794C9E4258 /* TPDNavigonMapsApp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPDNavigonMapsApp.m; path = TPDMapsApp/TPDMapsApp/TPDNavigonMapsApp.m; sourceTree = "<group>"; };
+		75C806EAA629AC09CD6DF63BC341D1FE /* Cosmos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Cosmos.modulemap; sourceTree = "<group>"; };
+		790B679EA2A3547708A150558244C5A0 /* Pods_VFix_Expert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VFix_Expert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AF10E72E1F857077255FC8CFF5457C8 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Source/Error.swift; sourceTree = "<group>"; };
+		7C86760767D70763F96645447F05C821 /* CosmosRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosRating.swift; path = Cosmos/CosmosRating.swift; sourceTree = "<group>"; };
+		7FBD36F7465D818EC30ABF1EFD1E1123 /* MMDrawerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MMDrawerController-dummy.m"; sourceTree = "<group>"; };
+		84019C9A4A71FA33C37D7E5157A94639 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		865CD7F334E70C0B96016DF6F2899940 /* Pods-VFix_Expert-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VFix_Expert-acknowledgements.plist"; sourceTree = "<group>"; };
-		8B0EDC484113070BBCDB4066C4C81865 /* TPDNavigonMapsApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPDNavigonMapsApp.h; path = TPDMapsApp/TPDMapsApp/TPDNavigonMapsApp.h; sourceTree = "<group>"; };
+		873E3FD8B41CF1B61052B78C0A7F7230 /* TPDURLUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPDURLUtilities.h; path = TPDMapsApp/TPDMapsApp/TPDURLUtilities.h; sourceTree = "<group>"; };
+		8989E50470429757AB1F595E82E9697A /* TPDMapsApp-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TPDMapsApp-prefix.pch"; sourceTree = "<group>"; };
 		8BA841C868DEA4F5C54DB43ED5C6FD97 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D82FA69126CD820D9C97D51F4C96E68 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90D56F92DE09436C4137ED09DC76603F /* CosmosLocalizedRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLocalizedRating.swift; path = Cosmos/CosmosLocalizedRating.swift; sourceTree = "<group>"; };
 		935E66CD9ED88180810DBFA0FC221215 /* Pods-VFix_Expert-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VFix_Expert-umbrella.h"; sourceTree = "<group>"; };
+		9429AA07DA6FDD38C4E2AC14624F4D8F /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
 		94674B28CB58396FC260E8F67BBBCD6B /* Pods-VFix_Expert-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VFix_Expert-acknowledgements.markdown"; sourceTree = "<group>"; };
-		98E27B8AF18660C3CD0E0ACDA64B29BC /* TPDMotionXGPSMapsApp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPDMotionXGPSMapsApp.m; path = TPDMapsApp/TPDMapsApp/TPDMotionXGPSMapsApp.m; sourceTree = "<group>"; };
+		963B2567D735C24D287B54BBE9C68C75 /* Download.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Download.swift; path = Source/Download.swift; sourceTree = "<group>"; };
+		9C1A0906A93711A620DC7659F922DBF1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C1AD6A6DFF98417AA0E1734D5B9B608 /* TPDWazeMapsApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPDWazeMapsApp.h; path = TPDMapsApp/TPDMapsApp/TPDWazeMapsApp.h; sourceTree = "<group>"; };
+		9C686FB415B8F8265E2540699CD09307 /* CosmosSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSize.swift; path = Cosmos/CosmosSize.swift; sourceTree = "<group>"; };
 		9C82201027E067197DC45E7D63EE1A26 /* Pods-VFix_Expert-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VFix_Expert-dummy.m"; sourceTree = "<group>"; };
-		9E9A825E2A4B7E3085467E2759937FC2 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerVisualState.h; path = MMDrawerController/MMDrawerVisualState.h; sourceTree = "<group>"; };
-		A0D26AD80ABBA79A780237DDBC589C92 /* TPDMapsApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TPDMapsApp.modulemap; sourceTree = "<group>"; };
-		A8F0BC35FCD62C7770118869DEF272CE /* TPDMapsApp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPDMapsApp.m; path = TPDMapsApp/TPDMapsApp/TPDMapsApp.m; sourceTree = "<group>"; };
-		AA0BFD68114D06CBD6262131B636543F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ACC97918DDE07E8C5671744FCD151952 /* TPDNavigonMapsApp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPDNavigonMapsApp.m; path = TPDMapsApp/TPDMapsApp/TPDNavigonMapsApp.m; sourceTree = "<group>"; };
-		AEF68CA996474BD193BDE685FCE32D8C /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerBarButtonItem.m; path = MMDrawerController/MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		9E4B959BB16C774FB7B2EDD2FF1525B0 /* Cosmos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-umbrella.h"; sourceTree = "<group>"; };
+		A116E8966334B2A4B17611BB95FB63EF /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MMDrawerController+Subclass.h"; path = "MMDrawerController/MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		A2FB0B946D5271F575C9EC7D76BE0942 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MMDrawerController.m"; path = "MMDrawerController/UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		A396C53C67ECA182E4DA13A661BD832B /* CosmosAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosAccessibility.swift; path = Cosmos/CosmosAccessibility.swift; sourceTree = "<group>"; };
+		A3F8D5256461B33708D7A9AC43E18C9E /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerBarButtonItem.h; path = MMDrawerController/MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		ACCCC6F62786E48AB142AE36A18110EC /* CosmosDefaultSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosDefaultSettings.swift; path = Cosmos/CosmosDefaultSettings.swift; sourceTree = "<group>"; };
+		AD7F02F6161CB1D1FA8FE0416D3F04A1 /* TPDWazeMapsApp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPDWazeMapsApp.m; path = TPDMapsApp/TPDMapsApp/TPDWazeMapsApp.m; sourceTree = "<group>"; };
+		AD8DE856EBFA704980BDEF886672F9DC /* CosmosText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosText.swift; path = Cosmos/CosmosText.swift; sourceTree = "<group>"; };
 		B18F24645AA4D651DFC7B69A3A0833DB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		B2D00FF25217A43E30521A59A986B28B /* MMDrawerVisualState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerVisualState.m; path = MMDrawerController/MMDrawerVisualState.m; sourceTree = "<group>"; };
-		B508F664EBCF75B6C8893A632F9CC57C /* MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerController.h; path = MMDrawerController/MMDrawerController.h; sourceTree = "<group>"; };
+		B3826DBB7C7193E9F5F3169B9DB12767 /* StarFillMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarFillMode.swift; path = Cosmos/StarFillMode.swift; sourceTree = "<group>"; };
 		B5C4F4D43D94A3F1935B6DA9EE1F84EE /* Pods-VFix_Expert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VFix_Expert.debug.xcconfig"; sourceTree = "<group>"; };
-		B6D404903C40119E0E696575889697EB /* TPDAppleMapsApp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPDAppleMapsApp.m; path = TPDMapsApp/TPDMapsApp/TPDAppleMapsApp.m; sourceTree = "<group>"; };
-		B88F5429F6A83D23620E0FFC336AB8FA /* TPDURLQueryItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPDURLQueryItem.h; path = TPDMapsApp/TPDMapsApp/TPDURLQueryItem.h; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BAD1A0D8A215D42ED554583F8E476ED1 /* MMDrawerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMDrawerController.xcconfig; sourceTree = "<group>"; };
-		BCB17211BB11873A43F4DFDFCBA5782F /* MMDrawerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MMDrawerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBF3AE7B49FC0F4E7E06FEC4706EFB5D /* TPDURLQueryItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPDURLQueryItem.m; path = TPDMapsApp/TPDMapsApp/TPDURLQueryItem.m; sourceTree = "<group>"; };
 		BD04049ED538CBBA93978B5E61B8CB36 /* Pods-VFix_Expert-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VFix_Expert-resources.sh"; sourceTree = "<group>"; };
-		C49B3E13E0F650430898A54FF90373D2 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerBarButtonItem.h; path = MMDrawerController/MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
-		C4E8F8186E9CA84ABEF9D038193C2A96 /* MMDrawerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController-prefix.pch"; sourceTree = "<group>"; };
-		CE7286A2281457CE2AAD403AD51CA1A5 /* TPDMotionXGPSMapsApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPDMotionXGPSMapsApp.h; path = TPDMapsApp/TPDMapsApp/TPDMotionXGPSMapsApp.h; sourceTree = "<group>"; };
-		DC2BAB9CAAD7A583D3EA250244764DD3 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MMDrawerController.h"; path = "MMDrawerController/UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
-		DDA547D1E56A2E0BC1A4C7E3609833D1 /* TPDMapQuestMapsApp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPDMapQuestMapsApp.m; path = TPDMapsApp/TPDMapsApp/TPDMapQuestMapsApp.m; sourceTree = "<group>"; };
-		EADCB465E1DA8A2AFB5639CB672D53B0 /* MMDrawerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MMDrawerController-dummy.m"; sourceTree = "<group>"; };
-		EC049EED625137FA02F941C019542588 /* TPDURLUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPDURLUtilities.h; path = TPDMapsApp/TPDMapsApp/TPDURLUtilities.h; sourceTree = "<group>"; };
-		ED2CBAA90CC40E0FBE2C21796FCF04AF /* TPDMapsApp-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TPDMapsApp-prefix.pch"; sourceTree = "<group>"; };
-		F7A5393C31888F93F33033C54E70736B /* TPDWazeMapsApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPDWazeMapsApp.h; path = TPDMapsApp/TPDMapsApp/TPDWazeMapsApp.h; sourceTree = "<group>"; };
-		F81D6C43D6EDB33489BEB7266F34524D /* TPDURLQueryItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPDURLQueryItem.m; path = TPDMapsApp/TPDMapsApp/TPDURLQueryItem.m; sourceTree = "<group>"; };
-		FD8F6A5A9C4341BBF10E85DE2566629E /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MMDrawerController.m"; path = "MMDrawerController/UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		BE6D5BD45635B2525E22DB2A32DEADC3 /* TPDAppleMapsApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPDAppleMapsApp.h; path = TPDMapsApp/TPDMapsApp/TPDAppleMapsApp.h; sourceTree = "<group>"; };
+		BFEF706089A9365D454D424791012AEF /* TPDMapsApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TPDMapsApp-umbrella.h"; sourceTree = "<group>"; };
+		C1D480C8825C0AE81506D3DE63B46B43 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		CAB15B22F96CA406A9169563E6D255CD /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		CE96417FC4D87F8A3B5542A18369BC6A /* MMDrawerController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MMDrawerController.modulemap; sourceTree = "<group>"; };
+		D55FF43F64B4E5B67E2DF4DA5983CF71 /* Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5A462CBD44305C632C8072712022803 /* TPDMapsApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TPDMapsApp.modulemap; sourceTree = "<group>"; };
+		DB8106B7C12550DBB12E78784FEC22BA /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MMDrawerController.h"; path = "MMDrawerController/UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		E00A06B61DD3D8D6BAA113B9D044D360 /* Cosmos.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cosmos.xcconfig; sourceTree = "<group>"; };
+		E3872EBB9B072512799D072B952857E1 /* TPDGoogleMapsApp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPDGoogleMapsApp.m; path = TPDMapsApp/TPDMapsApp/TPDGoogleMapsApp.m; sourceTree = "<group>"; };
+		E40DF6F36F5F49EB33366E95F832C944 /* CosmosLayerHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayerHelper.swift; path = Cosmos/CosmosLayerHelper.swift; sourceTree = "<group>"; };
+		E529DAD83EB74D291D5A98CEFD1EB797 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		E7C9C3B9B139A3ADE6FCB56DB2E14436 /* MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerController.m; path = MMDrawerController/MMDrawerController.m; sourceTree = "<group>"; };
+		E8BBE11BC47EC7B0754299F6BB6A9F82 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		E99258F4E013352FE5F6DE874968C7F0 /* MMDrawerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController-prefix.pch"; sourceTree = "<group>"; };
+		ECB8D70DB88B41319F253D1CFD42F339 /* TPDMapQuestMapsApp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPDMapQuestMapsApp.m; path = TPDMapsApp/TPDMapsApp/TPDMapQuestMapsApp.m; sourceTree = "<group>"; };
+		F5E30ED6510A4DAADBE01DB4138B6F84 /* MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerController.h; path = MMDrawerController/MMDrawerController.h; sourceTree = "<group>"; };
+		F807F82D3A44E8B06D8E2F8CE3346043 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerBarButtonItem.m; path = MMDrawerController/MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		97D43DF9CAD4674B7753FC70876313D5 /* Frameworks */ = {
+		0C32F0A2C45D29745087F7072F59547D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				402D489E3CC8EAC3F996450C7EA21027 /* Foundation.framework in Frameworks */,
+				3EDE1B308AC0556EE7560CDD0AFEF5E0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14409D151BCE19B917E1ACDD56DC85F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61137E758A762DBADEAAE6454CB06EA7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EE95CB330A4685331E024B313301876 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD92524FA1D54A38C035D09DF2BC1780 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,48 +243,49 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D3EAF40384653EACA2F8988F65792F81 /* Frameworks */ = {
+		DDF29492FA055C53559A30D4C6E1EE1E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C39367B780B1662501007B287C16A907 /* Foundation.framework in Frameworks */,
+				227182790ECBCA9F05EBE542662DC4F2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09CB254060AA383B111B5BED7E66CA12 /* MMDrawerVisualStates */ = {
+		13216A72766ED5B02048CECFEB8882D4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9E9A825E2A4B7E3085467E2759937FC2 /* MMDrawerVisualState.h */,
-				B2D00FF25217A43E30521A59A986B28B /* MMDrawerVisualState.m */,
-			);
-			name = MMDrawerVisualStates;
-			sourceTree = "<group>";
-		};
-		248E693B17032B676D1C0B020901AEBB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				AA0BFD68114D06CBD6262131B636543F /* Info.plist */,
-				1752AFBB9FB124B1F714764F3049F579 /* MMDrawerController.modulemap */,
-				BAD1A0D8A215D42ED554583F8E476ED1 /* MMDrawerController.xcconfig */,
-				EADCB465E1DA8A2AFB5639CB672D53B0 /* MMDrawerController-dummy.m */,
-				C4E8F8186E9CA84ABEF9D038193C2A96 /* MMDrawerController-prefix.pch */,
-				5E5447A144E78671DD01666201BD2E85 /* MMDrawerController-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/MMDrawerController";
-			sourceTree = "<group>";
-		};
-		287D1076E0A3B0E33DD5DA35A2A96C6D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BCB17211BB11873A43F4DFDFCBA5782F /* MMDrawerController.framework */,
-				5DCB9CE666516617DD5278F04E2C4F26 /* Pods_VFix_Expert.framework */,
-				76DAE509A504DCA2898EFC534D00C022 /* TPDMapsApp.framework */,
+				84019C9A4A71FA33C37D7E5157A94639 /* Alamofire.framework */,
+				D55FF43F64B4E5B67E2DF4DA5983CF71 /* Cosmos.framework */,
+				12ED69A0671DE8230FD6AD1E910A10F7 /* MMDrawerController.framework */,
+				790B679EA2A3547708A150558244C5A0 /* Pods_VFix_Expert.framework */,
+				4336B2A4B39786EF7555F6305178548D /* TPDMapsApp.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1A659A52CE0280F8BDBD505D2BF8C1B2 /* Cosmos */ = {
+			isa = PBXGroup;
+			children = (
+				A396C53C67ECA182E4DA13A661BD832B /* CosmosAccessibility.swift */,
+				ACCCC6F62786E48AB142AE36A18110EC /* CosmosDefaultSettings.swift */,
+				E40DF6F36F5F49EB33366E95F832C944 /* CosmosLayerHelper.swift */,
+				1803BADFE8004061C9BD6EFD81EB077A /* CosmosLayers.swift */,
+				90D56F92DE09436C4137ED09DC76603F /* CosmosLocalizedRating.swift */,
+				7C86760767D70763F96645447F05C821 /* CosmosRating.swift */,
+				0327EDF9F11CEBFD1DE30A4CCD711E86 /* CosmosSettings.swift */,
+				9C686FB415B8F8265E2540699CD09307 /* CosmosSize.swift */,
+				AD8DE856EBFA704980BDEF886672F9DC /* CosmosText.swift */,
+				2902BE4B0049893AA2FF51A1094260AB /* CosmosTouch.swift */,
+				29BB22DFE3AD01543D96C0EB73E4D63D /* CosmosTouchTarget.swift */,
+				26F9D00A610BD8B45CBF06014C4DD760 /* CosmosView.swift */,
+				B3826DBB7C7193E9F5F3169B9DB12767 /* StarFillMode.swift */,
+				5424CC298C03A6077FA3F0A3F71A0D0A /* StarLayer.swift */,
+				F9C8EDDCD8CF498E560E786FE5F9A575 /* Support Files */,
+			);
+			path = Cosmos;
 			sourceTree = "<group>";
 		};
 		3926C638AD0708942C88C2BC89261735 /* iOS */ = {
@@ -192,6 +297,46 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		3B07617ECBAFF48D4B8407CA9B6E66B8 /* TPDMapsApp */ = {
+			isa = PBXGroup;
+			children = (
+				BE6D5BD45635B2525E22DB2A32DEADC3 /* TPDAppleMapsApp.h */,
+				4FE6B9FD77E54C02BA32EB6140CF4E9A /* TPDAppleMapsApp.m */,
+				67CA12F4E0BBE5917CDCD12ADC25EF21 /* TPDGoogleMapsApp.h */,
+				E3872EBB9B072512799D072B952857E1 /* TPDGoogleMapsApp.m */,
+				447D355C7F51D431992BAF392A7893AB /* TPDMapQuestMapsApp.h */,
+				ECB8D70DB88B41319F253D1CFD42F339 /* TPDMapQuestMapsApp.m */,
+				4671189FCF105AB22A87DAE383DDB80B /* TPDMapsApp.h */,
+				46CEAD506712B845B3A9FB990338912B /* TPDMapsApp.m */,
+				4CA0B086CBCE7189F2B0763897811A96 /* TPDMotionXGPSMapsApp.h */,
+				57FF019FDA63E1453934383053AFF506 /* TPDMotionXGPSMapsApp.m */,
+				0C767C4656794C189CE2CD2F525E9833 /* TPDNavigonMapsApp.h */,
+				6D7BBD31A0BF6EF13F2177794C9E4258 /* TPDNavigonMapsApp.m */,
+				5D3E4A085B05B09AF8A408651116650A /* TPDURLQueryItem.h */,
+				BBF3AE7B49FC0F4E7E06FEC4706EFB5D /* TPDURLQueryItem.m */,
+				873E3FD8B41CF1B61052B78C0A7F7230 /* TPDURLUtilities.h */,
+				1566CD157116A1E3ACEBAB08FBC1ED4B /* TPDURLUtilities.m */,
+				9C1AD6A6DFF98417AA0E1734D5B9B608 /* TPDWazeMapsApp.h */,
+				AD7F02F6161CB1D1FA8FE0416D3F04A1 /* TPDWazeMapsApp.m */,
+				E6ED8D501AC663864DB219B77F42F666 /* Support Files */,
+			);
+			path = TPDMapsApp;
+			sourceTree = "<group>";
+		};
+		41913EF581F8C4288B3A757CBC9424E7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				076F8521CAAB8330D7540E0413548D9A /* Alamofire.modulemap */,
+				E8BBE11BC47EC7B0754299F6BB6A9F82 /* Alamofire.xcconfig */,
+				C1D480C8825C0AE81506D3DE63B46B43 /* Alamofire-dummy.m */,
+				CAB15B22F96CA406A9169563E6D255CD /* Alamofire-prefix.pch */,
+				3587D6404E90D37C142F5A5920139E1A /* Alamofire-umbrella.h */,
+				8D82FA69126CD820D9C97D51F4C96E68 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,16 +345,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4E3E6D0FD2F8A6EEE06807E43FB29876 /* Core */ = {
+		5709751D3D966832BBACAB01BBCD3246 /* MMDrawerBarButtonItem */ = {
 			isa = PBXGroup;
 			children = (
-				B508F664EBCF75B6C8893A632F9CC57C /* MMDrawerController.h */,
-				373D9DC20BCECE589CAF7227F453E9A9 /* MMDrawerController.m */,
-				14746FCDF6FA99830C50A15549FA82AA /* MMDrawerController+Subclass.h */,
-				DC2BAB9CAAD7A583D3EA250244764DD3 /* UIViewController+MMDrawerController.h */,
-				FD8F6A5A9C4341BBF10E85DE2566629E /* UIViewController+MMDrawerController.m */,
+				A3F8D5256461B33708D7A9AC43E18C9E /* MMDrawerBarButtonItem.h */,
+				F807F82D3A44E8B06D8E2F8CE3346043 /* MMDrawerBarButtonItem.m */,
 			);
-			name = Core;
+			name = MMDrawerBarButtonItem;
 			sourceTree = "<group>";
 		};
 		5DD95E84CC8FC9383CB1A4F57A358407 /* Pods-VFix_Expert */ = {
@@ -230,6 +372,32 @@
 			path = "Target Support Files/Pods-VFix_Expert";
 			sourceTree = "<group>";
 		};
+		6440BDCFE8855167D905C43CFB438080 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0AB0029FD2194B89C1CF39DAF42F0D7D /* Info.plist */,
+				CE96417FC4D87F8A3B5542A18369BC6A /* MMDrawerController.modulemap */,
+				183B02C73C2342668CEE31CFBD7D21DD /* MMDrawerController.xcconfig */,
+				7FBD36F7465D818EC30ABF1EFD1E1123 /* MMDrawerController-dummy.m */,
+				E99258F4E013352FE5F6DE874968C7F0 /* MMDrawerController-prefix.pch */,
+				30D510090185914E735F71C39988A95E /* MMDrawerController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MMDrawerController";
+			sourceTree = "<group>";
+		};
+		67E953F2BD3DD6575D0951AFDCBEE8F2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F5E30ED6510A4DAADBE01DB4138B6F84 /* MMDrawerController.h */,
+				E7C9C3B9B139A3ADE6FCB56DB2E14436 /* MMDrawerController.m */,
+				A116E8966334B2A4B17611BB95FB63EF /* MMDrawerController+Subclass.h */,
+				DB8106B7C12550DBB12E78784FEC22BA /* UIViewController+MMDrawerController.h */,
+				A2FB0B946D5271F575C9EC7D76BE0942 /* UIViewController+MMDrawerController.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		6970897348A1C2AC6CC42D6D1BB77A79 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,13 +406,25 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		724B3E9F2EF612BE9D3F848C76A13A81 /* MMDrawerBarButtonItem */ = {
+		71654679334CEA16C8E810A058C5CC51 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				C49B3E13E0F650430898A54FF90373D2 /* MMDrawerBarButtonItem.h */,
-				AEF68CA996474BD193BDE685FCE32D8C /* MMDrawerBarButtonItem.m */,
+				04BAB89F22AF8E73D42042DF523ECBF7 /* Alamofire.swift */,
+				963B2567D735C24D287B54BBE9C68C75 /* Download.swift */,
+				7AF10E72E1F857077255FC8CFF5457C8 /* Error.swift */,
+				0B6BE9EB5209796CF22737382F02D6B4 /* Manager.swift */,
+				6AB38776BBB4AFC002DE3CA3578B344C /* MultipartFormData.swift */,
+				58EF84C6E017AA32A94F460ACE4A0E1E /* ParameterEncoding.swift */,
+				363C7D33854FEA158C9958AC8C2D597A /* Request.swift */,
+				E529DAD83EB74D291D5A98CEFD1EB797 /* ResponseSerialization.swift */,
+				9429AA07DA6FDD38C4E2AC14624F4D8F /* Result.swift */,
+				327BFC2FAE66EFFBBB9DDBF8FC9F744E /* ServerTrustPolicy.swift */,
+				3B0314F4650AA7212AC7CD9C862D0F6C /* Stream.swift */,
+				6853B776599C1DBA0DA368EB4AE28D1A /* Upload.swift */,
+				49C323FA15C3E84631E59F7C5970C124 /* Validation.swift */,
+				41913EF581F8C4288B3A757CBC9424E7 /* Support Files */,
 			);
-			name = MMDrawerBarButtonItem;
+			path = Alamofire;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -252,78 +432,77 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				F0BDAEF2BA75E5E255BE72A5FC5AB33E /* Pods */,
-				287D1076E0A3B0E33DD5DA35A2A96C6D /* Products */,
+				E7073334FB1E57B8F9698CDEF7B3C549 /* Pods */,
+				13216A72766ED5B02048CECFEB8882D4 /* Products */,
 				6970897348A1C2AC6CC42D6D1BB77A79 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8273EE880C564601458BBA370B27E7BE /* Subclass */ = {
+		C60A32CD939FEFBE88FD5729E97CD987 /* MMDrawerVisualStates */ = {
+			isa = PBXGroup;
+			children = (
+				3370B8967C15990AB0189D421673EEE8 /* MMDrawerVisualState.h */,
+				0D35EFC0797569CA75EA7A96340061F3 /* MMDrawerVisualState.m */,
+			);
+			name = MMDrawerVisualStates;
+			sourceTree = "<group>";
+		};
+		C88D3021985747C864466A31DDF415AC /* Subclass */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Subclass;
 			sourceTree = "<group>";
 		};
-		A85D0250147C4D1B958A600CA4E47BCE /* TPDMapsApp */ = {
+		E6ED8D501AC663864DB219B77F42F666 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				14BD77964E9FDC6E6B9486CF7F8B034C /* TPDAppleMapsApp.h */,
-				B6D404903C40119E0E696575889697EB /* TPDAppleMapsApp.m */,
-				5CB4E260F054E2C272193DE877996701 /* TPDGoogleMapsApp.h */,
-				0CF301FB11BFA8C86335B3761DAE14BA /* TPDGoogleMapsApp.m */,
-				511D6E5A91BE405D58F58DFB3A5CEF1E /* TPDMapQuestMapsApp.h */,
-				DDA547D1E56A2E0BC1A4C7E3609833D1 /* TPDMapQuestMapsApp.m */,
-				2DB6474A2E6C812948EC1767880A98ED /* TPDMapsApp.h */,
-				A8F0BC35FCD62C7770118869DEF272CE /* TPDMapsApp.m */,
-				CE7286A2281457CE2AAD403AD51CA1A5 /* TPDMotionXGPSMapsApp.h */,
-				98E27B8AF18660C3CD0E0ACDA64B29BC /* TPDMotionXGPSMapsApp.m */,
-				8B0EDC484113070BBCDB4066C4C81865 /* TPDNavigonMapsApp.h */,
-				ACC97918DDE07E8C5671744FCD151952 /* TPDNavigonMapsApp.m */,
-				B88F5429F6A83D23620E0FFC336AB8FA /* TPDURLQueryItem.h */,
-				F81D6C43D6EDB33489BEB7266F34524D /* TPDURLQueryItem.m */,
-				EC049EED625137FA02F941C019542588 /* TPDURLUtilities.h */,
-				1D2A956609860EEA6ABFAB5B15E8F880 /* TPDURLUtilities.m */,
-				F7A5393C31888F93F33033C54E70736B /* TPDWazeMapsApp.h */,
-				622897B0D2E8E74832B3F98AE30CBF3E /* TPDWazeMapsApp.m */,
-				AFE0D9A3ABCF9FAE14A1C82E20E33EE5 /* Support Files */,
-			);
-			path = TPDMapsApp;
-			sourceTree = "<group>";
-		};
-		AFE0D9A3ABCF9FAE14A1C82E20E33EE5 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				294248DC089B48586BB01C100AEA4532 /* Info.plist */,
-				A0D26AD80ABBA79A780237DDBC589C92 /* TPDMapsApp.modulemap */,
-				1BD0676C15ACBF63BDAE00509F73CA56 /* TPDMapsApp.xcconfig */,
-				73C70ED6ED195E51122DB762DD831A1F /* TPDMapsApp-dummy.m */,
-				ED2CBAA90CC40E0FBE2C21796FCF04AF /* TPDMapsApp-prefix.pch */,
-				48C69F7608636F572F573C9BFB6C1257 /* TPDMapsApp-umbrella.h */,
+				9C1A0906A93711A620DC7659F922DBF1 /* Info.plist */,
+				D5A462CBD44305C632C8072712022803 /* TPDMapsApp.modulemap */,
+				29325C99963A14D5143BEF69645FF38F /* TPDMapsApp.xcconfig */,
+				0DB3B16FF79ACCD32A204BC69EEA4451 /* TPDMapsApp-dummy.m */,
+				8989E50470429757AB1F595E82E9697A /* TPDMapsApp-prefix.pch */,
+				BFEF706089A9365D454D424791012AEF /* TPDMapsApp-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/TPDMapsApp";
 			sourceTree = "<group>";
 		};
-		B0445A43C3C51A30C7B7F02E6EA6E9BF /* MMDrawerController */ = {
+		E7073334FB1E57B8F9698CDEF7B3C549 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4E3E6D0FD2F8A6EEE06807E43FB29876 /* Core */,
-				724B3E9F2EF612BE9D3F848C76A13A81 /* MMDrawerBarButtonItem */,
-				09CB254060AA383B111B5BED7E66CA12 /* MMDrawerVisualStates */,
-				8273EE880C564601458BBA370B27E7BE /* Subclass */,
-				248E693B17032B676D1C0B020901AEBB /* Support Files */,
+				71654679334CEA16C8E810A058C5CC51 /* Alamofire */,
+				1A659A52CE0280F8BDBD505D2BF8C1B2 /* Cosmos */,
+				F605FC655C76263673C570C18A2666F6 /* MMDrawerController */,
+				3B07617ECBAFF48D4B8407CA9B6E66B8 /* TPDMapsApp */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F605FC655C76263673C570C18A2666F6 /* MMDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				67E953F2BD3DD6575D0951AFDCBEE8F2 /* Core */,
+				5709751D3D966832BBACAB01BBCD3246 /* MMDrawerBarButtonItem */,
+				C60A32CD939FEFBE88FD5729E97CD987 /* MMDrawerVisualStates */,
+				C88D3021985747C864466A31DDF415AC /* Subclass */,
+				6440BDCFE8855167D905C43CFB438080 /* Support Files */,
 			);
 			path = MMDrawerController;
 			sourceTree = "<group>";
 		};
-		F0BDAEF2BA75E5E255BE72A5FC5AB33E /* Pods */ = {
+		F9C8EDDCD8CF498E560E786FE5F9A575 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B0445A43C3C51A30C7B7F02E6EA6E9BF /* MMDrawerController */,
-				A85D0250147C4D1B958A600CA4E47BCE /* TPDMapsApp */,
+				75C806EAA629AC09CD6DF63BC341D1FE /* Cosmos.modulemap */,
+				E00A06B61DD3D8D6BAA113B9D044D360 /* Cosmos.xcconfig */,
+				4289680EC56DFC9505347F6BE27B4FB2 /* Cosmos-dummy.m */,
+				1C459486ADB77EE239B9110A43A2F384 /* Cosmos-prefix.pch */,
+				9E4B959BB16C774FB7B2EDD2FF1525B0 /* Cosmos-umbrella.h */,
+				3B290CBD70D773A3DE2739452A96276A /* Info.plist */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/Cosmos";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,60 +521,57 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		12E8374B25FC7B2BCF4E098844F7ECA9 /* Headers */ = {
+		1B475EF15193C032E946ED68703400A7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				493D418569461B2EB5A22646F5F0DB1D /* TPDAppleMapsApp.h in Headers */,
-				6BFFEABB81C3ED8B29E8D817AC3AE2D5 /* TPDGoogleMapsApp.h in Headers */,
-				E7781417C0EEEB627BAA5EAA34895B90 /* TPDMapQuestMapsApp.h in Headers */,
-				7E5C8A9390AE8BAE813714A0510CE030 /* TPDMapsApp-umbrella.h in Headers */,
-				7D2E8F034B237654512FD95066732647 /* TPDMapsApp.h in Headers */,
-				BB8C39243CC4E03A34DC5E269EA1E7FA /* TPDMotionXGPSMapsApp.h in Headers */,
-				BE306CCD326D75404D8EAE5FCEC6C821 /* TPDNavigonMapsApp.h in Headers */,
-				6BF76D5F380E3ECFCD2727A07A4F4CF1 /* TPDURLQueryItem.h in Headers */,
-				2D5F7CCF65A3EE56F2D5E2E4076ACB4F /* TPDURLUtilities.h in Headers */,
-				F40AB0FD689C26F1A5C2B1DA6E4D49B6 /* TPDWazeMapsApp.h in Headers */,
+				D0962564B50DBABE6DCF48B58393718E /* TPDAppleMapsApp.h in Headers */,
+				9DA4707CD6A8069AA7A42A375EE7DD4B /* TPDGoogleMapsApp.h in Headers */,
+				BCF41E4DCCCF4724306F0A6C4F33EA38 /* TPDMapQuestMapsApp.h in Headers */,
+				31412C0329E070BBFE5802CAC60A26F9 /* TPDMapsApp-umbrella.h in Headers */,
+				5FC4B63DCCCD027324948BB587F15445 /* TPDMapsApp.h in Headers */,
+				AEB59AA3A5B8111151CC12845EA5A731 /* TPDMotionXGPSMapsApp.h in Headers */,
+				F3CDEF7BC051BAF30C09A468D4B01DA6 /* TPDNavigonMapsApp.h in Headers */,
+				EBDF6C9C0D1BBE9F6D4A2A7F15C3EE0F /* TPDURLQueryItem.h in Headers */,
+				EA89C4F3AB15689212D86A201F47E699 /* TPDURLUtilities.h in Headers */,
+				2855A73FE27354065611744350526A3F /* TPDWazeMapsApp.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1F13158C102589EE56D6037E70E5D545 /* Headers */ = {
+		B5AE91D1E4458566D1507A193595D7D6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A9A4E16F1F8626B00E3437D396476B5 /* Pods-VFix_Expert-umbrella.h in Headers */,
+				606A219B918881A70A78CD91EACDA8F7 /* Cosmos-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C86EF8D1931CF1DA34C8F053D17FC6E3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				137CF51F4FBE1C8162297FED260F5381 /* Pods-VFix_Expert-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF115D13DFBDD03E0ABD3097C5108DCC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A215FAB60CB15B6E5FA3A15E9E350D7D /* Alamofire-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		56725263F9C6EBC3C11F93C96C95293A /* Pods-VFix_Expert */ = {
+		168D3353E7817EFF3CFE5B062A8C4F47 /* TPDMapsApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6209F5DE997DFD25E4026CAA600AB532 /* Build configuration list for PBXNativeTarget "Pods-VFix_Expert" */;
+			buildConfigurationList = B56F84398018A6A2016745B9F4EFD9A8 /* Build configuration list for PBXNativeTarget "TPDMapsApp" */;
 			buildPhases = (
-				4B873AD02669E9536B5F2989C7AF1AD2 /* Sources */,
-				D3EAF40384653EACA2F8988F65792F81 /* Frameworks */,
-				1F13158C102589EE56D6037E70E5D545 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CDE4476803AB40F36B76BA0A67C5AC4C /* PBXTargetDependency */,
-				6FF717E710CF9903DEB94C1A28FBB2C1 /* PBXTargetDependency */,
-			);
-			name = "Pods-VFix_Expert";
-			productName = "Pods-VFix_Expert";
-			productReference = 5DCB9CE666516617DD5278F04E2C4F26 /* Pods_VFix_Expert.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		8CB102FA61DD88A6C4FC58265D500A00 /* TPDMapsApp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C62BE86DAC09C7644803798C44500EBE /* Build configuration list for PBXNativeTarget "TPDMapsApp" */;
-			buildPhases = (
-				E310CA517BD03F3C0E050169081746EB /* Sources */,
-				97D43DF9CAD4674B7753FC70876313D5 /* Frameworks */,
-				12E8374B25FC7B2BCF4E098844F7ECA9 /* Headers */,
+				5960A9498DC1247108C3BD08A1D5A439 /* Sources */,
+				3EE95CB330A4685331E024B313301876 /* Frameworks */,
+				1B475EF15193C032E946ED68703400A7 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -403,7 +579,41 @@
 			);
 			name = TPDMapsApp;
 			productName = TPDMapsApp;
-			productReference = 76DAE509A504DCA2898EFC534D00C022 /* TPDMapsApp.framework */;
+			productReference = 4336B2A4B39786EF7555F6305178548D /* TPDMapsApp.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4B2F30D90D85A544E9EFE2A49D392C25 /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70DA65F1729D88E78F64BE8BACBAD6AC /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+				5FBF281000F4380394A2338B903D6017 /* Sources */,
+				14409D151BCE19B917E1ACDD56DC85F6 /* Frameworks */,
+				EF115D13DFBDD03E0ABD3097C5108DCC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = 84019C9A4A71FA33C37D7E5157A94639 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		608B49B5DDACC601EE8044A1931993F9 /* Cosmos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B580BEC7E92B10FC3C82CD96A459AF5D /* Build configuration list for PBXNativeTarget "Cosmos" */;
+			buildPhases = (
+				64ACD90BE8F69E7FD4BDFC22146B42DF /* Sources */,
+				DDF29492FA055C53559A30D4C6E1EE1E /* Frameworks */,
+				B5AE91D1E4458566D1507A193595D7D6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cosmos;
+			productName = Cosmos;
+			productReference = D55FF43F64B4E5B67E2DF4DA5983CF71 /* Cosmos.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		96D3562E47E4792B0A6093A0323EB398 /* MMDrawerController */ = {
@@ -420,7 +630,28 @@
 			);
 			name = MMDrawerController;
 			productName = MMDrawerController;
-			productReference = BCB17211BB11873A43F4DFDFCBA5782F /* MMDrawerController.framework */;
+			productReference = 12ED69A0671DE8230FD6AD1E910A10F7 /* MMDrawerController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F7DD1AE9012706E49AAB920AD35210C3 /* Pods-VFix_Expert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B26FBB40DD4F6D30E65B6ECDFCDAD3B /* Build configuration list for PBXNativeTarget "Pods-VFix_Expert" */;
+			buildPhases = (
+				17E848346A47EED1CEFABD8B127B4776 /* Sources */,
+				0C32F0A2C45D29745087F7072F59547D /* Frameworks */,
+				C86EF8D1931CF1DA34C8F053D17FC6E3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C55C503C02B882CD29ECF0F85F288B2 /* PBXTargetDependency */,
+				3A11A6D9936C0AC85BEBD034B8F72A50 /* PBXTargetDependency */,
+				B92F97D59FCDA63E03D01D45879F9A5A /* PBXTargetDependency */,
+				B3551F7B3CFE1034EA9E4A1E3E8B3B32 /* PBXTargetDependency */,
+			);
+			name = "Pods-VFix_Expert";
+			productName = "Pods-VFix_Expert";
+			productReference = 790B679EA2A3547708A150558244C5A0 /* Pods_VFix_Expert.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -440,18 +671,28 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 287D1076E0A3B0E33DD5DA35A2A96C6D /* Products */;
+			productRefGroup = 13216A72766ED5B02048CECFEB8882D4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				4B2F30D90D85A544E9EFE2A49D392C25 /* Alamofire */,
+				608B49B5DDACC601EE8044A1931993F9 /* Cosmos */,
 				96D3562E47E4792B0A6093A0323EB398 /* MMDrawerController */,
-				56725263F9C6EBC3C11F93C96C95293A /* Pods-VFix_Expert */,
-				8CB102FA61DD88A6C4FC58265D500A00 /* TPDMapsApp */,
+				F7DD1AE9012706E49AAB920AD35210C3 /* Pods-VFix_Expert */,
+				168D3353E7817EFF3CFE5B062A8C4F47 /* TPDMapsApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		17E848346A47EED1CEFABD8B127B4776 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72A8D1EAA2A0AA75463CBB779C3CCC87 /* Pods-VFix_Expert-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1AC8283747C7D044F7E6743D804C3D89 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -464,77 +705,97 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4B873AD02669E9536B5F2989C7AF1AD2 /* Sources */ = {
+		5960A9498DC1247108C3BD08A1D5A439 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0109E668ACA78BD94B428CF182521B50 /* Pods-VFix_Expert-dummy.m in Sources */,
+				18AD55A048EBA023CCF35354278F959C /* TPDAppleMapsApp.m in Sources */,
+				6BD18651BF9F0D4A2AD13A42DD5CA678 /* TPDGoogleMapsApp.m in Sources */,
+				3767CC6B69BCC7DAF06B700AC04FE2A1 /* TPDMapQuestMapsApp.m in Sources */,
+				13399901A139E4616B7D1976E74CBAE2 /* TPDMapsApp-dummy.m in Sources */,
+				D845A196D602459BE530B485A970601B /* TPDMapsApp.m in Sources */,
+				98F3B06BDFB855DF68B06B9664059BB3 /* TPDMotionXGPSMapsApp.m in Sources */,
+				CEF8C6D2FC8ECD7687FB3BB384F194FF /* TPDNavigonMapsApp.m in Sources */,
+				D6AAB150EC3E9B43E8D75FA8E1826EAC /* TPDURLQueryItem.m in Sources */,
+				3F9A192B65484D9E4CF20C64FD8F02CF /* TPDURLUtilities.m in Sources */,
+				C6241EE15DDF797CD77301741682C63C /* TPDWazeMapsApp.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E310CA517BD03F3C0E050169081746EB /* Sources */ = {
+		5FBF281000F4380394A2338B903D6017 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC031F3F5375BD49000F62D469BF7757 /* TPDAppleMapsApp.m in Sources */,
-				DD15AF4B0CC60E383182224F4F006C06 /* TPDGoogleMapsApp.m in Sources */,
-				FF987318B8CEC6A9C7F11D33BA7BC8F0 /* TPDMapQuestMapsApp.m in Sources */,
-				75BF8C8AA90168468F1C56BF2921A24D /* TPDMapsApp-dummy.m in Sources */,
-				9E9D43CEA27F64D0A2D7C4A095D74064 /* TPDMapsApp.m in Sources */,
-				D330B094AA7A7A5B50BAD3201FADDB14 /* TPDMotionXGPSMapsApp.m in Sources */,
-				E5A9BC236C4492C7C6E5A417019CA27F /* TPDNavigonMapsApp.m in Sources */,
-				2365690974EF27DA50179A66994976C2 /* TPDURLQueryItem.m in Sources */,
-				A1C43594F1539A3FBBB8059E33B985AC /* TPDURLUtilities.m in Sources */,
-				5D5E9FF3A03D137CB569F33C19F37A0A /* TPDWazeMapsApp.m in Sources */,
+				D8136D3B59D4753690000387A8082B54 /* Alamofire-dummy.m in Sources */,
+				E816509B4E3564E1A117CBDC0D845D69 /* Alamofire.swift in Sources */,
+				9077ECA2FA7B9C5D73365490A3D8898F /* Download.swift in Sources */,
+				FE1F95F519342B9266EB69B23B4336CF /* Error.swift in Sources */,
+				69A447D12E60E5C3451DA30C6BB4BF7F /* Manager.swift in Sources */,
+				D39B20327B1DAF6D8753ED5685DDE6DC /* MultipartFormData.swift in Sources */,
+				A8B5EDB7371475F62767B297B1A10CDE /* ParameterEncoding.swift in Sources */,
+				F16FEF1CB9703FE1887C8A618B84B7C6 /* Request.swift in Sources */,
+				848CEFBFC69DEBAF0E18885F3269F439 /* ResponseSerialization.swift in Sources */,
+				E6D041ABFBB48D9F1D8AA96E7D4C6C34 /* Result.swift in Sources */,
+				30A8F35FCAB29F5FBFC9F3F7E25A3B6B /* ServerTrustPolicy.swift in Sources */,
+				0EFD1FF643346FF85C83679F659672CA /* Stream.swift in Sources */,
+				E7B226D8BB16471AD63665A794036E44 /* Upload.swift in Sources */,
+				3E9392CB5BD9C0CC47B04EDB40639558 /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64ACD90BE8F69E7FD4BDFC22146B42DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D1D58A5ED379ABDA6BF567CE70A6372 /* Cosmos-dummy.m in Sources */,
+				3E73DB65BEC900EFC6EC35C5F2A526B3 /* CosmosAccessibility.swift in Sources */,
+				CC00126E443C3CEEFA221930E1B0CC54 /* CosmosDefaultSettings.swift in Sources */,
+				2336A7F0F45440935556D3DDAC798E27 /* CosmosLayerHelper.swift in Sources */,
+				984ACF077007E44906F6A2F419E3D3C9 /* CosmosLayers.swift in Sources */,
+				A0C58A338DA547DC3EAA5CD10A7D305E /* CosmosLocalizedRating.swift in Sources */,
+				299992941CFA463D0A7204190D39FA73 /* CosmosRating.swift in Sources */,
+				D7453EEDB3CD57C33612C94FCBF8A57E /* CosmosSettings.swift in Sources */,
+				883E1BE9856159DB1EBBEBEEA85D8199 /* CosmosSize.swift in Sources */,
+				DF717A08CF1193FFCA4FE75041293A18 /* CosmosText.swift in Sources */,
+				3EFCCC931EFB340108AB20B34C9FD626 /* CosmosTouch.swift in Sources */,
+				62A8CA31EA35172D3375E11586921F82 /* CosmosTouchTarget.swift in Sources */,
+				A84E190C472D28E1EB771327D55A0257 /* CosmosView.swift in Sources */,
+				7CCF424046BEED00EB99738D76C64132 /* StarFillMode.swift in Sources */,
+				63ECC77E4E536666556C8D2791280861 /* StarLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6FF717E710CF9903DEB94C1A28FBB2C1 /* PBXTargetDependency */ = {
+		3A11A6D9936C0AC85BEBD034B8F72A50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Cosmos;
+			target = 608B49B5DDACC601EE8044A1931993F9 /* Cosmos */;
+			targetProxy = EBB629C2C519BB309EBDEAC17A63F337 /* PBXContainerItemProxy */;
+		};
+		6C55C503C02B882CD29ECF0F85F288B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 4B2F30D90D85A544E9EFE2A49D392C25 /* Alamofire */;
+			targetProxy = 6049B9C8F1D61AF731645FCDB459E4F3 /* PBXContainerItemProxy */;
+		};
+		B3551F7B3CFE1034EA9E4A1E3E8B3B32 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TPDMapsApp;
-			target = 8CB102FA61DD88A6C4FC58265D500A00 /* TPDMapsApp */;
-			targetProxy = 8BDD0A71482F00343BF0D3F7571F4D23 /* PBXContainerItemProxy */;
+			target = 168D3353E7817EFF3CFE5B062A8C4F47 /* TPDMapsApp */;
+			targetProxy = 7B83C508C7F2015BDBA4550E742BA497 /* PBXContainerItemProxy */;
 		};
-		CDE4476803AB40F36B76BA0A67C5AC4C /* PBXTargetDependency */ = {
+		B92F97D59FCDA63E03D01D45879F9A5A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MMDrawerController;
 			target = 96D3562E47E4792B0A6093A0323EB398 /* MMDrawerController */;
-			targetProxy = 420DF7640831C7022027361BE00CCABF /* PBXContainerItemProxy */;
+			targetProxy = 98323486692471E58FC1C13906A8B5A3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		11A0BE72439D85B376FF84C95BB5928B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BD0676C15ACBF63BDAE00509F73CA56 /* TPDMapsApp.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TPDMapsApp/TPDMapsApp-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TPDMapsApp/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TPDMapsApp/TPDMapsApp.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = TPDMapsApp;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9E9B8D948D0EEBDB574B8AD16E0C1CE8 /* Release */ = {
+		541597AD5D1E96DF066DCD77964C4EFB /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 23D9244175D3A5EA67B00F7251CB15C9 /* Pods-VFix_Expert.release.xcconfig */;
 			buildSettings = {
@@ -564,9 +825,9 @@
 			};
 			name = Release;
 		};
-		9F4F6DCB23B8CF93F6594FCC1C596226 /* Release */ = {
+		64B9E2398C742D1C7CCCD332423F73C3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BD0676C15ACBF63BDAE00509F73CA56 /* TPDMapsApp.xcconfig */;
+			baseConfigurationReference = 29325C99963A14D5143BEF69645FF38F /* TPDMapsApp.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -590,6 +851,120 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		6DE74D9BED2AECB3C4629B8F6DEA67A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E00A06B61DD3D8D6BAA113B9D044D360 /* Cosmos.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Cosmos/Cosmos-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cosmos/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Cosmos/Cosmos.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Cosmos;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		70B7F0C6A67FFEB0231B9578604C1F3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8BBE11BC47EC7B0754299F6BB6A9F82 /* Alamofire.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		952FAE0D475BAC48369F5FFD0FD4A911 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5C4F4D43D94A3F1935B6DA9EE1F84EE /* Pods-VFix_Expert.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-VFix_Expert/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VFix_Expert/Pods-VFix_Expert.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_VFix_Expert;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9C65AA379D5885662980724FA4C9CFDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8BBE11BC47EC7B0754299F6BB6A9F82 /* Alamofire.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -632,7 +1007,7 @@
 		};
 		B246AA37DA19EE5FDD85E37AF3C9E192 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BAD1A0D8A215D42ED554583F8E476ED1 /* MMDrawerController.xcconfig */;
+			baseConfigurationReference = 183B02C73C2342668CEE31CFBD7D21DD /* MMDrawerController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -657,9 +1032,9 @@
 			};
 			name = Debug;
 		};
-		BC2FD2506BA12FEFC321A8F76CC0BF35 /* Debug */ = {
+		C40D717A1A7C6976ED8C2FAC4A84CFEC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5C4F4D43D94A3F1935B6DA9EE1F84EE /* Pods-VFix_Expert.debug.xcconfig */;
+			baseConfigurationReference = E00A06B61DD3D8D6BAA113B9D044D360 /* Cosmos.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -668,28 +1043,25 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-VFix_Expert/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Cosmos/Cosmos-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cosmos/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-VFix_Expert/Pods-VFix_Expert.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_VFix_Expert;
+				MODULEMAP_FILE = "Target Support Files/Cosmos/Cosmos.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Cosmos;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		D3AA7ABB7FCA95FB709C38DFB0881148 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BAD1A0D8A215D42ED554583F8E476ED1 /* MMDrawerController.xcconfig */;
+			baseConfigurationReference = 183B02C73C2342668CEE31CFBD7D21DD /* MMDrawerController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -713,6 +1085,33 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		EF41D60FA78DFCE3B53D6C736034B0FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29325C99963A14D5143BEF69645FF38F /* TPDMapsApp.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TPDMapsApp/TPDMapsApp-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TPDMapsApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TPDMapsApp/TPDMapsApp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TPDMapsApp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -751,6 +1150,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1B26FBB40DD4F6D30E65B6ECDFCDAD3B /* Build configuration list for PBXNativeTarget "Pods-VFix_Expert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				952FAE0D475BAC48369F5FFD0FD4A911 /* Debug */,
+				541597AD5D1E96DF066DCD77964C4EFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -769,20 +1177,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6209F5DE997DFD25E4026CAA600AB532 /* Build configuration list for PBXNativeTarget "Pods-VFix_Expert" */ = {
+		70DA65F1729D88E78F64BE8BACBAD6AC /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC2FD2506BA12FEFC321A8F76CC0BF35 /* Debug */,
-				9E9B8D948D0EEBDB574B8AD16E0C1CE8 /* Release */,
+				9C65AA379D5885662980724FA4C9CFDD /* Debug */,
+				70B7F0C6A67FFEB0231B9578604C1F3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C62BE86DAC09C7644803798C44500EBE /* Build configuration list for PBXNativeTarget "TPDMapsApp" */ = {
+		B56F84398018A6A2016745B9F4EFD9A8 /* Build configuration list for PBXNativeTarget "TPDMapsApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				11A0BE72439D85B376FF84C95BB5928B /* Debug */,
-				9F4F6DCB23B8CF93F6594FCC1C596226 /* Release */,
+				EF41D60FA78DFCE3B53D6C736034B0FF /* Debug */,
+				64B9E2398C742D1C7CCCD332423F73C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B580BEC7E92B10FC3C82CD96A459AF5D /* Build configuration list for PBXNativeTarget "Cosmos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DE74D9BED2AECB3C4629B8F6DEA67A1 /* Debug */,
+				C40D717A1A7C6976ED8C2FAC4A84CFEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

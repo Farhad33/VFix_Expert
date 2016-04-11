@@ -18,11 +18,24 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let userDefaults = NSUserDefaults.standardUserDefaults()
     
     @IBOutlet weak var menuTableView: UITableView!
+    @IBOutlet weak var expertNameLabel: UILabel!
+    @IBOutlet weak var expertEmailLabel: UILabel!
+    @IBOutlet weak var expertPhoto: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        menuTableView.delegate = self
 //        menuTableView.dataSource = self
 //        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        expertNameLabel.text = userDefaults.stringForKey("expert_name")
+        expertEmailLabel.text = userDefaults.stringForKey("expert_email")
+        
+        expertPhoto.image = UIImage(named: "myphoto64x64")
+        expertPhoto.layer.borderWidth = 1
+        expertPhoto.layer.masksToBounds = false
+        expertPhoto.layer.borderColor = UIColor.whiteColor().CGColor
+        expertPhoto.layer.cornerRadius = expertPhoto.frame.height/2
+        expertPhoto.clipsToBounds = true
         
 //        self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
@@ -33,6 +46,12 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(animated: Bool) {
+       
+        expertNameLabel.text = userDefaults.stringForKey("expert_name")
+        expertEmailLabel.text = userDefaults.stringForKey("expert_email")
+        
+    }
     override func shouldAutorotate() -> Bool {
         return false
     }
@@ -143,9 +162,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 refreshAlert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { (action: UIAlertAction!) in
                     
                     self.userDefaults.setObject(nil, forKey: "user_name")
-//                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                    let vc = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
-//                    self.presentViewController(vc, animated: true, completion: nil)
+
                     self.dismissViewControllerAnimated(true, completion: nil)
                     
                 }))

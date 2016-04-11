@@ -20,16 +20,20 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     var isUp: Bool = false
     var onSubmit: Bool = false
+    let defaults = NSUserDefaults.standardUserDefaults()
     // image in the future
     // services
     //a
+    var firstName: String = "Noureddine"
+    var lastName: String = "Youssfi"
     
-    @IBOutlet weak var firstNameField: UITextField!
-    @IBOutlet weak var lastNameField: UITextField!
+    
     @IBOutlet weak var mailPart1Field: UITextField!
     @IBOutlet weak var mailPart2Field: UITextField!
     @IBOutlet weak var phoneField: UITextField!
     @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var zipcodeField: UITextField!
+    @IBOutlet weak var stateField: UITextField!
     
     // Todo: collapse feature:
     
@@ -41,19 +45,35 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         expertPhoto.image = UIImage(named: "myphoto64x64")
         expertPhoto.layer.borderWidth = 1
         expertPhoto.layer.masksToBounds = false
-        expertPhoto.layer.borderColor = UIColor.blackColor().CGColor
+        expertPhoto.layer.borderColor = UIColor.whiteColor().CGColor
         expertPhoto.layer.cornerRadius = expertPhoto.frame.height/2
         expertPhoto.clipsToBounds = true
         expertTopView.backgroundColor = UIColor.blackColor()
         photoEditButton.hidden = true
-        expertName.hidden = true
+        self.expertBottomView.hidden = true
         
-        firstNameField.enabled = false
-        lastNameField.enabled = false
+        
+        expertName.hidden = false
+        expertName.text = firstName + " " + lastName
+        
         mailPart1Field.enabled = false
+        mailPart1Field.text = defaults.stringForKey("expert_mail_first")
+        
         mailPart2Field.enabled = false
+        mailPart2Field.text = defaults.stringForKey("expert_mail_second")
+        
         phoneField.enabled = false
+        phoneField.text = defaults.stringForKey("expert_phone")
+        
         emailField.enabled = false
+        emailField.text = defaults.stringForKey("expert_email")
+        
+        stateField.enabled = false
+        stateField.text = defaults.stringForKey("state")
+        
+        zipcodeField.enabled = false
+        zipcodeField.text = defaults.stringForKey("zip_code")
+        
         // expertBottomView.center.y = self.view.bounds.height + expertBottomView.center.y
 //        self.expertBottomView.center.y = self.view.bounds.height / 1.14
         // Do any additional setup after loading the view.
@@ -65,7 +85,15 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 
         
     }
-
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        expertName.text = defaults.stringForKey("expert_name")
+        emailField.text = defaults.stringForKey("expert_email")
+        self.expertBottomView.hidden = true
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -81,26 +109,28 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBAction func editButtonClicked(sender: AnyObject) {
         if !isUp{
             UIView.animateWithDuration(0.5, animations: {
-                self.expertBottomView.center.y = self.view.bounds.height / 1.14
+                self.expertBottomView.center.y = self.view.bounds.height / 1.32
                 
             })
             isUp = true
+            self.expertBottomView.hidden = false
         } else {
             UIView.animateWithDuration(0.5, animations: {
-                self.expertBottomView.center.y = self.view.bounds.height * 1.14
+                self.expertBottomView.center.y = self.view.bounds.height * 1.32
                 
             })
             isUp = false
+//            self.expertBottomView.hidden = true
         }
     }
     @IBAction func onCaptureClicked(sender: AnyObject) {
         
         UIView.animateWithDuration(0.5, animations: {
-            self.expertBottomView.center.y = self.view.bounds.height * 1.14
+            self.expertBottomView.center.y = self.view.bounds.height * 1.32
             
         })
         isUp = false
-        
+        self.expertBottomView.hidden = true
         let vc = UIImagePickerController()
         vc.delegate = self
         vc.allowsEditing = true
@@ -113,10 +143,11 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBAction func onLibraryClicked(sender: AnyObject) {
         
         UIView.animateWithDuration(0.5, animations: {
-            self.expertBottomView.center.y = self.view.bounds.height * 1.14
+            self.expertBottomView.center.y = self.view.bounds.height * 1.32
             
         })
         isUp = false
+        self.expertBottomView.hidden = true
         
         let vc = UIImagePickerController()
         vc.navigationBar.translucent = false
@@ -148,42 +179,80 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBAction func secureEditClicked(sender: AnyObject) {
         var alert = UIAlertController(title: "Edit Info", message: "Enter Password:", preferredStyle: .Alert)
         if (!onSubmit){
-            onSubmit = true
+            
             //2. Add the text field. You can configure it however you need.
             alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
-                
+                textField.secureTextEntry = true
+                textField.placeholder = "Password"
             })
             
             //3. Grab the value from the text field, and print it when the user clicks OK.
             alert.addAction(UIAlertAction(title: "Confirm", style: .Default, handler: { (action) -> Void in
                 let textField = alert.textFields![0] as UITextField
+                
                 print("Text field: \(textField.text)")
                 
-                self.firstNameField.enabled = true
-                self.lastNameField.enabled = true
+                
                 self.mailPart1Field.enabled = true
                 self.mailPart2Field.enabled = true
                 self.phoneField.enabled = true
                 self.emailField.enabled = true
+                self.zipcodeField.enabled = true
+                self.stateField.enabled = true
                 self.photoEditButton.hidden = false
                 self.secureEditButton.image = nil
                 self.secureEditButton.title = "Submit"
+                self.onSubmit = true
             }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in
+                print("Canceled")
+                self.onSubmit = false
+            }))
+            
+           
             
             // 4. Present the alert.
             
             self.presentViewController(alert, animated: true, completion: nil)
         } else {
             onSubmit = false
-            firstNameField.enabled = false
-            lastNameField.enabled = false
+            
             mailPart1Field.enabled = false
             mailPart2Field.enabled = false
             phoneField.enabled = false
             emailField.enabled = false
+            zipcodeField.enabled = false
+            stateField.enabled = false
+            
             self.photoEditButton.hidden = true
             self.secureEditButton.title = ""
             self.secureEditButton.image = UIImage(named: "editbutton.png")
+            
+            /*
+            @IBOutlet weak var mailPart1Field: UITextField!
+            @IBOutlet weak var mailPart2Field: UITextField!
+            @IBOutlet weak var phoneField: UITextField!
+            @IBOutlet weak var emailField: UITextField!
+            */
+            
+            /*
+            mailPart1Field.text = defaults.stringForKey("expert_mail_part1")
+            
+            mailPart2Field.enabled = false
+            mailPart1Field.text = defaults.stringForKey("expert_mail_part2")
+            */
+            
+            defaults.setObject(mailPart1Field.text, forKey: "expert_mail_first")
+            defaults.setObject(mailPart2Field.text, forKey: "expert_mail_second")
+            defaults.setObject(phoneField.text, forKey: "expert_phone")
+            defaults.setObject(emailField.text, forKey: "expert_email")
+            defaults.setObject(stateField.text, forKey: "state")
+            defaults.setObject(zipcodeField.text, forKey: "zip_code")
+            defaults.synchronize()
+//            defaults.setObject(expertName.text, forKey: "expert_name")
+//            defaults.setObject(expertName.text, forKey: "expert_name")
+            
+            
         }
     }
 
