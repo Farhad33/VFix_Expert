@@ -1,0 +1,3 @@
+[submodule "VFix_Expert/Alamofire"]
+	path = VFix_Expert/Alamofire
+	url = https://github.com/Alamofire/Alamofire.git
