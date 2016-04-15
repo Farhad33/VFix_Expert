@@ -41,13 +41,13 @@ class VFixClient: BDBOAuth1SessionManager {
         manager.GET("http://104.197.177.20/api/v2/vfixmirror/_table/wp_posts", parameters: nil,
             success: {(operation: NSURLSessionDataTask!, response: AnyObject?) -> Void in
                 
-                print("makeGet was successful!")
-                print(response)
+//                print("makeGet was successful!")
+//                print(response)
                 
             },
             failure: { (operation: NSURLSessionDataTask?, error: NSError!) -> Void in
-                print("makeGet was a failure")
-                print(error)
+//                print("makeGet was a failure")
+//                print(error)
             }
         )
     }

@@ -9,6 +9,7 @@ pod 'BDBOAuth1Manager', '2.0.0'
 pod 'Fabric'
 pod 'TwitterKit'
 pod 'TwitterCore'
+pod 'Alamofire' 
+pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 
 end
-
