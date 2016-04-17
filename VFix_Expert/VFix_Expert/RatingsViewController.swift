@@ -23,7 +23,7 @@ class RatingsViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor(red: 20/255.0, green: 157/255.0, blue: 234/255.0, alpha: 1.0)
 //        navigationController?.navigationBar.barStyle = UIBarStyle.Black
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        cosmosView.rating = 3.6
+        cosmosView.rating = 3.7
         cosmosView.settings.updateOnTouch = false
         // Do any additional setup after loading the view.
     }

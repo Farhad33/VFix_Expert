@@ -12,24 +12,23 @@ import MMDrawerController
 class myPayViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var totalWeeklyPayment: UILabel!
     var tableView: UITableView = UITableView()
-    var items: [String] = ["Viper", "X", "Games"]
+    var items: [String] = ["This Month:", "This week:", "Last week:", "Week before:"]
+    var money: [String] = ["$ 100.00", "$ 200.00", "$ 300.00"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.barTintColor = UIColor(red: 20/255.0, green: 157/255.0, blue: 234/255.0, alpha: 1.0)
 //        navigationController?.navigationBar.barStyle = UIBarStyle.Black
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         // Do any additional setup after loading the view.
-        tableView.frame = CGRectMake(0, 50, 305, 200);
-        tableView.center = self.view.center
-        tableView.frame.origin.y = topView.frame.height * 2
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.scrollEnabled = false
-        
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
-        self.view.addSubview(tableView)
+        addMonthView(items, money: money)
+        topView.layer.shadowColor = UIColor.darkGrayColor().CGColor
+        topView.layer.shadowOffset = CGSizeMake(2, 2);
+        topView.layer.shadowOpacity = 1;
+        topView.layer.shadowRadius = 1.0;
+        topView.layer.masksToBounds = false
         
     }
 
@@ -53,15 +52,42 @@ class myPayViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
         
-        cell.textLabel?.text = self.items[indexPath.row]
+        
+        if (indexPath.row < 1){
+            cell.textLabel?.text = self.items[indexPath.row]
+            cell.textLabel?.textColor = UIColor(red: 20/255.0, green: 157/255.0, blue: 234/255.0, alpha: 1.0)
+            cell.textLabel?.font = cell.textLabel?.font.fontWithSize(17)
+        }else {
+            cell.textLabel?.text = self.items[indexPath.row] + " " + self.money[indexPath.row - 1]
+            cell.textLabel?.font = cell.textLabel?.font.fontWithSize(13)
+            cell.textLabel?.textAlignment = NSTextAlignment.Center
+        }
         
         return cell
         
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("You selected cell #\(indexPath.row)!")
+        
     }
+    
+    func addMonthView(months: [String], money: [String]){
+        tableView.frame = CGRectMake(0, 50, 305, 200);
+        tableView.center = self.view.center
+        tableView.frame.origin.y = topView.frame.height + (topView.frame.height / 2)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.scrollEnabled = false
+        tableView.userInteractionEnabled = false
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.layer.borderColor = UIColor .grayColor().CGColor
+        tableView.layer.borderWidth = 0.5
+        tableView.layer.cornerRadius = 5
+        tableView.layer.masksToBounds = true
+        
+        self.view.addSubview(tableView)
+    }
+    
     /*
     // MARK: - Navigation
 

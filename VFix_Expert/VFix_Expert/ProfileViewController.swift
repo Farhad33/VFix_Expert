@@ -14,7 +14,6 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var expertName: UILabel!
     @IBOutlet weak var expertPhoto: UIImageView!
     @IBOutlet weak var expertTopView: UIView!
-    @IBOutlet weak var expertBottomView: UIView!
     @IBOutlet weak var photoEditButton: UIButton!
     @IBOutlet weak var secureEditButton: UIBarButtonItem!
     
@@ -34,6 +33,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var zipcodeField: UITextField!
     @IBOutlet weak var stateField: UITextField!
+    @IBOutlet weak var extensionField: UITextField!
     
     // Todo: collapse feature:
     
@@ -42,6 +42,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         navigationController?.navigationBar.barTintColor = UIColor(red: 20/255.0, green: 157/255.0, blue: 234/255.0, alpha: 1.0)
 //        navigationController?.navigationBar.barStyle = UIBarStyle.Black
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        
         expertPhoto.image = UIImage(named: "myphoto64x64")
         expertPhoto.layer.borderWidth = 1
         expertPhoto.layer.masksToBounds = false
@@ -50,8 +51,6 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         expertPhoto.clipsToBounds = true
         expertTopView.backgroundColor = UIColor.blackColor()
         photoEditButton.hidden = true
-        self.expertBottomView.hidden = true
-        
         
         expertName.hidden = false
         expertName.text = firstName + " " + lastName
@@ -74,6 +73,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         zipcodeField.enabled = false
         zipcodeField.text = defaults.stringForKey("zip_code")
         
+        extensionField.enabled = false
+        extensionField.text = defaults.stringForKey("ext")
+        
         // expertBottomView.center.y = self.view.bounds.height + expertBottomView.center.y
 //        self.expertBottomView.center.y = self.view.bounds.height / 1.14
         // Do any additional setup after loading the view.
@@ -90,7 +92,6 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         expertName.text = defaults.stringForKey("expert_name")
         emailField.text = defaults.stringForKey("expert_email")
-        self.expertBottomView.hidden = true
         
     }
     
@@ -107,61 +108,48 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func editButtonClicked(sender: AnyObject) {
-        if !isUp{
-            UIView.animateWithDuration(0.5, animations: {
-                self.expertBottomView.center.y = self.view.bounds.height / 1.32
-                
-            })
-            isUp = true
-            self.expertBottomView.hidden = false
-        } else {
-            UIView.animateWithDuration(0.5, animations: {
-                self.expertBottomView.center.y = self.view.bounds.height * 1.32
-                
-            })
-            isUp = false
-//            self.expertBottomView.hidden = true
-        }
+        chooseImage()
     }
-    @IBAction func onCaptureClicked(sender: AnyObject) {
+    func chooseImage() {
+        let actionSheet: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet);
         
-        UIView.animateWithDuration(0.5, animations: {
-            self.expertBottomView.center.y = self.view.bounds.height * 1.32
+        let takePhoto: UIAlertAction = UIAlertAction(title: "Take a Photo", style: .Default)
+        { action -> Void in
+            let vc = UIImagePickerController();
+            vc.delegate = self;
+            vc.allowsEditing = true;
             
-        })
-        isUp = false
-        self.expertBottomView.hidden = true
-        let vc = UIImagePickerController()
-        vc.delegate = self
-        vc.allowsEditing = true
-        vc.sourceType = UIImagePickerControllerSourceType.Camera
+            vc.sourceType = UIImagePickerControllerSourceType.Camera;
+            vc.navigationBar.translucent = false
+            vc.navigationBar.barTintColor = UIColor(red: 20/255.0, green: 157/255.0, blue: 234/255.0, alpha: 1.0)
+            vc.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+            vc.navigationBar.tintColor = UIColor.whiteColor()
+            self.presentViewController(vc, animated: true, completion: nil);
+        }
+        actionSheet.addAction(takePhoto)
         
-        self.presentViewController(vc, animated: true, completion: nil)
+        let fromLibrary: UIAlertAction = UIAlertAction(title: "Choose Existing", style: .Default) { action -> Void in
+            let vc = UIImagePickerController();
+            vc.delegate = self;
+            vc.allowsEditing = true;
+            vc.sourceType = UIImagePickerControllerSourceType.PhotoLibrary;
+            vc.navigationBar.translucent = false
+            vc.navigationBar.barTintColor = UIColor(red: 20/255.0, green: 157/255.0, blue: 234/255.0, alpha: 1.0)
+            vc.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+            vc.navigationBar.tintColor = UIColor.whiteColor()
+            self.presentViewController(vc, animated: true, completion: nil);
+        }
+        actionSheet.addAction(fromLibrary)
+        
+        let cancelButton: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel)
+        { action -> Void in
+        }
+        actionSheet.addAction(cancelButton)
+        
+        self.presentViewController(actionSheet, animated: true, completion: nil);
         
     }
     
-    @IBAction func onLibraryClicked(sender: AnyObject) {
-        
-        UIView.animateWithDuration(0.5, animations: {
-            self.expertBottomView.center.y = self.view.bounds.height * 1.32
-            
-        })
-        isUp = false
-        self.expertBottomView.hidden = true
-        
-        let vc = UIImagePickerController()
-        vc.navigationBar.translucent = false
-        vc.navigationBar.barTintColor = UIColor(red: 20/255.0, green: 157/255.0, blue: 234/255.0, alpha: 1.0)
-        vc.navigationBar.tintColor = UIColor.whiteColor()
-        vc.navigationBar.titleTextAttributes = [
-            NSForegroundColorAttributeName : UIColor.whiteColor()
-        ]
-        vc.delegate = self
-        vc.allowsEditing = true
-        vc.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        
-        self.presentViewController(vc, animated: true, completion: nil)
-    }
     func imagePickerController(picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [String : AnyObject]) {
             // Get the image captured by the UIImagePickerController
@@ -200,6 +188,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                 self.zipcodeField.enabled = true
                 self.stateField.enabled = true
                 self.photoEditButton.hidden = false
+                self.extensionField.enabled = true
                 self.secureEditButton.image = nil
                 self.secureEditButton.title = "Submit"
                 self.onSubmit = true
@@ -223,6 +212,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             emailField.enabled = false
             zipcodeField.enabled = false
             stateField.enabled = false
+            extensionField.enabled = false
             
             self.photoEditButton.hidden = true
             self.secureEditButton.title = ""
@@ -241,7 +231,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             mailPart2Field.enabled = false
             mailPart1Field.text = defaults.stringForKey("expert_mail_part2")
             */
-            
+            defaults.setObject(extensionField.text, forKey: "ext")
             defaults.setObject(mailPart1Field.text, forKey: "expert_mail_first")
             defaults.setObject(mailPart2Field.text, forKey: "expert_mail_second")
             defaults.setObject(phoneField.text, forKey: "expert_phone")

@@ -16,6 +16,10 @@ class ScheduleViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor(red: 20/255.0, green: 157/255.0, blue: 234/255.0, alpha: 1.0)
 //        navigationController?.navigationBar.barStyle = UIBarStyle.Black
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+//        navigationController?.navigationBar.setTitleVerticalPositionAdjustment(CGFloat(7), forBarMetrics: UIBarMetrics.Default)
+//        navigationController?.navigationBar.topItem?.title = "Dashboard"
+//        navigationController?.navigationBar.
+        
         // Do any additional setup after loading the view.
     }
 

@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
     let userDefaults = NSUserDefaults.standardUserDefaults()
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         fieldRequired.hidden = true
         fieldRequired2.hidden = true
@@ -35,6 +36,12 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         passwordField.text = ""
         passwordField.secureTextEntry = true
+        UIApplication.sharedApplication().statusBarStyle = .Default
+    }
+    override func viewWillDisappear(animated: Bool) {
+//        passwordField.text = ""
+//        passwordField.secureTextEntry = true
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

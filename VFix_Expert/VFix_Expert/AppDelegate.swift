@@ -16,14 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var drawerContainer: MMDrawerController?
     var mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-    var userDefaults = NSUserDefaults.standardUserDefaults()
+    
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
 //        UIApplication.sharedApplication().statusBarHidden = false
 //        UIApplication.sharedApplication().statusBarStyle = .LightContent
-        
+        application.statusBarStyle = UIStatusBarStyle.LightContent
+        let userDefaults = NSUserDefaults.standardUserDefaults()
         let username: String = "ndyoussfi"
         let name: String = "Noureddine Youssfi"
         let address_part1: String = "900 Mansell St"
@@ -32,7 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let email: String = "ndyoussfi@gmail.com"
         let state: String = "CA"
         let zip: String = "94134"
+        let ext: String = "1234"
+        let defaultMap: Int = 0
         
+        userDefaults.setObject(ext, forKey: "ext")
         userDefaults.setObject(name, forKey: "expert_name")
         userDefaults.setObject(address_part1, forKey: "expert_mail_first")
         userDefaults.setObject(address_part2, forKey: "expert_mail_second")
@@ -41,7 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         userDefaults.setObject(state, forKey: "state")
         userDefaults.setObject(zip, forKey: "zip_code")
         userDefaults.setObject(username, forKey: "user_name")
-
+        userDefaults.setObject(defaultMap, forKey: "default_map")
+        userDefaults.synchronize()
         
         let savedUserName: String? = userDefaults.stringForKey("user_name")
         if savedUserName != nil{
@@ -64,7 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     func buildInterface(){
-        let mainPage: DashboardTabBarController = mainStoryBoard.instantiateViewControllerWithIdentifier("DashboardTabBarController") as! DashboardTabBarController
+        let mainPage: ScheduleViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("ScheduleViewController") as! ScheduleViewController
         
         let menu: MenuViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("MenuViewController") as! MenuViewController
         

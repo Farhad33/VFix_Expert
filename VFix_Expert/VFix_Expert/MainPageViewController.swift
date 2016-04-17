@@ -16,7 +16,7 @@ let sessionToken = "22719873bdbb43cf0cc7f77d6e857e9e"
 var endPoint = "companies/13772899/appointments"
 let APIKey = "f8d0c6b95ab7f5316a7bff112b40bfd2def192a0"
 let baseUrl = "https://www.agendize.com/api/2.0/scheduling/"
-
+let defaultMapValue = NSUserDefaults.standardUserDefaults().integerForKey("default_map")
 
 class MainPageViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
 
@@ -32,8 +32,8 @@ class MainPageViewController: UIViewController, CLLocationManagerDelegate, MKMap
 //        navigationController?.navigationBar.barStyle = UIBarStyle.Black
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         navigationController?.navigationBar.topItem?.title = ""
-
         
+        print("\(defaultMapValue) is def map")
         
         let location: String = "50 phelan ave sanfrancisco CA"
         let geocoder: CLGeocoder = CLGeocoder()
@@ -64,22 +64,23 @@ class MainPageViewController: UIViewController, CLLocationManagerDelegate, MKMap
         locationManager.requestWhenInUseAuthorization()
         
 
-        NetworkRequest(sessionToken, endPoint: endPoint)
+//        NetworkRequest(sessionToken, endPoint: endPoint)
         
     }
     
     
-    func NetworkRequest(sessionToken: String, endPoint: String) {
-        Alamofire.request(.GET, "\(baseUrl)\(endPoint)?apiKey=\(APIKey)&token=\(sessionToken)")
-            
-            .responseJSON { response in
-                print(response)
-        }
-        
-    }
+//    func NetworkRequest(sessionToken: String, endPoint: String) {
+//        Alamofire.request(.GET, "\(baseUrl)\(endPoint)?apiKey=\(APIKey)&token=\(sessionToken)")
+//            
+//            .responseJSON { response in
+//                print(response)
+//        }
+//        
+//    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
+        print("\(defaultMapValue) is def map")
 //        self.navigationController?.navigationBar.topItem?.title = "hi"
     }
     
@@ -114,7 +115,7 @@ class MainPageViewController: UIViewController, CLLocationManagerDelegate, MKMap
     override func shouldAutorotate() -> Bool {
         return false
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

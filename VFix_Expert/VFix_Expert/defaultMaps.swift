@@ -10,23 +10,38 @@ import UIKit
 import TPDMapsApp
 
 var defaultMapApp: TPDMapsApp?
-var defaultMap: TPDMapsApp?
 let userDefaults = NSUserDefaults.standardUserDefaults()
 class defaultMaps: TPDMapsApp {
     func setDefault(map: TPDMapsApp){
         defaultMapApp = map
 //        let setDefaultMapData = NSKeyedArchiver.archivedDataWithRootObject(defaultMapApp!)
-//        userDefaults.setObject(setDefaultMapData, forKey: "default_map")
-        print(defaultMapApp!.name)
+        switch defaultMapApp!.name {
+            
+        case "Apple":
+            print("its apple")
+            
+            userDefaults.setObject(0, forKey: "default_map")
+            userDefaults.synchronize()
+            break
+        case "Google":
+            print("its google")
+            
+            userDefaults.setObject(1, forKey: "default_map")
+            userDefaults.synchronize()
+            break
+        case "Waze":
+            print("its waze")
+            
+            userDefaults.setObject(2, forKey: "default_map")
+            userDefaults.synchronize()
+            break
+        default:
+            print("its weird")
+        }
+//        print(defaultMapApp!.name)
+        
         
     }
-//    func getDefaultMap() {
-//        if let getDefaultMapData = userDefaults.objectForKey("default_map") as? NSData{
-//            if let getDefaultMapApp = NSKeyedUnarchiver.unarchiveObjectWithData(getDefaultMapData) as? TPDMapsApp{
-//                defaultMap = getDefaultMapApp
-//            }
-//        }
-//        
-//    }
+    
     
 }

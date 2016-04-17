@@ -97,11 +97,17 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         switch(indexPath.row){
             case 0:
             // "Dashboard"
-                let mainPageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DashboardTabBarController") as! DashboardTabBarController
-                let mainPageNav = UINavigationController(rootViewController: mainPageViewController)
-                appDelegate.drawerContainer!.centerViewController = mainPageNav
+//                let mainPageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DashboardTabBarController") as! DashboardTabBarController
+//                let mainPageNav = UINavigationController(rootViewController: mainPageViewController)
+//                appDelegate.drawerContainer!.centerViewController = mainPageNav
+//                appDelegate.drawerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
+//                break
+                let scheduleViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ScheduleViewController") as! ScheduleViewController
+                let ScheduleNav = UINavigationController(rootViewController: scheduleViewController)
+                // let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                appDelegate.drawerContainer!.centerViewController = ScheduleNav
                 appDelegate.drawerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
-                break
+            break
             case 1:
             // , "Profile"
                 let profileViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProfileViewController") as! ProfileViewController
@@ -112,12 +118,18 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 break
             case 2:
             //, "Schedule", 
-                let scheduleViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ScheduleViewController") as! ScheduleViewController
-                let ScheduleNav = UINavigationController(rootViewController: scheduleViewController)
-               // let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-                appDelegate.drawerContainer!.centerViewController = ScheduleNav
+//                let scheduleViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ScheduleViewController") as! ScheduleViewController
+//                let ScheduleNav = UINavigationController(rootViewController: scheduleViewController)
+//               // let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//                appDelegate.drawerContainer!.centerViewController = ScheduleNav
+//                appDelegate.drawerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
+//                break
+            
+                let mainPageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DashboardTabBarController") as! DashboardTabBarController
+                let mainPageNav = UINavigationController(rootViewController: mainPageViewController)
+                appDelegate.drawerContainer!.centerViewController = mainPageNav
                 appDelegate.drawerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
-                break
+            break
             case 3:
             // "My pay"
                 let MyPayViewController = self.storyboard?.instantiateViewControllerWithIdentifier("myPayViewController") as! myPayViewController

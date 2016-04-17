@@ -11,6 +11,10 @@ import MMDrawerController
 
 class MyCardViewController: UIViewController {
 
+    
+    @IBOutlet weak var delightNum: UITextField!
+    @IBOutlet weak var lastFour: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.barTintColor = UIColor(red: 20/255.0, green: 157/255.0, blue: 234/255.0, alpha: 1.0)
