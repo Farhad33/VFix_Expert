@@ -16,6 +16,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var expertTopView: UIView!
     @IBOutlet weak var photoEditButton: UIButton!
     @IBOutlet weak var secureEditButton: UIBarButtonItem!
+    @IBOutlet weak var emailUnderlineView: UIView!
+    @IBOutlet weak var invalidEmailLabel: UILabel!
     
     var isUp: Bool = false
     var onSubmit: Bool = false
@@ -39,7 +41,10 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(emailUnderlineView.backgroundColor)
         navigationController?.navigationBar.barTintColor = UIColor(red: 20/255.0, green: 157/255.0, blue: 234/255.0, alpha: 1.0)
+        
+        // 0.0784314 0.615686 0.917647
 //        navigationController?.navigationBar.barStyle = UIBarStyle.Black
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
@@ -66,6 +71,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         emailField.enabled = false
         emailField.text = defaults.stringForKey("expert_email")
+        invalidEmailLabel.hidden = true
         
         stateField.enabled = false
         stateField.text = defaults.stringForKey("state")
@@ -245,7 +251,24 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             
         }
     }
+    @IBAction func onEmailChanged(sender: AnyObject) {
 
+        if (!isValidEmail(emailField.text!)){
+            emailUnderlineView.backgroundColor = UIColor.redColor()
+            invalidEmailLabel.hidden = false
+        } else {
+            emailUnderlineView.backgroundColor = UIColor(red: 20/255.0, green: 157/255.0, blue: 234/255.0, alpha: 1.0)
+            invalidEmailLabel.hidden = true
+            // 0.0784314 0.615686 0.917647
+        }
+    }
+    func isValidEmail(testStr:String) -> Bool {
+        // println("validate calendar: \(testStr)")
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluateWithObject(testStr)
+    }
 
     
     /*

@@ -15,6 +15,12 @@ class SignUpViewController: UIViewController {
         let userDefaults = NSUserDefaults.standardUserDefaults()
         // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(animated: Bool) {
+        UIApplication.sharedApplication().statusBarStyle = .Default
+    }
+    override func viewWillDisappear(animated: Bool) {
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

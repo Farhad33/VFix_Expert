@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9682F9E585E5FE5A681A2188'
+               BlueprintIdentifier = '45AA584ADFD72350B3115E3E'
                BlueprintName = 'TPDMapsApp'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'TPDMapsApp.framework'>

@@ -88,6 +88,12 @@ class myPayViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.view.addSubview(tableView)
     }
     
+    @IBAction func onSupportClicked(sender: AnyObject) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("SupportViewController") as! SupportViewController
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

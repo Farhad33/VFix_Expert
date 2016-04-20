@@ -85,13 +85,21 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-VFix_Expert/Alamofire.framework"
+  install_framework "Pods-VFix_Expert/CalendarLib.framework"
   install_framework "Pods-VFix_Expert/Cosmos.framework"
   install_framework "Pods-VFix_Expert/MMDrawerController.framework"
+  install_framework "Pods-VFix_Expert/OSCache.framework"
+  install_framework "Pods-VFix_Expert/OrderedDictionary.framework"
+  install_framework "Pods-VFix_Expert/SwiftyJSON.framework"
   install_framework "Pods-VFix_Expert/TPDMapsApp.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-VFix_Expert/Alamofire.framework"
+  install_framework "Pods-VFix_Expert/CalendarLib.framework"
   install_framework "Pods-VFix_Expert/Cosmos.framework"
   install_framework "Pods-VFix_Expert/MMDrawerController.framework"
+  install_framework "Pods-VFix_Expert/OSCache.framework"
+  install_framework "Pods-VFix_Expert/OrderedDictionary.framework"
+  install_framework "Pods-VFix_Expert/SwiftyJSON.framework"
   install_framework "Pods-VFix_Expert/TPDMapsApp.framework"
 fi

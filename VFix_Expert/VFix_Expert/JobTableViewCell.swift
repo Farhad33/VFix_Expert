@@ -10,6 +10,9 @@ import UIKit
 
 class JobTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var serviceTypeLabel: UILabel!
+    @IBOutlet weak var appointmentTime: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

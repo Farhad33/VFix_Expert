@@ -21,6 +21,12 @@ class CalendarViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func onSupportClicked(sender: AnyObject) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("SupportViewController") as! SupportViewController
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

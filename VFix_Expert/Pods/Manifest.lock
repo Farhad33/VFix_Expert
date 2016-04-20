@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (3.3.1)
+  - CalendarLib (1.0):
+    - OrderedDictionary (~> 1.2)
+    - OSCache (~> 1.2)
   - Cosmos (1.2.2)
   - MMDrawerController (0.5.7):
     - MMDrawerController/Core (= 0.5.7)
@@ -13,18 +16,38 @@ PODS:
     - MMDrawerController/Core
   - MMDrawerController/Subclass (0.5.7):
     - MMDrawerController/Core
+  - OrderedDictionary (1.2)
+  - OSCache (1.2.1)
+  - SwiftyJSON (2.3.2)
   - TPDMapsApp (1.1.0)
 
 DEPENDENCIES:
   - Alamofire
+  - CalendarLib (~> 1.0)
   - Cosmos (~> 1.2)
   - MMDrawerController (~> 0.5.7)
+  - OrderedDictionary (~> 1.2)
+  - OSCache (~> 1.2)
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
   - TPDMapsApp (~> 1.0)
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: 2a5b70f06001316d4fb54501edc70b4084705da0
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
+  CalendarLib: 09364238c6259a17a719f2f8b05a79bf379ecb8d
   Cosmos: 87c49100c69d2cb2eebfa4eb8d1e801fe29ff774
   MMDrawerController: 7a4cf8e25596bf2434e03ce50d22a8608ddee6a1
+  OrderedDictionary: 9cc5d69c5c5314ad696ed1839190724e83d534c7
+  OSCache: 826996b68e8542a8a3d8af1ab0a0fc3070d8f357
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   TPDMapsApp: 2ccfb67dd3192bc0757a34f7f1dad5fadb2012b1
 
 COCOAPODS: 0.39.0
