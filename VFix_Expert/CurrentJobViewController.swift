@@ -66,6 +66,7 @@ class CurrentJobViewController: UIViewController, UITableViewDataSource, UITable
                         let json = JSON(value)
                         let response = json["items"]
                         responseCount = response.count
+                        print(responseCount)
                         print(response)
                         //                    print(address)
                         
@@ -112,6 +113,24 @@ class CurrentJobViewController: UIViewController, UITableViewDataSource, UITable
         // Dispose of any resources that can be recreated.
     }
     
+    func convertDateFormater(date: String) -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        dateFormatter.timeZone = NSTimeZone(name: "UTC")
+        
+        guard let date = dateFormatter.dateFromString(date) else {
+            print("no date from string")
+            return ""
+        }
+        
+        dateFormatter.dateFormat = "HH:mm a"
+        dateFormatter.timeZone = NSTimeZone(name: "UTC")
+        let timeStamp = dateFormatter.stringFromDate(date)
+        
+        return timeStamp
+    }
+
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        return tableData.count
         return responseCount
@@ -121,12 +140,13 @@ class CurrentJobViewController: UIViewController, UITableViewDataSource, UITable
         
         let cell = tableView.dequeueReusableCellWithIdentifier("CurrentJobCell", forIndexPath: indexPath) as! CurrentJobCell
         
-        
+
         cell.serviceLabel.text = service
         cell.timeLabel.text = startTime
        
         return cell
     }
+    
     
    
      // MARK: - Navigation
@@ -150,12 +170,13 @@ class CurrentJobViewController: UIViewController, UITableViewDataSource, UITable
         
         let client_phone = clientPhone
         let client_address = clientStreet + " " + clientCity + " " + clientState + " " + clientZip
-        //let address =
+        let client_name = clientName
         let detailViewController = segue.destinationViewController as! ClientInfoViewController
         detailViewController.serviceInfo = appointment
         detailViewController.timeInfo = appointment_time
         detailViewController.addressInfo = client_address
         detailViewController.phoneInfo = client_phone
+        detailViewController.nameInfo = client_name
         
      }
  
