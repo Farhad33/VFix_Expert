@@ -84,6 +84,7 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-VFix_Expert/ARSLineProgress.framework"
   install_framework "Pods-VFix_Expert/Alamofire.framework"
   install_framework "Pods-VFix_Expert/CalendarLib.framework"
   install_framework "Pods-VFix_Expert/Cosmos.framework"
@@ -94,6 +95,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-VFix_Expert/TPDMapsApp.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-VFix_Expert/ARSLineProgress.framework"
   install_framework "Pods-VFix_Expert/Alamofire.framework"
   install_framework "Pods-VFix_Expert/CalendarLib.framework"
   install_framework "Pods-VFix_Expert/Cosmos.framework"

@@ -9,11 +9,17 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-
+/*
 var sessionToken = "22719873bdbb43cf0cc7f77d6e857e9e"
 var url = "companies/13772899/appointments"
 let APIKey = "f8d0c6b95ab7f5316a7bff112b40bfd2def192a0"
 let baseUrl = "https://www.agendize.com/api/2.0/scheduling/"
+*/
+private var Token = "22719873bdbb43cf0cc7f77d6e857e9e"
+private var Key = "f8d0c6b95ab7f5316a7bff112b40bfd2def192a0"
+private var BaseUrl = "https://www.agendize.com/api/2.0/scheduling/companies/13772899/appointments?staffId="
+private var Id = "13772906"
+
 var address: String = ""
 var city: String = ""
 var state: String = ""
@@ -47,32 +53,46 @@ class JobsTableViewController: UIViewController, UITableViewDataSource, UITableV
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    /*
+     button.backgroundColor = UIColor.clearColor()
+     button.layer.cornerRadius = 5
+     button.layer.borderWidth = 1
+     button.layer.borderColor = UIColor.blackColor().CGColor
+     */
+    
+    override func viewWillDisappear(animated: Bool) {
+//        appointments.removeAll()
+    }
+    override func viewWillAppear(animated: Bool) {
+//        NetworkRequest()
+    }
     
     func NetworkRequest() {
-        Alamofire.request(.GET, "\(baseUrl)\(url)?apiKey=\(APIKey)&token=\(sessionToken)")
+
+        Alamofire.request(.GET, "\(BaseUrl)\(Id)&token=\(Token)&apiKey=\(Key)")
             .responseJSON { response in
-                if let value = response.result.value {
-                    if response.result.isSuccess == true{
-                        let json = JSON(value)
-                        print(appointments)
-                        let response = json["items"]
-                        for (_, j) in response {
-                            
-                            
-                            if staffID == j["staff"]["id"].stringValue{
+                appointments.removeAll()
+                if response.result.isSuccess{
+                    print("success")
+                    if let value = response.result.value {
+                        let values = JSON(value)
+                        let data = values["items"]
+                        print(data)
+                        for (_, j) in data {
+                            if Id == j["staff"]["id"].stringValue{
                                 appointments.append(j)
                             }
                         }
-                        print("after")
-                        print(appointments)
                         
-                    } else {
-                        print("not there yet")
+                    }else {
+                        print("nothing yet")
                     }
                     self.tableView.dataSource = self
                     self.tableView.delegate = self
                     self.tableView.reloadData()
                 }
+                
         }
     }
     func convertDateFormater(date: String) -> String {
@@ -126,8 +146,7 @@ class JobsTableViewController: UIViewController, UITableViewDataSource, UITableV
          clientState = String(appointments[indexPath!.row]["client"]["address"]["state"])
          clientZip = String(appointments[indexPath!.row]["client"]["address"]["zipCode"])
          clientCity = String(appointments[indexPath!.row]["client"]["address"]["city"])
-         
- 
+        
         
         let client_phone = String(appointments[indexPath!.row]["client"]["phone"])
         let client_address = clientStreet + " " + clientCity + " " + clientState + " " + clientZip

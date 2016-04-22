@@ -9,6 +9,7 @@
 import UIKit
 //import DrawerController
 import MMDrawerController
+import ARSLineProgress
 
 class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -164,18 +165,23 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 break
             case 7:
             // "Log Out"
-//                let mainPageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MainPageViewController") as! MainPageViewController
-//                let mainPageNav = UINavigationController(rootViewController: mainPageViewController)
-//             //   let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//                appDelegate.drawerContainer!.centerViewController = mainPageNav
-//                appDelegate.drawerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
+
                 var refreshAlert = UIAlertController(title: "Log out", message: "This action is irriversable. Are you sure?", preferredStyle: UIAlertControllerStyle.Alert)
                 
                 refreshAlert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { (action: UIAlertAction!) in
                     
                     self.userDefaults.setObject(nil, forKey: "user_name")
-
-                    self.dismissViewControllerAnimated(true, completion: nil)
+                    ARSLineProgress.showSuccess()
+                    let seconds = 1.5
+                    let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
+                    let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+                    
+                    dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+                        
+                        // here code perfomed with delay
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    })
+                    
                     
                 }))
                 

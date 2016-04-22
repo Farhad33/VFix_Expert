@@ -10,8 +10,8 @@ target 'VFix_Expert' do
     pod 'MMDrawerController', '~> 0.5.7'
     pod 'Cosmos', '~> 1.2'
     pod 'Alamofire'
-    
-    pod 'CalendarLib', '~> 1.0'
+    pod 'ARSLineProgress', '~> 1.0'
+    pod 'CalendarLib', '~> 2.0'
     pod 'OSCache', '~> 1.2'
     pod 'OrderedDictionary', '~> 1.2'
     pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'

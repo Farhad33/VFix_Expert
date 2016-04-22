@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ARSLineProgress
 
 class LoginViewController: UIViewController {
 
@@ -52,7 +53,19 @@ class LoginViewController: UIViewController {
     @IBAction func onSignIn(sender: AnyObject) {
         if (usernameValidation() && passwordValidation()){
             userDefaults.setObject(usernameField.text, forKey: "user_name")
-            appDelegate.buildInterface()
+            ARSLineProgress.showSuccess()
+            
+            let seconds = 1.5
+            let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
+            let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+            
+            dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+                
+                // here code perfomed with delay
+                self.appDelegate.buildInterface()
+            })
+            
+            
         } else {
             var refreshAlert = UIAlertController(title: "Log in", message: "Please fill all required fields!", preferredStyle: UIAlertControllerStyle.Alert)
             
@@ -67,7 +80,9 @@ class LoginViewController: UIViewController {
 //            refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in
 //                print("Canceled")
 //            }))
+            
             presentViewController(refreshAlert, animated: true, completion: nil)
+            
         }
         
     }

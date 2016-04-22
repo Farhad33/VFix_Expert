@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'AE99B24ECB02698B388D392C'
+               BlueprintIdentifier = '7DB3407D793B36AB5013FAF9'
                BlueprintName = 'OrderedDictionary'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'OrderedDictionary.framework'>

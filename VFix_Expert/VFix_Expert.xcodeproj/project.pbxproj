@@ -28,6 +28,7 @@
 		A005430F1CA74E9600656D5A /* MyCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A005430E1CA74E9600656D5A /* MyCardViewController.swift */; };
 		A00543111CA74EA900656D5A /* RatingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00543101CA74EA900656D5A /* RatingsViewController.swift */; };
 		A00543161CA9F41A00656D5A /* DashboardTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00543151CA9F41A00656D5A /* DashboardTabBarController.swift */; };
+		A03DD57A1CC98BDB008DF51C /* availabilityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03DD5791CC98BDB008DF51C /* availabilityCell.swift */; };
 		A075873A1CC6E5DC0011A76E /* AvailabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07587391CC6E5DC0011A76E /* AvailabilityViewController.swift */; };
 		A075873D1CC6F8E30011A76E /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A075873C1CC6F8E30011A76E /* SupportViewController.swift */; };
 		A097C7E41C9E1CBA00E9A1EA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A097C7E31C9E1CBA00E9A1EA /* MenuViewController.swift */; };
@@ -62,6 +63,7 @@
 		A00543101CA74EA900656D5A /* RatingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingsViewController.swift; sourceTree = "<group>"; };
 		A00543121CA884C600656D5A /* VFix_Expert-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VFix_Expert-Bridging-Header.h"; sourceTree = "<group>"; };
 		A00543151CA9F41A00656D5A /* DashboardTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTabBarController.swift; sourceTree = "<group>"; };
+		A03DD5791CC98BDB008DF51C /* availabilityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = availabilityCell.swift; sourceTree = "<group>"; };
 		A07587391CC6E5DC0011A76E /* AvailabilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailabilityViewController.swift; sourceTree = "<group>"; };
 		A075873C1CC6F8E30011A76E /* SupportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
 		A097C7E31C9E1CBA00E9A1EA /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				3E8CE53F1C92AE8E002A4A5B /* JobTableViewCell.swift */,
 				A097C7E51C9E219000E9A1EA /* MenuCell.swift */,
 				A0CC27FF1CB1EA7D001F562F /* defaultMapsCell.swift */,
+				A03DD5791CC98BDB008DF51C /* availabilityCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				A0DD3AB41CB739A1005C4791 /* defaultMaps.swift in Sources */,
 				A00543111CA74EA900656D5A /* RatingsViewController.swift in Sources */,
 				3E8CE5331C92AE30002A4A5B /* SignUpViewController.swift in Sources */,
+				A03DD57A1CC98BDB008DF51C /* availabilityCell.swift in Sources */,
 				A0E009BC1CA4D4B8003DD632 /* MainPageViewController.swift in Sources */,
 				3E8CE53B1C92AE62002A4A5B /* JobHistoryViewController.swift in Sources */,
 				A005430D1CA74E8700656D5A /* SettingsViewController.swift in Sources */,
