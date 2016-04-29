@@ -9,76 +9,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VFix_Expert/ProfileViewController.swift"
-            timestampString = "482815897.368528"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "246"
-            endingLineNumber = "246"
-            landmarkName = "secureEditClicked(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "VFix_Expert/defaultMaps.swift"
-            timestampString = "482381194.751731"
+            timestampString = "483418582.019078"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "setDefault(_:)"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VFix_Expert/defaultMaps.swift"
-            timestampString = "481771879.084682"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "8"
-            endingLineNumber = "8">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "globalinit_33_15A786141AF6B13BABF8FDC4026ED11D_func0"
-                  moduleName = "VFix_Expert"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Light/Downloads/VFix_Expert-master/VFix_Expert/VFix_Expert/defaultMaps.swift"
-                  timestampString = "481771879.118543"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VFix_Expert.defaultMapApp.unsafeMutableAddressor : Swift.Optional&lt;__ObjC.TPDMapsApp&gt;"
-                  moduleName = "VFix_Expert"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Light/Downloads/VFix_Expert-master/VFix_Expert/VFix_Expert/defaultMaps.swift"
-                  timestampString = "481771879.119152"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -94,22 +32,6 @@
             startingLineNumber = "736"
             endingLineNumber = "736"
             landmarkName = "respondsToSelector(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VFix_Expert/myPayViewController.swift"
-            timestampString = "482351507.730671"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "addMonthView(_:money:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

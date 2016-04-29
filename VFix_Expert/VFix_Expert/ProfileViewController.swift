@@ -8,26 +8,32 @@
 
 import UIKit
 import MMDrawerController
+import SpriteKit
 
-class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var expertName: UILabel!
     @IBOutlet weak var expertPhoto: UIImageView!
     @IBOutlet weak var expertTopView: UIView!
     @IBOutlet weak var photoEditButton: UIButton!
-    @IBOutlet weak var secureEditButton: UIBarButtonItem!
+    @IBOutlet weak var secureEditButton: UIButton!
     @IBOutlet weak var emailUnderlineView: UIView!
     @IBOutlet weak var invalidEmailLabel: UILabel!
+    @IBOutlet weak var expertBottomView: UIView!
+    @IBOutlet weak var expertBottomViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var expertBottomViewBottomConstraint: NSLayoutConstraint!
+    
     
     var isUp: Bool = false
     var onSubmit: Bool = false
     let defaults = NSUserDefaults.standardUserDefaults()
+    let lightSource = SKLightNode()
     // image in the future
     // services
     //a
     var firstName: String = "Noureddine"
     var lastName: String = "Youssfi"
-    
+    var firstTap = false
     
     @IBOutlet weak var mailPart1Field: UITextField!
     @IBOutlet weak var mailPart2Field: UITextField!
@@ -41,14 +47,37 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
+        
+        
+        let origImage = UIImage(named: "locked.ong")
+        let tintedImage = origImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        secureEditButton.tintColor = UIColor.whiteColor()
+        
+        self.secureEditButton.setImage(tintedImage, forState: .Normal)
         print(emailUnderlineView.backgroundColor)
         navigationController?.navigationBar.barTintColor = UIColor(red: 20/255.0, green: 157/255.0, blue: 234/255.0, alpha: 1.0)
         
-        // 0.0784314 0.615686 0.917647
-//        navigationController?.navigationBar.barStyle = UIBarStyle.Black
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
-        expertPhoto.image = UIImage(named: "myphoto64x64")
+        if let imageData = userDefaults.objectForKey("image") as? NSData{
+            if let img = UIImage(data: imageData){
+                let size = CGSizeMake(64, 64)
+                expertPhoto.image = imageResize(img, sizeChange: size)
+            }
+        } else {
+            expertPhoto.image = UIImage(named: "myphoto64x64")
+        }
+        for subview in self.expertBottomView.subviews{
+            if (subview != self.secureEditButton){
+                subview.alpha = 0.5
+                self.secureEditButton.alpha = 1
+                self.expertBottomView.backgroundColor = UIColor.darkGrayColor().colorWithAlphaComponent(0.6)
+                
+            }
+        }
         expertPhoto.layer.borderWidth = 1
         expertPhoto.layer.masksToBounds = false
         expertPhoto.layer.borderColor = UIColor.whiteColor().CGColor
@@ -60,42 +89,66 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         expertName.hidden = false
         expertName.text = firstName + " " + lastName
         
+        
         mailPart1Field.enabled = false
         mailPart1Field.text = defaults.stringForKey("expert_mail_first")
+        mailPart1Field.autocorrectionType = .No
         
         mailPart2Field.enabled = false
         mailPart2Field.text = defaults.stringForKey("expert_mail_second")
+        mailPart2Field.autocorrectionType = .No
         
         phoneField.enabled = false
         phoneField.text = defaults.stringForKey("expert_phone")
+        phoneField.autocorrectionType = .No
         
         emailField.enabled = false
         emailField.text = defaults.stringForKey("expert_email")
+        emailField.autocorrectionType = .No
         invalidEmailLabel.hidden = true
         
         stateField.enabled = false
         stateField.text = defaults.stringForKey("state")
+        stateField.autocorrectionType = .No
         
         zipcodeField.enabled = false
         zipcodeField.text = defaults.stringForKey("zip_code")
+        zipcodeField.autocorrectionType = .No
         
         extensionField.enabled = false
         extensionField.text = defaults.stringForKey("ext")
+        extensionField.autocorrectionType = .No
         
-        // expertBottomView.center.y = self.view.bounds.height + expertBottomView.center.y
-//        self.expertBottomView.center.y = self.view.bounds.height / 1.14
-        // Do any additional setup after loading the view.
-//        photoEditButton.layer.borderWidth = 1
-//        photoEditButton.layer.masksToBounds = false
-//        photoEditButton.layer.borderColor = UIColor.whiteColor().CGColor
-//        photoEditButton.layer.cornerRadius = photoEditButton.frame.height/2
-//        photoEditButton.clipsToBounds = true
+        
 
+    
+    }
+//    deinit {
+//        NSNotificationCenter.defaultCenter().removeObserver(self);
+//    }
+    func imageResize (image:UIImage, sizeChange:CGSize)-> UIImage{
         
+        let hasAlpha = true
+        let scale: CGFloat = 0.0 // Use scale factor of main screen
+        
+        UIGraphicsBeginImageContextWithOptions(sizeChange, !hasAlpha, scale)
+        image.drawInRect(CGRect(origin: CGPointZero, size: sizeChange))
+        
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        return scaledImage
     }
     
+    
     override func viewWillAppear(animated: Bool) {
-        
+        for subview in self.expertBottomView.subviews{
+            if (subview != self.secureEditButton){
+                subview.alpha = 0.5
+                self.expertBottomView.backgroundColor = UIColor.darkGrayColor().colorWithAlphaComponent(0.6)
+                
+            }
+        }
+//        secureEditButton.backgroundColor = UIColor.whiteColor()
+//        secureEditButton.tintColor = UIColor.whiteColor()
         expertName.text = defaults.stringForKey("expert_name")
         emailField.text = defaults.stringForKey("expert_email")
         
@@ -161,10 +214,13 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             // Get the image captured by the UIImagePickerController
             let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
             let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
-            
-            
-            expertPhoto.image = editedImage
-            
+            secureEditButton.tintColor = UIColor.redColor()
+            let size = CGSize(width: 64,height: 64)
+            expertPhoto.image = imageResize(editedImage,sizeChange: size)
+            let ProfileJPEG: UIImage = expertPhoto.image!
+            let ProfileJPG = UIImageJPEGRepresentation(ProfileJPEG, 1)! as NSData
+            defaults.setObject(ProfileJPG, forKey: "image")
+            defaults.synchronize()
             // Do something with the images (based on your use case)
             
             // Dismiss UIImagePickerController to go back to your original view controller
@@ -178,15 +234,17 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
                 textField.secureTextEntry = true
                 textField.placeholder = "Password"
+                
             })
             
             //3. Grab the value from the text field, and print it when the user clicks OK.
             alert.addAction(UIAlertAction(title: "Confirm", style: .Default, handler: { (action) -> Void in
                 let textField = alert.textFields![0] as UITextField
-                
+//                textField.layer.cornerRadius = 5
                 print("Text field: \(textField.text)")
                 
                 
+                self.secureEditButton.imageView?.image = UIImage(named: "unlocked.png")
                 self.mailPart1Field.enabled = true
                 self.mailPart2Field.enabled = true
                 self.phoneField.enabled = true
@@ -195,9 +253,24 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                 self.stateField.enabled = true
                 self.photoEditButton.hidden = false
                 self.extensionField.enabled = true
-                self.secureEditButton.image = nil
-                self.secureEditButton.title = "Submit"
+                
+//                self.secureEditButton.image = nil
+//                self.secureEditButton.title = "Submit"
                 self.onSubmit = true
+
+                for subview in self.expertBottomView.subviews{
+                    if (subview != self.secureEditButton){
+                        UIView.animateWithDuration(0.5, animations: {
+                            subview.alpha = 1
+                            self.secureEditButton.alpha = 1
+                            self.expertBottomView.backgroundColor = UIColor.whiteColor()
+                        })
+                    }
+                }
+//                UIView.animateWithDuration(0.7, animations: {
+//                    self.expertBottomViewTopConstraint.constant = 40
+//                })
+//                self.secureEditButton.backgroundColor = UIColor.whiteColor()
             }))
             alert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in
                 print("Canceled")
@@ -211,7 +284,21 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             self.presentViewController(alert, animated: true, completion: nil)
         } else {
             onSubmit = false
+            let origImage = UIImage(named: "locked.ong")
+            let tintedImage = origImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+            secureEditButton.tintColor = UIColor.whiteColor()
             
+            self.secureEditButton.setImage(tintedImage, forState: .Normal)
+            for subview in self.expertBottomView.subviews{
+                if (subview != self.secureEditButton){
+                    UIView.animateWithDuration(0.5, animations: {
+                        subview.alpha = 0.5
+                        self.secureEditButton.alpha = 1
+                        self.expertBottomView.backgroundColor = UIColor.darkGrayColor().colorWithAlphaComponent(0.6)
+                    })
+                }
+            }
+
             mailPart1Field.enabled = false
             mailPart2Field.enabled = false
             phoneField.enabled = false
@@ -219,24 +306,10 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             zipcodeField.enabled = false
             stateField.enabled = false
             extensionField.enabled = false
+            expertBottomViewTopConstraint.constant = 168
             
             self.photoEditButton.hidden = true
-            self.secureEditButton.title = ""
-            self.secureEditButton.image = UIImage(named: "editbutton.png")
             
-            /*
-            @IBOutlet weak var mailPart1Field: UITextField!
-            @IBOutlet weak var mailPart2Field: UITextField!
-            @IBOutlet weak var phoneField: UITextField!
-            @IBOutlet weak var emailField: UITextField!
-            */
-            
-            /*
-            mailPart1Field.text = defaults.stringForKey("expert_mail_part1")
-            
-            mailPart2Field.enabled = false
-            mailPart1Field.text = defaults.stringForKey("expert_mail_part2")
-            */
             defaults.setObject(extensionField.text, forKey: "ext")
             defaults.setObject(mailPart1Field.text, forKey: "expert_mail_first")
             defaults.setObject(mailPart2Field.text, forKey: "expert_mail_second")
@@ -252,7 +325,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
     }
     @IBAction func onEmailChanged(sender: AnyObject) {
-
+        textFieldDidBeginEditing(emailField)
         if (!isValidEmail(emailField.text!)){
             emailUnderlineView.backgroundColor = UIColor.redColor()
             invalidEmailLabel.hidden = false
@@ -270,6 +343,14 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         return emailTest.evaluateWithObject(testStr)
     }
 
+    @IBAction func supportButtonClicked(sender: AnyObject) {
+        let suppVC = self.storyboard!.instantiateViewControllerWithIdentifier("SupportViewController") as! SupportViewController
+        let navController = UINavigationController(rootViewController: suppVC) // Creating a navigation controller with VC1 at the root of the navigation stack.
+        self.presentViewController(navController, animated:true, completion: nil)
+    }
+    // phone 110
+    // email
+    
     
     /*
     // MARK: - Navigation
@@ -280,5 +361,100 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func onSecuredTap(sender: AnyObject) {
+        if (!onSubmit){
+            if (!firstTap){
+                firstTapValidation()
+            } else {
+                securityAnimationWithDuration(0.2)
+            }
+        }
+    }
+    
+    func firstTapValidation(){
+        firstTap = true
+        var refreshAlert = UIAlertController(title: "Security Alert", message: "Please verify your account.", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) in
+            self.securityAnimationWithDuration(0.7)
+            }))
+        presentViewController(refreshAlert, animated: true, completion: nil)
+    }
+    
+    func securityAnimationWithDuration(duration : NSTimeInterval){
+            self.secureEditButton.imageView?.image = nil
+            let origImage = UIImage(named: "locked.ong")
+            let tintedImage = origImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+            self.secureEditButton.tintColor = UIColor.redColor()
+            
+            self.secureEditButton.setImage(tintedImage, forState: .Normal)
+            UIView.animateWithDuration(duration, animations: {
+                self.secureEditButton.transform = CGAffineTransformMakeScale(3, 3)
+            })
+            UIView.animateWithDuration(duration, animations: {
+                self.secureEditButton.transform = CGAffineTransformMakeScale(1, 1)
+            })
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        switch textField {
+        case mailPart1Field:
+            self.expertBottomViewTopConstraint.constant = 40
+            break
+        case mailPart2Field:
+            self.expertBottomViewTopConstraint.constant = 40
+            break
+        case stateField:
+            self.expertBottomViewTopConstraint.constant = 40
+            break
+        case zipcodeField:
+            self.expertBottomViewTopConstraint.constant = 40
+            break
+        case extensionField:
+            self.expertBottomViewTopConstraint.constant = 40
+            break
+        case emailField:
+            self.expertBottomViewTopConstraint.constant = 40
+            break
+        case phoneField:
+            self.expertBottomViewTopConstraint.constant = 40
+            break
+        default:
+            self.expertBottomViewTopConstraint.constant = 40
+        }
+    }
+    @IBAction func onMail1Changed(sender: AnyObject) {
+        textFieldDidBeginEditing(mailPart1Field)
+    }
+    @IBAction func onMail2Changed(sender: AnyObject) {
+        textFieldDidBeginEditing(mailPart1Field)
+    }
+    @IBAction func onStateChanged(sender: AnyObject) {
+        textFieldDidBeginEditing(stateField)
+    }
+    @IBAction func onZipChanged(sender: AnyObject) {
+        textFieldDidBeginEditing(zipcodeField)
+    }
+    @IBAction func onExtChanged(sender: AnyObject) {
+        textFieldDidBeginEditing(extensionField)
+    }
+    @IBAction func onPhoneChanged(sender: AnyObject) {
+        textFieldDidBeginEditing(phoneField)
+    }
+//    func keyboardWasShown(notification: NSNotification) {
+//        var info = notification.userInfo!
+//        var keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+//        
+//        UIView.animateWithDuration(0.1, animations: { () -> Void in
+//            self.expertBottomViewBottomConstraint.constant = 40
+//        })
+//    }
+    
+    // phone 50
+    // email 50
+    // state zip ext
+    
+    
+    
 }
+

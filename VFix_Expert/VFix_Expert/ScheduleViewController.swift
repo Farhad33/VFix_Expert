@@ -11,6 +11,13 @@ import MMDrawerController
 
 class ScheduleViewController: UIViewController {
 
+    @IBOutlet weak var nextJobView: UIView!
+    @IBOutlet weak var nexJobDate: UILabel!
+    @IBOutlet weak var nextJobCity: UILabel!
+    @IBOutlet weak var nextJobTime: UILabel!
+    @IBOutlet weak var setAvView: UIView!
+    @IBOutlet weak var annouce1View: UIView!
+    @IBOutlet weak var annouce2View: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.barTintColor = UIColor(red: 20/255.0, green: 157/255.0, blue: 234/255.0, alpha: 1.0)
@@ -21,6 +28,16 @@ class ScheduleViewController: UIViewController {
 //        navigationController?.navigationBar.
         
         // Do any additional setup after loading the view.
+        for view in self.view.subviews {
+            if (view.frame.height > 25){
+                view.layer.shadowColor = UIColor.darkGrayColor().CGColor
+                view.layer.shadowOffset = CGSizeMake(2, 2);
+                view.layer.shadowOpacity = 0.5;
+                view.layer.shadowRadius = 1.0;
+                view.layer.masksToBounds = false
+                view.layer.cornerRadius = 5
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,11 +53,37 @@ class ScheduleViewController: UIViewController {
     }
     
     @IBAction func onSupportClicked(sender: AnyObject) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("SupportViewController") as! SupportViewController
-        self.presentViewController(vc, animated: true, completion: nil)
+        let suppVC = self.storyboard!.instantiateViewControllerWithIdentifier("SupportViewController") as! SupportViewController
+        let navController = UINavigationController(rootViewController: suppVC) // Creating a navigation controller with VC1 at the root of the navigation stack.
+        self.presentViewController(navController, animated:true, completion: nil)    }
+    
+    @IBAction func referalButtonClicked(sender: AnyObject) {
+        referFunction()
+//        UIView.animateWithDuration(0.1, animations: {
+//            self.annouce2View.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(1.0)
+//        })
     }
-
+    func referFunction(){
+        let activityViewController = UIActivityViewController(
+            activityItems: ["Vfix Expert is a Great App!" as NSString],
+            applicationActivities: nil)
+        
+        presentViewController(activityViewController, animated: true, completion: nil)
+    }
+    @IBAction func comingSoonPressed(sender: AnyObject) {
+        newVersion()
+        
+        
+    }
+    func newVersion(){
+        var refreshAlert = UIAlertController(title: "Coming soon!", message: "Vfix Expert 2.0 coming soon!", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) in
+            //            self.securityAnimationWithDuration(0.7)
+//            self.navigationController?.popViewControllerAnimated(true)
+        }))
+        presentViewController(refreshAlert, animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

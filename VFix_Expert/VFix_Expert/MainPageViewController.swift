@@ -11,132 +11,235 @@ import MMDrawerController
 import MapKit
 import Alamofire
 import CoreLocation
+import MessageUI
+import TPDMapsApp
 
-//let sessionToken = "22719873bdbb43cf0cc7f77d6e857e9e"
-//var endPoint = "companies/13772899/appointments"
-//let APIKey = "f8d0c6b95ab7f5316a7bff112b40bfd2def192a0"
-//let baseUrl = "https://www.agendize.com/api/2.0/scheduling/"
-let defaultMapValue = NSUserDefaults.standardUserDefaults().integerForKey("default_map")
 
-class MainPageViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
 
+// 
+class MainPageViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, MFMessageComposeViewControllerDelegate{
+    
+    
     var serviceInfo: String = ""
     var timeInfo: String = ""
     var phoneInfo: String = ""
     var nameInfo: String = ""
     var addressInfo: String = ""
+    var instructionsInfo: String = ""
+    var image: UIImage?
+    let availableMapsApps = TPDMapsApp.availableMapsAppsSortedByName()
     
+    @IBOutlet weak var jobInstructionLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
-    var locationManager : CLLocationManager!
+
     
+    @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var serviceType: UILabel!
     @IBOutlet weak var customerName: UILabel!
     @IBOutlet weak var customerAddress: UILabel!
     @IBOutlet weak var customerPhone: UILabel!
     @IBOutlet weak var appointmentTime: UILabel!
     @IBOutlet weak var instructionsTextView: UITextView!
+    @IBOutlet weak var noInstructionsView: UIView!
     
+    var mapManager = MapManager()
+    var locationManager: CLLocationManager!
+    var def: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
+        userDefaults.synchronize()
+        let defaultMapValue = NSUserDefaults.standardUserDefaults().integerForKey("default_map")
+        def = defaultMapValue
+        print("\(defaultMapValue) is def map")
         serviceType.text = serviceInfo
         serviceType.textColor = UIColor(red: 20/255.0, green: 157/255.0, blue: 224/255.0, alpha: 1.0)
         customerName.text = nameInfo
         customerPhone.text = phoneInfo
         customerAddress.text = addressInfo
         appointmentTime.text = timeInfo
-        instructionsTextView.flashScrollIndicators() 
+        bottomView.hidden = false
+        noInstructionsView.hidden = true
+//        instructionsInfo = "some stuff"
+        instructionsTextView.text = instructionsInfo
+        if (instructionsInfo == ""){
+//            jobInstructionLabel.hidden = true
+//            bottomView.center.y = 495
+            bottomView.hidden = true
+            noInstructionsView.hidden = false
+            
+        } else {
+//            bottomView.center.y = 420
+            bottomView.hidden = false
+            noInstructionsView.hidden = true
+        }
         
-//        self.navigationController?.navigationBar.backItem?.title = "Back"
+        instructionsTextView.flashScrollIndicators()
+        
+        topView.layer.shadowColor = UIColor.blackColor().CGColor
+        topView.layer.shadowOpacity = 1
+        topView.layer.shadowOffset = CGSizeZero
+        topView.layer.shadowRadius = 5
+        
+        bottomView.layer.shadowColor = UIColor.blackColor().CGColor
+        bottomView.layer.shadowOpacity = 1
+        bottomView.layer.shadowOffset = CGSizeZero
+        bottomView.layer.shadowRadius = 5
+        
+        noInstructionsView.layer.shadowColor = UIColor.blackColor().CGColor
+        noInstructionsView.layer.shadowOpacity = 1
+        noInstructionsView.layer.shadowOffset = CGSizeZero
+        noInstructionsView.layer.shadowRadius = 5
+
         // Do any additional setup after loading the view.
         navigationController?.navigationBar.barTintColor = UIColor(red: 20/255.0, green: 157/255.0, blue: 224/255.0, alpha: 1.0)
-//        navigationController?.navigationBar.barStyle = UIBarStyle.Black
+
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         navigationController?.navigationBar.topItem?.title = ""
         
         print("\(defaultMapValue) is def map")
         
-        let location: String = "50 phelan ave sanfrancisco CA"
-        let geocoder: CLGeocoder = CLGeocoder()
-        geocoder.geocodeAddressString(location,completionHandler: {(placemarks: [CLPlacemark]?, error: NSError?) -> Void in
-            if (placemarks?.count > 0) {
-                let topResult: CLPlacemark = (placemarks?[0])!
-                let placemark: MKPlacemark = MKPlacemark(placemark: topResult)
-                var region: MKCoordinateRegion = self.mapView.region
-                
-                region.center.latitude = (placemark.location?.coordinate.latitude)!
-                region.center.longitude = (placemark.location?.coordinate.longitude)!
-                
-                region.span = MKCoordinateSpanMake(0.5, 0.5)
-                
-                self.mapView.setRegion(region, animated: true)
-                self.mapView.addAnnotation(placemark)
-            }
-        })
+        // ================ START ===============
+        self.mapView?.delegate = self
+        self.mapView!.showsUserLocation = true
+        // ================ END ===============
+        usingAppleButtonPressed()
+        removeAllPlacemarkFromMap(shouldRemoveUserLocation: false)
+    }
+    
+     // ================ START ===============
+    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+        if overlay is MKPolyline {
+            let polylineRenderer = MKPolylineRenderer(overlay: overlay)
+            polylineRenderer.strokeColor = UIColor(red: 20/255.0, green: 157/255.0, blue: 224/255.0, alpha: 1.0)
+            polylineRenderer.lineWidth = 5
+            print("done")
+            return polylineRenderer
+        }
+        return MKOverlayRenderer()
+    }
+    
+    func usingAppleButtonPressed(){
+        let destination = addressInfo
+//        guard let letdestination = destination where !letdestination.isEmpty else {
+//            print("enter to and from")
+//            return
+//        }
         
-        let centerLocation = CLLocation(latitude: 37.7833, longitude: -122.4167)
-        // zoomEnabled, scrollEnabled, pitchEnabled, rotateEnabled <================= IMPORTANT ================
-        goToLocation(centerLocation)
+        self.view.endEditing(true)
         
         locationManager = CLLocationManager()
         locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-        locationManager.distanceFilter = 200
-        locationManager.requestWhenInUseAuthorization()
+        // locationManager.locationServicesEnabled
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
         
-
-//        NetworkRequest(sessionToken, endPoint: endPoint)
         
+        if (locationManager.respondsToSelector(Selector("requestWhenInUseAuthorization"))) {
+            //locationManager.requestAlwaysAuthorization() // add in plist NSLocationAlwaysUsageDescription
+            locationManager.requestWhenInUseAuthorization() // add in plist NSLocationWhenInUseUsageDescription
+        }
     }
     
+    func getDirectionsUsingApple() {
+        let destination = addressInfo
+        mapManager.directionsFromCurrentLocation(to: destination) { (route, directionInformation, boundingRegion, error) -> () in
+            if (error != nil) {
+                print(error!)
+            }
+            else {
+                if let web = self.mapView {
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.removeAllPlacemarkFromMap(shouldRemoveUserLocation: true)
+                        web.addOverlay(route!)
+                        
+
+                        //
+                        if let first = self.mapView.overlays.first {
+                            let rect = self.mapView.overlays.reduce(first.boundingMapRect, combine: {MKMapRectUnion($0, $1.boundingMapRect)})
+                            self.mapView.setVisibleMapRect(rect, edgePadding: UIEdgeInsets(top: 150.0, left: 50.0, bottom: 150.0, right: 50.0), animated: true)
+                        }
+//                        web.setVisibleMapRect(boundingRegion!, animated: true)
+                        
+                        
+                    }
+                }
+            }
+        }
+    }
+    func locationManager(manager: CLLocationManager,
+                         didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        var hasAuthorised = false
+        var locationStatus:NSString = ""
+        switch status {
+        case CLAuthorizationStatus.Restricted:
+            locationStatus = "Restricted Access"
+        case CLAuthorizationStatus.Denied:
+            locationStatus = "Denied access"
+        case CLAuthorizationStatus.NotDetermined:
+            locationStatus = "Not determined"
+        default:
+            locationStatus = "Allowed access"
+            hasAuthorised = true
+        }
+        
+        if(hasAuthorised == true) {
+            getDirectionsUsingApple()
+        }
+        else {
+            print("locationStatus \(locationStatus)")
+        }
+    }
     
-//    func NetworkRequest(sessionToken: String, endPoint: String) {
-//        Alamofire.request(.GET, "\(baseUrl)\(endPoint)?apiKey=\(APIKey)&token=\(sessionToken)")
-//            
-//            .responseJSON { response in
-//                print(response)
-//        }
+    func removeAllPlacemarkFromMap(shouldRemoveUserLocation shouldRemoveUserLocation:Bool){
+        if let mapView = self.mapView {
+            for annotation in mapView.annotations{
+                if shouldRemoveUserLocation {
+                    if annotation as? MKUserLocation !=  mapView.userLocation {
+//                        mapView.removeAnnotation(annotation as MKAnnotation)
+                    var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(service)
+                    
+                        if (annotationView == nil) {
+                            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: service)
+                        }
+                        else {
+                            annotationView!.annotation = annotation
+                        }
+                        annotationView!.image = image
+                }
+            }
+            }}
+    }
+
+//    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+//        let identifier = "customAnnotationView"
 //        
+//        // custom image annotation
+//        var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
+//        if (annotationView == nil) {
+//            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+//        }
+//        else {
+//            annotationView!.annotation = annotation
+//        }
+//        annotationView!.image = image
+//        
+//        return annotationView
 //    }
+    // ================ END ===============
+    
+ 
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-        print("\(defaultMapValue) is def map")
+        
         self.tabBarController?.navigationController?.navigationBarHidden = true
         self.tabBarController?.tabBar.hidden = true
-//        self.navigationController?.navigationBar.topItem?.title = "hi"
     }
     override func viewWillDisappear(animated: Bool) {
         self.tabBarController?.navigationController?.navigationBarHidden = false
         self.tabBarController?.tabBar.hidden = false
     }
     
-    func addAnnotationAtCoordinate(coordinate: CLLocationCoordinate2D) {
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = coordinate
-        annotation.title = "An annotation!"
-        mapView.addAnnotation(annotation)
-    }
-    
-    func goToLocation(location: CLLocation) {
-        let span = MKCoordinateSpanMake(0.1, 0.1)
-        let region = MKCoordinateRegionMake(location.coordinate, span)
-        mapView.setRegion(region, animated: false)
-    }
-    
-    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        if status == CLAuthorizationStatus.AuthorizedWhenInUse {
-            locationManager.startUpdatingLocation()
-        }
-    }
-    
-    
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first {
-            let span = MKCoordinateSpanMake(0.1, 0.1)
-            let region = MKCoordinateRegionMake(location.coordinate, span)
-            mapView.setRegion(region, animated: false)
-        }
-    }
     
     override func shouldAutorotate() -> Bool {
         return false
@@ -148,17 +251,76 @@ class MainPageViewController: UIViewController, CLLocationManagerDelegate, MKMap
         
         
     }
-    
-//    @IBAction func menuButtonClicked(sender: AnyObject) {
-//        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//        appDelegate.drawerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
-//    }
 
     @IBAction func onCallClicked(sender: AnyObject) {
-        let phone = customerPhone.text
-        let url:NSURL = NSURL(string:phone!)!
-        UIApplication.sharedApplication().openURL(url);
+        contactActionSheet()
     }
+    private func callNumber(phoneNumber:String) {
+        if let phoneCallURL:NSURL = NSURL(string: "tel://\(phoneNumber)") {
+            let application:UIApplication = UIApplication.sharedApplication()
+            if (application.canOpenURL(phoneCallURL)) {
+                application.openURL(phoneCallURL);
+            }
+        }
+    }
+    func messageComposeViewController(controller: MFMessageComposeViewController, didFinishWithResult result: MessageComposeResult) {
+        switch (result.rawValue) {
+        case MessageComposeResultCancelled.rawValue:
+            print("Message was cancelled")
+            self.dismissViewControllerAnimated(true, completion: nil)
+        case MessageComposeResultFailed.rawValue:
+            print("Message failed")
+            self.dismissViewControllerAnimated(true, completion: nil)
+        case MessageComposeResultSent.rawValue:
+            print("Message was sent")
+            self.dismissViewControllerAnimated(true, completion: nil)
+        default:
+            break;
+        }
+    }
+    
+    func contactActionSheet(){
+        let optionMenu = UIAlertController(title: nil, message: "Contact \(nameInfo)", preferredStyle: .ActionSheet)
+        
+        // 2
+        let callAction = UIAlertAction(title: "Call \(nameInfo)", style: .Default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            self.callNumber(self.phoneInfo)
+        })
+        let messageAction = UIAlertAction(title: "Message \(nameInfo)", style: .Default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            var messageVC = MFMessageComposeViewController()
+            
+            messageVC.body = ""
+            messageVC.recipients = [self.phoneInfo]
+            messageVC.messageComposeDelegate = self;
+            
+            self.presentViewController(messageVC, animated: false, completion: nil)
+            
+        })
+        
+        //
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
+            (alert: UIAlertAction!) -> Void in
+            print("Cancelled")
+        })
+        
+        
+        // 4
+        optionMenu.addAction(callAction)
+        optionMenu.addAction(messageAction)
+        optionMenu.addAction(cancelAction)
+        
+        // 5
+        self.presentViewController(optionMenu, animated: true, completion: nil)
+    }
+    
+    @IBAction func navigateButton(sender: AnyObject) {
+        let app = availableMapsApps![def!] as! TPDMapsApp
+        app.openWithQuery(addressInfo)
+    }
+    
+    
     /*
     // MARK: - Navigation
 

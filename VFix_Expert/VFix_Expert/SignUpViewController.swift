@@ -30,7 +30,9 @@ class SignUpViewController: UIViewController {
     @IBAction func onCancelClicked(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
     /*
     // MARK: - Navigation
 

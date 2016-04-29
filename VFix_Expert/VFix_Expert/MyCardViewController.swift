@@ -36,9 +36,9 @@ class MyCardViewController: UIViewController {
     }
 
     @IBAction func onSupportClicked(sender: AnyObject) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("SupportViewController") as! SupportViewController
-        self.presentViewController(vc, animated: true, completion: nil)
+        let suppVC = self.storyboard!.instantiateViewControllerWithIdentifier("SupportViewController") as! SupportViewController
+        let navController = UINavigationController(rootViewController: suppVC) // Creating a navigation controller with VC1 at the root of the navigation stack.
+        self.presentViewController(navController, animated:true, completion: nil)
     }
     /*
     // MARK: - Navigation

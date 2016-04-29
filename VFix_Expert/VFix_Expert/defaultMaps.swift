@@ -20,19 +20,22 @@ class defaultMaps: TPDMapsApp {
         case "Apple":
             print("its apple")
             
-            userDefaults.setObject(0, forKey: "default_map")
+//            userDefaults.setObject(0, forKey: "default_map")
+            userDefaults.setInteger(0, forKey: "default_map")
             userDefaults.synchronize()
             break
         case "Google":
             print("its google")
-            
-            userDefaults.setObject(1, forKey: "default_map")
+            userDefaults.setInteger(1, forKey: "default_map")
+
+//            userDefaults.setObject(1, forKey: "default_map")
             userDefaults.synchronize()
             break
         case "Waze":
             print("its waze")
-            
-            userDefaults.setObject(2, forKey: "default_map")
+//            userDefaults.setObject(2, forKey: "default_map")
+
+            userDefaults.setInteger(2, forKey: "default_map")
             userDefaults.synchronize()
             break
         default:

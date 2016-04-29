@@ -40,7 +40,9 @@ class DashboardTabBarController: UITabBarController {
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.drawerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
     }
-
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
     /*
     // MARK: - Navigation
 

@@ -31,8 +31,14 @@
 		A03DD57A1CC98BDB008DF51C /* availabilityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03DD5791CC98BDB008DF51C /* availabilityCell.swift */; };
 		A075873A1CC6E5DC0011A76E /* AvailabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07587391CC6E5DC0011A76E /* AvailabilityViewController.swift */; };
 		A075873D1CC6F8E30011A76E /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A075873C1CC6F8E30011A76E /* SupportViewController.swift */; };
+		A085D69B1CCF17BF0041996B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A085D69A1CCF17BF0041996B /* WebViewController.swift */; };
+		A085D69D1CCF1C830041996B /* DepositViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A085D69C1CCF1C830041996B /* DepositViewController.swift */; };
 		A097C7E41C9E1CBA00E9A1EA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A097C7E31C9E1CBA00E9A1EA /* MenuViewController.swift */; };
 		A097C7E61C9E219000E9A1EA /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A097C7E51C9E219000E9A1EA /* MenuCell.swift */; };
+		A0A36B791CCCAF5F001AAB78 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0A36B781CCCAF5F001AAB78 /* MapKit.framework */; };
+		A0A36B7B1CCCAF68001AAB78 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0A36B7A1CCCAF68001AAB78 /* CoreLocation.framework */; };
+		A0A36B7D1CCD71FE001AAB78 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0A36B7C1CCD71FE001AAB78 /* MessageUI.framework */; };
+		A0A36B7F1CCD8E2B001AAB78 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A36B7E1CCD8E2B001AAB78 /* MapManager.swift */; };
 		A0CC28001CB1EA7D001F562F /* defaultMapsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CC27FF1CB1EA7D001F562F /* defaultMapsCell.swift */; };
 		A0DD3AB41CB739A1005C4791 /* defaultMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD3AB31CB739A1005C4791 /* defaultMaps.swift */; };
 		A0E009BC1CA4D4B8003DD632 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E009BB1CA4D4B8003DD632 /* MainPageViewController.swift */; };
@@ -66,8 +72,14 @@
 		A03DD5791CC98BDB008DF51C /* availabilityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = availabilityCell.swift; sourceTree = "<group>"; };
 		A07587391CC6E5DC0011A76E /* AvailabilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailabilityViewController.swift; sourceTree = "<group>"; };
 		A075873C1CC6F8E30011A76E /* SupportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
+		A085D69A1CCF17BF0041996B /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		A085D69C1CCF1C830041996B /* DepositViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepositViewController.swift; sourceTree = "<group>"; };
 		A097C7E31C9E1CBA00E9A1EA /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		A097C7E51C9E219000E9A1EA /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		A0A36B781CCCAF5F001AAB78 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A0A36B7A1CCCAF68001AAB78 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A0A36B7C1CCD71FE001AAB78 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		A0A36B7E1CCD8E2B001AAB78 /* MapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapManager.swift; path = "../../../../../Downloads/MapManager-master 2/MapManager.swift"; sourceTree = "<group>"; };
 		A0CC27FF1CB1EA7D001F562F /* defaultMapsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = defaultMapsCell.swift; sourceTree = "<group>"; };
 		A0DD3AB31CB739A1005C4791 /* defaultMaps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = defaultMaps.swift; sourceTree = "<group>"; };
 		A0E009BB1CA4D4B8003DD632 /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +92,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0A36B7D1CCD71FE001AAB78 /* MessageUI.framework in Frameworks */,
+				A0A36B7B1CCCAF68001AAB78 /* CoreLocation.framework in Frameworks */,
+				A0A36B791CCCAF5F001AAB78 /* MapKit.framework in Frameworks */,
 				15F527176F6EB4745B0387B8 /* Pods_VFix_Expert.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,6 +160,8 @@
 				A00543151CA9F41A00656D5A /* DashboardTabBarController.swift */,
 				A07587391CC6E5DC0011A76E /* AvailabilityViewController.swift */,
 				A075873C1CC6F8E30011A76E /* SupportViewController.swift */,
+				A085D69A1CCF17BF0041996B /* WebViewController.swift */,
+				A085D69C1CCF1C830041996B /* DepositViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -170,6 +187,9 @@
 		6FBE457E2B027AE1516C2219 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A0A36B7C1CCD71FE001AAB78 /* MessageUI.framework */,
+				A0A36B7A1CCCAF68001AAB78 /* CoreLocation.framework */,
+				A0A36B781CCCAF5F001AAB78 /* MapKit.framework */,
 				B326CC34EF53A07D7359B26A /* Pods_VFix_Expert.framework */,
 			);
 			name = Frameworks;
@@ -178,6 +198,7 @@
 		A00543041CA6042600656D5A /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				A0A36B7E1CCD8E2B001AAB78 /* MapManager.swift */,
 				3E8CE51D1C92AD12002A4A5B /* AppDelegate.swift */,
 				A00543121CA884C600656D5A /* VFix_Expert-Bridging-Header.h */,
 				A0DD3AB31CB739A1005C4791 /* defaultMaps.swift */,
@@ -331,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A00543091CA74E6F00656D5A /* ScheduleViewController.swift in Sources */,
+				A085D69B1CCF17BF0041996B /* WebViewController.swift in Sources */,
 				A0CC28001CB1EA7D001F562F /* defaultMapsCell.swift in Sources */,
 				A075873D1CC6F8E30011A76E /* SupportViewController.swift in Sources */,
 				3E8CE5351C92AE39002A4A5B /* CalendarViewController.swift in Sources */,
@@ -340,6 +362,7 @@
 				A097C7E61C9E219000E9A1EA /* MenuCell.swift in Sources */,
 				A00543161CA9F41A00656D5A /* DashboardTabBarController.swift in Sources */,
 				3E8CE5391C92AE57002A4A5B /* MapsViewController.swift in Sources */,
+				A0A36B7F1CCD8E2B001AAB78 /* MapManager.swift in Sources */,
 				A00543071CA74E6000656D5A /* ProfileViewController.swift in Sources */,
 				A075873A1CC6E5DC0011A76E /* AvailabilityViewController.swift in Sources */,
 				3E8CE5201C92AD12002A4A5B /* ViewController.swift in Sources */,
@@ -353,6 +376,7 @@
 				A005430D1CA74E8700656D5A /* SettingsViewController.swift in Sources */,
 				3E8CE51E1C92AD12002A4A5B /* AppDelegate.swift in Sources */,
 				3E8CE53D1C92AE72002A4A5B /* JobDetailViewController.swift in Sources */,
+				A085D69D1CCF1C830041996B /* DepositViewController.swift in Sources */,
 				3E8CE5371C92AE47002A4A5B /* JobsTableViewController.swift in Sources */,
 				3E8CE5401C92AE8E002A4A5B /* JobTableViewCell.swift in Sources */,
 			);
@@ -472,7 +496,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = VFix_Expert/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "https---github.com-Farhad33-VFix-Expert.VFix-Expert";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ndyoussfi.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -487,7 +511,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = VFix_Expert/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "https---github.com-Farhad33-VFix-Expert.VFix-Expert";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ndyoussfi.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

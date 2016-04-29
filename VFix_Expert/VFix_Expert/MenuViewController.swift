@@ -20,7 +20,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var menuTableView: UITableView!
     @IBOutlet weak var expertNameLabel: UILabel!
-    @IBOutlet weak var expertEmailLabel: UILabel!
+    
     @IBOutlet weak var expertPhoto: UIImageView!
     
     override func viewDidLoad() {
@@ -29,9 +29,14 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
 //        menuTableView.dataSource = self
 //        UIApplication.sharedApplication().statusBarStyle = .LightContent
         expertNameLabel.text = userDefaults.stringForKey("expert_name")
-        expertEmailLabel.text = userDefaults.stringForKey("expert_email")
         
-        expertPhoto.image = UIImage(named: "myphoto64x64")
+        if let imageData = userDefaults.objectForKey("image") as? NSData{
+            if let img = UIImage(data: imageData){
+                expertPhoto.image = img
+            }
+        } else {
+            expertPhoto.image = UIImage(named: "myphoto64x64")
+        }
         expertPhoto.layer.borderWidth = 1
         expertPhoto.layer.masksToBounds = false
         expertPhoto.layer.borderColor = UIColor.whiteColor().CGColor
@@ -50,7 +55,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewWillAppear(animated: Bool) {
        
         expertNameLabel.text = userDefaults.stringForKey("expert_name")
-        expertEmailLabel.text = userDefaults.stringForKey("expert_email")
+        
         
     }
     override func shouldAutorotate() -> Bool {

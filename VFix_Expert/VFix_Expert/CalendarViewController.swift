@@ -12,6 +12,7 @@ import EventKitUI
 import EventKit
 import Alamofire
 import SwiftyJSON
+import ARSLineProgress
 
 
 private var calendarToken = "22719873bdbb43cf0cc7f77d6e857e9e"
@@ -32,8 +33,18 @@ var calendarUserApppointments: Array =  [JSON]()
 var calendarAppointmentStartDate: NSDate!
 var calendarAppointmentEndDate: NSDate!
 
-class CalendarViewController: MGCDayPlannerViewController {
 
+
+class CalendarViewController: MGCDayPlannerViewController {
+    
+    
+    private var selectedService: String?
+    private var selectedAppointmentTime: String?
+    private var selectedAddress: String?
+    private var selectedPhone: String?
+    private var selectedClientName: String?
+    private var selectedNotes: String?
+    var app = UIApplication.sharedApplication()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,7 +55,7 @@ class CalendarViewController: MGCDayPlannerViewController {
         
         agendizeDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         agendizeStartTime = agendizeDateFormatter.stringFromDate(NSDate())
-        
+        self.app.beginIgnoringInteractionEvents()
         
         NetworkRequest()
         
@@ -66,10 +77,16 @@ class CalendarViewController: MGCDayPlannerViewController {
     
     // &startDateTime=\(agendizeStartTime)
     func NetworkRequest()  {
+        if ARSLineProgress.shown { return }
+            ARSLineProgress.showWithPresentCompetionBlock { () -> Void in
+            print("Showed with completion block")
+            }
+                
         Alamofire.request(.GET, "\(calendarBaseUrl)staffId=\(calendarId)&token=\(calendarToken)&apiKey=\(calendarKey)")
             .responseJSON { response in
                 
                 if response.result.isSuccess{
+                    
                     calendarUserApppointments.removeAll()
                     if let value = response.result.value {
                         let json = JSON(value)
@@ -107,8 +124,18 @@ class CalendarViewController: MGCDayPlannerViewController {
                             
                         }
                     }
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(3 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
+                        ARSLineProgress.hideWithCompletionBlock({ () -> Void in
+                            print("Hidden with completion block")
+                        })
+                    })
+                    ARSLineProgress.showSuccess()
+                    self.view.userInteractionEnabled = true
+                    self.app.endIgnoringInteractionEvents()
                 } else {
                     print("Alamofire Fail")
+                    ARSLineProgress.showFail()
+                    self.app.beginIgnoringInteractionEvents()
                 }
         }
         
@@ -130,7 +157,9 @@ class CalendarViewController: MGCDayPlannerViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
     
     @IBAction func onSupportClicked(sender: AnyObject) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -235,7 +264,7 @@ class CalendarViewController: MGCDayPlannerViewController {
             let appointmentView = MGCStandardEventView()
             appointmentView.title = calendarUserApppointments[Int(index)]["service"]["name"].stringValue
             appointmentView.font = UIFont(name: "Apple SD Gothic Neo", size: 12)
-            appointmentView.subtitle = address
+//            appointmentView.subtitle = address
             appointmentView.color = UIColor(red: 20/255.0, green: 157/255.0, blue: 224/255.0, alpha: 1.0)
 
             
@@ -247,6 +276,48 @@ class CalendarViewController: MGCDayPlannerViewController {
     }
     
     
+//    override func dayPlannerView(view: MGCDayPlannerView!, didSelectEventOfType type: MGCEventType, atIndex index: UInt, date: NSDate!) {
+//        
+//        let selectionFormatter = NSDateFormatter()
+//        selectionFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+//        let selectionDate = selectionFormatter.dateFromString(calendarUserApppointments[Int(index)]["start"]["dateTime"].stringValue)
+//        
+//        
+//        selectionFormatter.timeStyle = .ShortStyle
+//        
+//        
+//        
+//        let street = calendarUserApppointments[Int(index)]["client"]["address"]["street"].stringValue
+//        let city = calendarUserApppointments[Int(index)]["client"]["address"]["city"].stringValue
+//        let state = calendarUserApppointments[Int(index)]["client"]["address"]["state"].stringValue
+//        let zip = calendarUserApppointments[Int(index)]["client"]["address"]["zipCode"].stringValue
+//        
+//        let selectedService = calendarUserApppointments[Int(index)]["service"]["name"].stringValue
+//        let selectedClientName = calendarUserApppointments[Int(index)]["client"]["firstName"].stringValue + " " + calendarUserApppointments[Int(index)]["client"]["lastName"].stringValue
+//        let selectedAppointmentTime = selectionFormatter.stringFromDate(selectionDate!)
+//        let selectedPhone = calendarUserApppointments[Int(index)]["client"]["phone"].stringValue
+//        let selectedAddress = "\(street), \(city), \(state) \(zip)"
+//        let selectedAppointmentInstructions = calendarUserApppointments[Int(index)]["notes"].stringValue
+//        
+//        
+//        let appointmentView = MGCStandardEventView()
+//        appointmentView.title = calendarUserApppointments[Int(index)]["service"]["name"].stringValue
+//        appointmentView.subtitle = address
+//        
+//        // Service type, time and date, address, customer name, phone number
+//        
+//        print(selectedService)
+//        print(selectedClientName)
+//        print(selectedAppointmentTime)
+//        print(selectedPhone)
+//        print(selectedAddress)
+//        print(selectedAppointmentInstructions)
+//        //        print("selected service: \(appointmentView.title).")
+//        //        print("selected addreds: \(appointmentView.subtitle).")
+//        
+//        
+//        self.performSegueWithIdentifier("CalendarToDetailsSegue", sender: self)
+//    }
     override func dayPlannerView(view: MGCDayPlannerView!, didSelectEventOfType type: MGCEventType, atIndex index: UInt, date: NSDate!) {
         
         let selectionFormatter = NSDateFormatter()
@@ -263,12 +334,12 @@ class CalendarViewController: MGCDayPlannerViewController {
         let state = calendarUserApppointments[Int(index)]["client"]["address"]["state"].stringValue
         let zip = calendarUserApppointments[Int(index)]["client"]["address"]["zipCode"].stringValue
         
-        let selectedService = calendarUserApppointments[Int(index)]["service"]["name"].stringValue
-        let selectedClientName = calendarUserApppointments[Int(index)]["client"]["firstName"].stringValue + " " + calendarUserApppointments[Int(index)]["client"]["lastName"].stringValue
-        let selectedAppointmentTime = selectionFormatter.stringFromDate(selectionDate!)
-        let selectedPhone = calendarUserApppointments[Int(index)]["client"]["phone"].stringValue
-        let selectedAddress = "\(street), \(city), \(state) \(zip)"
-        let selectedAppointmentInstructions = calendarUserApppointments[Int(index)]["notes"].stringValue
+        selectedService = calendarUserApppointments[Int(index)]["service"]["name"].stringValue
+        selectedClientName = calendarUserApppointments[Int(index)]["client"]["firstName"].stringValue + " " + calendarUserApppointments[Int(index)]["client"]["lastName"].stringValue
+        selectedAppointmentTime = selectionFormatter.stringFromDate(selectionDate!)
+        selectedPhone = calendarUserApppointments[Int(index)]["client"]["phone"].stringValue
+        selectedAddress = "\(street), \(city), \(state) \(zip)"
+        selectedNotes = calendarUserApppointments[Int(index)]["notes"].stringValue
         
         
         let appointmentView = MGCStandardEventView()
@@ -282,13 +353,36 @@ class CalendarViewController: MGCDayPlannerViewController {
         print(selectedAppointmentTime)
         print(selectedPhone)
         print(selectedAddress)
-        print(selectedAppointmentInstructions)
+        print(selectedNotes)
         //        print("selected service: \(appointmentView.title).")
         //        print("selected addreds: \(appointmentView.subtitle).")
+        
+        
+        
+        
+        
+        self.performSegueWithIdentifier("CalendarToDetailsSegue", sender: self)
+        //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //        let vc = storyboard.instantiateViewControllerWithIdentifier("MainPageViewController") as! UIViewController
+        //        self.presentViewController(vc, animated: true, completion: nil)
     }
-    
     override func dayPlannerView(view: MGCDayPlannerView!, didDeselectEventOfType type: MGCEventType, atIndex index: UInt, date: NSDate!) {
         print("deselected")
+    }
+    
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        let detailViewController = segue.destinationViewController as! MainPageViewController
+        detailViewController.serviceInfo = selectedService!
+        detailViewController.timeInfo = selectedAppointmentTime!
+        detailViewController.addressInfo = selectedAddress!
+        detailViewController.phoneInfo = selectedPhone!
+        detailViewController.nameInfo = selectedClientName!
+        detailViewController.instructionsInfo = selectedNotes!
     }
     
 }
@@ -349,4 +443,6 @@ extension NSDate {
         //Return Result
         return dateWithHoursAdded
     }
+  
+    
 }

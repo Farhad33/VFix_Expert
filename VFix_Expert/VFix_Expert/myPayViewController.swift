@@ -15,7 +15,7 @@ class myPayViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var totalWeeklyPayment: UILabel!
     var tableView: UITableView = UITableView()
     var items: [String] = ["This Month:", "This week:", "Last week:", "Week before:"]
-    var money: [String] = ["$ 100.00", "$ 200.00", "$ 300.00"]
+    var money: [String] = ["$598.86", "$0.00", "$0.00"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +60,7 @@ class myPayViewController: UIViewController, UITableViewDataSource, UITableViewD
         }else {
             cell.textLabel?.text = self.items[indexPath.row] + " " + self.money[indexPath.row - 1]
             cell.textLabel?.font = cell.textLabel?.font.fontWithSize(13)
-            cell.textLabel?.textAlignment = NSTextAlignment.Center
+            cell.textLabel?.textAlignment = NSTextAlignment.Left
         }
         
         return cell
@@ -72,9 +72,10 @@ class myPayViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func addMonthView(months: [String], money: [String]){
-        tableView.frame = CGRectMake(0, 50, 305, 200);
+        tableView.frame = CGRectMake(0, 50, self.view.frame.width - 8, 200);
         tableView.center = self.view.center
         tableView.frame.origin.y = topView.frame.height + (topView.frame.height / 2)
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.scrollEnabled = false
@@ -89,9 +90,9 @@ class myPayViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     @IBAction func onSupportClicked(sender: AnyObject) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("SupportViewController") as! SupportViewController
-        self.presentViewController(vc, animated: true, completion: nil)
+        let suppVC = self.storyboard!.instantiateViewControllerWithIdentifier("SupportViewController") as! SupportViewController
+        let navController = UINavigationController(rootViewController: suppVC) // Creating a navigation controller with VC1 at the root of the navigation stack.
+        self.presentViewController(navController, animated:true, completion: nil)
     }
     
     /*

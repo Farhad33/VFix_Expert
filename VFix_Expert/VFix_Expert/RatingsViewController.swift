@@ -12,6 +12,7 @@ import Cosmos
 
 class RatingsViewController: UIViewController {
 
+    @IBOutlet weak var ratingsInfoView: UIView!
     @IBOutlet weak var cosmosView: CosmosView!
     @IBOutlet weak var ratingNumber: UILabel!
     @IBOutlet weak var jobsCountLabel: UILabel!
@@ -25,6 +26,8 @@ class RatingsViewController: UIViewController {
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         cosmosView.rating = 3.7
         cosmosView.settings.updateOnTouch = false
+//        ratingsInfoView.center = self.view.center
+        
         // Do any additional setup after loading the view.
     }
 
@@ -41,9 +44,9 @@ class RatingsViewController: UIViewController {
     }
 
     @IBAction func onSupportClicked(sender: AnyObject) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("SupportViewController") as! SupportViewController
-        self.presentViewController(vc, animated: true, completion: nil)
+        let suppVC = self.storyboard!.instantiateViewControllerWithIdentifier("SupportViewController") as! SupportViewController
+        let navController = UINavigationController(rootViewController: suppVC) // Creating a navigation controller with VC1 at the root of the navigation stack.
+        self.presentViewController(navController, animated:true, completion: nil)
     }
     /*
     // MARK: - Navigation

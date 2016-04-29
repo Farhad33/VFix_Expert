@@ -12,6 +12,8 @@ class JobTableViewCell: UITableViewCell {
 
     @IBOutlet weak var serviceTypeLabel: UILabel!
     @IBOutlet weak var appointmentTime: UILabel!
+    @IBOutlet weak var appointmentDate: UILabel!
+    @IBOutlet weak var serviceIcon: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

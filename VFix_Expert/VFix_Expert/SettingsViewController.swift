@@ -12,7 +12,7 @@ import TPDMapsApp
 
 class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
-    
+    var hiddencell: Int = 0
     let availableMapsApps = TPDMapsApp.availableMapsAppsSortedByName()
     var mapsIcons: [String] = ["Dashboard.png", "Profile.png", "Schedule.png"]
     @IBOutlet weak var tableview: UITableView!
@@ -47,10 +47,12 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         let app = availableMapsApps![indexPath.row] as! TPDMapsApp
         cell.mapsAppImage.image = UIImage(named: mapsIcons[indexPath.row])
         cell.mapsAppName.text = app.name
-        cell.mapsAppName.enabled = app.installed
+//        cell.mapsAppName.enabled = app.installed
         
-        if !app.installed{
-            cell.hidden = false
+        if (app.installed == false) {
+           tableView.rowHeight = 0
+        }else {
+            tableView.rowHeight = 55
         }
         return cell
         
@@ -91,9 +93,9 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
 
     @IBAction func onSupportClicked(sender: AnyObject) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("SupportViewController") as! SupportViewController
-        self.presentViewController(vc, animated: true, completion: nil)
+        let suppVC = self.storyboard!.instantiateViewControllerWithIdentifier("SupportViewController") as! SupportViewController
+        let navController = UINavigationController(rootViewController: suppVC) // Creating a navigation controller with VC1 at the root of the navigation stack.
+        self.presentViewController(navController, animated:true, completion: nil)
     }
     /*
     // MARK: - Navigation
